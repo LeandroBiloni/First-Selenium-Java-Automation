@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-09T17:04:13 ART" name="Surefire suite" finished-at="2024-03-09T17:04:18 ART" duration-ms="4895">
+    <groups>
+    </groups>
+    <test started-at="2024-03-09T17:04:13 ART" name="Surefire test" finished-at="2024-03-09T17:04:18 ART" duration-ms="4895">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:13 ART" name="setUp" finished-at="2024-03-09T17:04:14 ART" duration-ms="1091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="correctLogin()[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:14 ART" name="correctLogin" description="Login with correct credentials" finished-at="2024-03-09T17:04:14 ART" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctLogin -->
+        <test-method is-config="true" signature="teaarDowm(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:14 ART" name="teaarDowm" finished-at="2024-03-09T17:04:14 ART" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=correctLogin status=SUCCESS method=LoginTest.correctLogin()[pri:0, instance:tests.LoginTest@60704c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teaarDowm -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:14 ART" name="setUp" finished-at="2024-03-09T17:04:15 ART" duration-ms="861" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="titleToUserName()[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:15 ART" name="titleToUserName" description="Set Web Title to User Name field" finished-at="2024-03-09T17:04:15 ART" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleToUserName -->
+        <test-method is-config="true" signature="teaarDowm(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:15 ART" name="teaarDowm" finished-at="2024-03-09T17:04:15 ART" duration-ms="76" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=titleToUserName status=SUCCESS method=LoginTest.titleToUserName()[pri:0, instance:tests.LoginTest@60704c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teaarDowm -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:15 ART" name="setUp" finished-at="2024-03-09T17:04:16 ART" duration-ms="827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="wrongLogin()[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:16 ART" name="wrongLogin" description="Wrong Login" finished-at="2024-03-09T17:04:16 ART" duration-ms="270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongLogin -->
+        <test-method is-config="true" signature="teaarDowm(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@60704c]" started-at="2024-03-09T17:04:16 ART" name="teaarDowm" finished-at="2024-03-09T17:04:16 ART" duration-ms="73" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=wrongLogin status=SUCCESS method=LoginTest.wrongLogin()[pri:0, instance:tests.LoginTest@60704c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teaarDowm -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.ShopTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ShopTest@6193932a]" started-at="2024-03-09T17:04:16 ART" name="setUp" finished-at="2024-03-09T17:04:17 ART" duration-ms="819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="filterChange()[pri:0, instance:tests.ShopTest@6193932a]" started-at="2024-03-09T17:04:17 ART" name="filterChange" description="Change the shop filter" finished-at="2024-03-09T17:04:17 ART" duration-ms="374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterChange -->
+        <test-method is-config="true" signature="teaarDowm(org.testng.ITestResult)[pri:0, instance:tests.ShopTest@6193932a]" started-at="2024-03-09T17:04:17 ART" name="teaarDowm" finished-at="2024-03-09T17:04:18 ART" duration-ms="35" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filterChange status=SUCCESS method=ShopTest.filterChange()[pri:0, instance:tests.ShopTest@6193932a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teaarDowm -->
+      </class> <!-- tests.ShopTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
