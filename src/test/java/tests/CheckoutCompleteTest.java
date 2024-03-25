@@ -9,7 +9,7 @@ import pages.CheckoutTwoPage;
 import pages.InventoryPage;
 
 public class CheckoutCompleteTest extends CommonConditions {
-    @Test(description = "Go back to home page")
+    @Test(description = "Go back to home page", enabled = true)
     public void backHome() {
         login(correctUser, correctPassword);
 

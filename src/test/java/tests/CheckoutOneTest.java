@@ -9,7 +9,7 @@ import pages.CheckoutTwoPage;
 
 public class CheckoutOneTest extends CommonConditions{
 
-    @Test(description = "Go back to cart with cancel button", enabled = false)
+    @Test(description = "Go back to cart with cancel button", enabled = true)
     public void backToCart() {
         login(correctUser, correctPassword);
 
@@ -29,7 +29,7 @@ public class CheckoutOneTest extends CommonConditions{
         cartPage.assertPage();
     }
 
-    @Test(description = "Continue to checkout 2 without inserting info", enabled = false)
+    @Test(description = "Continue to checkout 2 without inserting info", enabled = true)
     public void continueToCheckout2WithNoData() {
         login(correctUser, correctPassword);
 
@@ -48,7 +48,7 @@ public class CheckoutOneTest extends CommonConditions{
         checkoutOnePage.assertInvalidData();
     }
 
-    @Test(description = "Continue to checkout 2", enabled = false)
+    @Test(description = "Continue to checkout 2", enabled = true)
     public void continueToCheckout2() {
         login(correctUser, correctPassword);
 

@@ -10,7 +10,7 @@ import pages.InventoryPage;
 
 public class CheckoutTwoTest extends CommonConditions{
     
-    @Test(description = "Cancel checkout")
+    @Test(description = "Cancel checkout", enabled = true)
     public void cancelCheckout() {
         login(correctUser, correctPassword);
 
@@ -38,7 +38,7 @@ public class CheckoutTwoTest extends CommonConditions{
         inventoryPage.assertPage();
     }
 
-    @Test(description = "Finish checkout")
+    @Test(description = "Finish checkout", enabled = true)
     public void finishCheckout() {
         login(correctUser, correctPassword);
 

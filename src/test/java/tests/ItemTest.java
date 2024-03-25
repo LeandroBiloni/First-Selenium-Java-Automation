@@ -7,7 +7,7 @@ import pages.InventoryPage;
 import pages.ItemPage;
 
 public class ItemTest extends CommonConditions {
-    @Test(description = "Go back to inventory", enabled = false)
+    @Test(description = "Go back to inventory", enabled = true)
     public void backToInventory() {
         login(correctUser, correctPassword);
 
@@ -29,7 +29,7 @@ public class ItemTest extends CommonConditions {
         inventoryPage.assertPage();
     }
     
-    @Test(description = "Add to cart", enabled = false)
+    @Test(description = "Add to cart", enabled = true)
     public void addToCart() {
         login(correctUser, correctPassword);
 
@@ -56,7 +56,7 @@ public class ItemTest extends CommonConditions {
         cartPage.assertSameItem(itemName);
     }
 
-    @Test(description = "Remove from cart", enabled = false)
+    @Test(description = "Remove from cart", enabled = true)
     public void removeFromCart() {
         login(correctUser, correctPassword);
 
