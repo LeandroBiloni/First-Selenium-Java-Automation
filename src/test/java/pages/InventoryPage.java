@@ -24,9 +24,6 @@ public class InventoryPage {
     private By closeMenuButton;
     
     private By cartButton;
-    private By twitterButton;
-    private By facebookButton;
-    private By linkedinButton;
 
     private By addToCartButton;
 
@@ -47,18 +44,11 @@ public class InventoryPage {
         closeMenuButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[2]/div/button");
 
         cartButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[3]/a");
-        twitterButton = By.xpath("/html/body/div/div/footer/ul/li[1]/a");
-        facebookButton = By.xpath("/html/body/div/div/footer/ul/li[2]/a");
-        linkedinButton = By.xpath("/html/body/div/div/footer/ul/li[3]/a");
 
         addToCartButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/button");
         
         inventoryItemLabelButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div");
         inventoryItemImageButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[1]/a/img");
-
-        twitterButton = By.xpath("/html/body/div/div/footer/ul/li[1]/a");
-        facebookButton = By.xpath("/html/body/div/div/footer/ul/li[2]/a");
-        linkedinButton = By.xpath("/html/body/div/div/footer/ul/li[3]/a");
     }
 
     public void assertPage() {
@@ -125,17 +115,5 @@ public class InventoryPage {
 
     public String getItemName() {
         return driver.findElement(inventoryItemLabelButton).getText();
-    }
-
-    public void clickTwitterButton() {
-        driver.findElement(twitterButton).click();
-    }
-
-    public void clickFacebookButton() {
-        driver.findElement(facebookButton).click();
-    }
-
-    public void clickLinkedInButton() {
-        driver.findElement(linkedinButton).click();
     }
 }

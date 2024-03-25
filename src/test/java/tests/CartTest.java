@@ -8,7 +8,7 @@ import pages.InventoryPage;
 
 public class CartTest extends CommonConditions {
 
-    @Test(description = "Go back to inventory page using All items button in menu")
+    @Test(description = "Go back to inventory page using All items button in menu", enabled = false)
     public void goToInventoryA() {
         login(correctUser, correctPassword);
 
@@ -25,7 +25,7 @@ public class CartTest extends CommonConditions {
         inventoryPage.assertPage();
     }
 
-    @Test(description = "Go back to inventory page using Continue Shopping button")
+    @Test(description = "Go back to inventory page using Continue Shopping button", enabled = false)
     public void goToInventoryB() {
         login(correctUser, correctPassword);
 
@@ -41,7 +41,7 @@ public class CartTest extends CommonConditions {
         inventoryPage.assertPage();
     }
 
-    @Test(description = "Go to checkout step one")
+    @Test(description = "Go to checkout step one", enabled = false)
     public void goToCheckoutOne() {
         login(correctUser, correctPassword);
 

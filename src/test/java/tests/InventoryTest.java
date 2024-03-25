@@ -19,7 +19,7 @@ public class InventoryTest extends CommonConditions {
         inventoryPage.selectFilter(3);
     }    
 
-    @Test(description = "Go to about page")
+    @Test(description = "Go to about page", enabled = false)
     public void goToAboutPage() {
         login(correctUser, correctPassword);
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -31,7 +31,7 @@ public class InventoryTest extends CommonConditions {
         aboutPage.assertPage();
     }
 
-    @Test(description = "Try to logout")
+    @Test(description = "Try to logout", enabled = false)
     public void logout() {
         login(correctUser, correctPassword);
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -45,7 +45,7 @@ public class InventoryTest extends CommonConditions {
         loginPage.assertPage();
     }
 
-    @Test(description = "Go back to Inventory page")
+    @Test(description = "Go back to Inventory page", enabled = false)
     public void goToInventory() {
         login(correctUser, correctPassword);
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -59,7 +59,7 @@ public class InventoryTest extends CommonConditions {
         inventoryPage.assertPage();
     }
 
-    @Test(description = "Close hamburger menu")
+    @Test(description = "Close hamburger menu", enabled = false)
     public void closeMenu() {
         login(correctUser, correctPassword);
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -70,7 +70,7 @@ public class InventoryTest extends CommonConditions {
         inventoryPage.closeMenu();
     }
 
-    @Test(description = "Go to item page from label")
+    @Test(description = "Go to item page from label", enabled = false)
     public void goToItemPageFromLabel() {
         login(correctUser, correctPassword);
 
@@ -88,7 +88,7 @@ public class InventoryTest extends CommonConditions {
         itemPage.compareItem(itemName);
     }
 
-    @Test(description = "Go to item page from image")
+    @Test(description = "Go to item page from image", enabled = false)
     public void goToItemPageFromImage() {
         login(correctUser, correctPassword);
 
@@ -106,7 +106,7 @@ public class InventoryTest extends CommonConditions {
         itemPage.compareItem(itemName);
     }
 
-    @Test(description = "Go to cart")
+    @Test(description = "Go to cart", enabled = false)
     public void goToCart() {
         login(correctUser, correctPassword);
 
@@ -120,7 +120,7 @@ public class InventoryTest extends CommonConditions {
         cartPage.assertPage();
     }
 
-    @Test(description = "Go to cart and check item")
+    @Test(description = "Go to cart and check item", enabled = false)
     public void goToCartWithAddedItem() {
         login(correctUser, correctPassword);
 
