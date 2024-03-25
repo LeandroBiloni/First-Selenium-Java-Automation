@@ -8,10 +8,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import helpers.Screenshoter;
+import helpers.WebDriverManager;
 import pages.LoginPage;
 
 public class CommonConditions {
     protected WebDriver driver;
+    protected final String correctUser = "standard_user";
+    protected final String correctPassword = "secret_sauce";
     //private ArrayList<String> tabs;
 
     @BeforeMethod
@@ -21,6 +24,7 @@ public class CommonConditions {
         ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.addArguments("--headless");
         driver = new ChromeDriver(chromeOptions);
+        WebDriverManager.setWindowSize(driver, "maximized");
         driver.navigate().to("https://www.saucedemo.com/");
     }
 

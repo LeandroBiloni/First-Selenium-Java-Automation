@@ -43,5 +43,9 @@ public class LoginPage {
         userFieldElement.sendKeys(driver.getTitle());
         Assert.assertEquals("Swag Labs", driver.getTitle());
     }
+
+    public void assertPage() {
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/");
+    }
 }
 
