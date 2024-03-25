@@ -2,11 +2,9 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import helpers.Helper;
 import pages.InventoryPage;
 import pages.ItemPage;
 import pages.LoginPage;
-import pages.SocialNetworksPage;
 import pages.AboutPage;
 import pages.CartPage;
 
@@ -140,64 +138,5 @@ public class InventoryTest extends CommonConditions {
         cartPage.assertPage();
 
         cartPage.assertSameItem(itemName);
-    }
-
-    @Test(description = "Go to twitter", enabled = false)
-    public void goToTwitter() {
-        login(correctUser, correctPassword);
-
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        SocialNetworksPage socialNetworksPage = new SocialNetworksPage(driver);
-
-        inventoryPage.assertPage();
-
-        inventoryPage.clickTwitterButton();
-
-        Helper helper = new Helper();
-
-        helper.waitForSeconds(3);
-
-        driver.switchTo().window(driver.getWindowHandles().iterator().next());
-
-        socialNetworksPage.assertTwitterPage();
-    }
-
-    @Test(description = "Go to facebook", enabled = false)
-    public void goToFacebook() {
-        login(correctUser, correctPassword);
-
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        SocialNetworksPage socialNetworksPage = new SocialNetworksPage(driver);
-
-        inventoryPage.assertPage();
-
-        inventoryPage.clickFacebookButton();
-
-        Helper helper = new Helper();
-
-        helper.waitForSeconds(3);
-
-        driver.switchTo().window(driver.getWindowHandles().iterator().next());
-
-        socialNetworksPage.assertFacebookPage();
-    }
-
-    @Test(description = "Go to linkedIn", enabled =  false)
-    public void goToLinkedIn() {
-        login(correctUser, correctPassword);
-
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        SocialNetworksPage socialNetworksPage = new SocialNetworksPage(driver);
-
-        inventoryPage.assertPage();
-
-        inventoryPage.clickLinkedInButton();
-
-        Helper helper = new Helper();
-
-        helper.waitForSeconds(3);
-        driver.switchTo().window(driver.getWindowHandles().iterator().next());
-
-        socialNetworksPage.assertLinkedInPage();
     }
 }
