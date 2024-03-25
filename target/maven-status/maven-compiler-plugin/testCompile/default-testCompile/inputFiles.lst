@@ -3,6 +3,7 @@ C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\prim
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\helpers\WebDriverManager.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\AboutPage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\CartPage.java
+C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\CheckoutCompletePage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\CheckoutOnePage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\CheckoutTwoPage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\InventoryPage.java
@@ -10,7 +11,9 @@ C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\prim
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\LoginPage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\LogonPage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CartTest.java
+C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CheckoutCompleteTest.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CheckoutOneTest.java
+C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CheckoutTwoTest.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CommonConditions.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\InventoryTest.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\ItemTest.java

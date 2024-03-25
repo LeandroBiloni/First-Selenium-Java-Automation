@@ -2,69 +2,71 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-25T15:29:50 ART" name="Surefire suite" finished-at="2024-03-25T15:29:54 ART" duration-ms="4632">
+  <suite started-at="2024-03-25T15:44:02 ART" name="Surefire suite" finished-at="2024-03-25T15:44:08 ART" duration-ms="5240">
     <groups>
     </groups>
-    <test started-at="2024-03-25T15:29:50 ART" name="Surefire test" finished-at="2024-03-25T15:29:54 ART" duration-ms="4632">
-      <class name="tests.CheckoutOneTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:50 ART" name="setUp" finished-at="2024-03-25T15:29:51 ART" duration-ms="1290" status="PASS">
+    <test started-at="2024-03-25T15:44:02 ART" name="Surefire test" finished-at="2024-03-25T15:44:08 ART" duration-ms="5240">
+      <class name="tests.CheckoutTwoTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:04 ART" name="setUp" finished-at="2024-03-25T15:44:05 ART" duration-ms="1050" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="backToCart()[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:51 ART" name="backToCart" description="Go back to cart with cancel button" finished-at="2024-03-25T15:29:51 ART" duration-ms="326" status="PASS">
+        <test-method signature="cancelCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:05 ART" name="cancelCheckout" description="Cancel checkout" finished-at="2024-03-25T15:44:06 ART" duration-ms="472" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- backToCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:51 ART" name="tearDown" finished-at="2024-03-25T15:29:51 ART" duration-ms="92" status="PASS">
+        </test-method> <!-- cancelCheckout -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:06 ART" name="tearDown" finished-at="2024-03-25T15:44:06 ART" duration-ms="64" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=backToCart status=SUCCESS method=CheckoutOneTest.backToCart()[pri:0, instance:tests.CheckoutOneTest@2b6faea6] output={null}]]]>
+                <![CDATA[[TestResult name=cancelCheckout status=SUCCESS method=CheckoutTwoTest.cancelCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:51 ART" name="setUp" finished-at="2024-03-25T15:29:52 ART" duration-ms="981" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:06 ART" name="setUp" finished-at="2024-03-25T15:44:07 ART" duration-ms="982" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="continueToCheckout2()[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:52 ART" name="continueToCheckout2" description="Continue to checkout 2" finished-at="2024-03-25T15:29:53 ART" duration-ms="444" status="PASS">
+        <test-method signature="finishCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:07 ART" name="finishCheckout" description="Finish checkout" finished-at="2024-03-25T15:44:07 ART" duration-ms="548" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- continueToCheckout2 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:53 ART" name="tearDown" finished-at="2024-03-25T15:29:53 ART" duration-ms="74" status="PASS">
+        </test-method> <!-- finishCheckout -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:07 ART" name="tearDown" finished-at="2024-03-25T15:44:08 ART" duration-ms="84" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=continueToCheckout2 status=SUCCESS method=CheckoutOneTest.continueToCheckout2()[pri:0, instance:tests.CheckoutOneTest@2b6faea6] output={null}]]]>
+                <![CDATA[[TestResult name=finishCheckout status=SUCCESS method=CheckoutTwoTest.finishCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:53 ART" name="setUp" finished-at="2024-03-25T15:29:54 ART" duration-ms="994" status="PASS">
+      </class> <!-- tests.CheckoutTwoTest -->
+      <class name="tests.CheckoutCompleteTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-25T15:44:02 ART" name="setUp" finished-at="2024-03-25T15:44:04 ART" duration-ms="1339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="continueToCheckout2WithNoData()[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:54 ART" name="continueToCheckout2WithNoData" description="Continue to checkout 2 without inserting info" finished-at="2024-03-25T15:29:54 ART" duration-ms="326" status="PASS">
+        <test-method signature="backHome()[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-25T15:44:04 ART" name="backHome" description="Go back to home page" finished-at="2024-03-25T15:44:04 ART" duration-ms="597" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- continueToCheckout2WithNoData -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@2b6faea6]" started-at="2024-03-25T15:29:54 ART" name="tearDown" finished-at="2024-03-25T15:29:54 ART" duration-ms="81" status="PASS">
+        </test-method> <!-- backHome -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-25T15:44:04 ART" name="tearDown" finished-at="2024-03-25T15:44:04 ART" duration-ms="74" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=continueToCheckout2WithNoData status=SUCCESS method=CheckoutOneTest.continueToCheckout2WithNoData()[pri:0, instance:tests.CheckoutOneTest@2b6faea6] output={null}]]]>
+                <![CDATA[[TestResult name=backHome status=SUCCESS method=CheckoutCompleteTest.backHome()[pri:0, instance:tests.CheckoutCompleteTest@56528192] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.CheckoutOneTest -->
+      </class> <!-- tests.CheckoutCompleteTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.CheckoutOneTest">
+      <class name="tests.CheckoutTwoTest">
         <methods>
+          <include name="finishCheckout"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="continueToCheckout2"/>
         </methods>
-      </class> <!-- tests.CheckoutOneTest -->
+      </class> <!-- tests.CheckoutTwoTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

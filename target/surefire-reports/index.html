@@ -103,17 +103,17 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.CheckoutOneTest" class="method navigator-link" hash-for-method="backToCart">backToCart</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.CheckoutCompleteTest" class="method navigator-link" hash-for-method="backHome">backHome</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.CheckoutOneTest" class="method navigator-link" hash-for-method="continueToCheckout2">continueToCheckout2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.CheckoutTwoTest" class="method navigator-link" hash-for-method="cancelCheckout">cancelCheckout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.CheckoutOneTest" class="method navigator-link" hash-for-method="continueToCheckout2WithNoData">continueToCheckout2WithNoData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.CheckoutTwoTest" class="method navigator-link" hash-for-method="finishCheckout">finishCheckout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -131,34 +131,42 @@
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.CheckoutOneTest</span>
+              <span class="class-name">tests.CheckoutCompleteTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="backToCart">
-                  </a> <!-- backToCart -->
-                  <span class="method-name">backToCart</span>
+                  <a name="backHome">
+                  </a> <!-- backHome -->
+                  <span class="method-name">backHome</span>
                   <em>
-(Go back to cart with cancel button)                  </em>
+(Go back to home page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.CheckoutTwoTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cancelCheckout">
+                  </a> <!-- cancelCheckout -->
+                  <span class="method-name">cancelCheckout</span>
+                  <em>
+(Cancel checkout)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="continueToCheckout2">
-                  </a> <!-- continueToCheckout2 -->
-                  <span class="method-name">continueToCheckout2</span>
+                  <a name="finishCheckout">
+                  </a> <!-- finishCheckout -->
+                  <span class="method-name">finishCheckout</span>
                   <em>
-(Continue to checkout 2)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="continueToCheckout2WithNoData">
-                  </a> <!-- continueToCheckout2WithNoData -->
-                  <span class="method-name">continueToCheckout2WithNoData</span>
-                  <em>
-(Continue to checkout 2 without inserting info)                  </em>
+(Finish checkout)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -175,7 +183,9 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.CartTest&quot;/&gt;
+      &lt;class name=&quot;tests.CheckoutCompleteTest&quot;/&gt;
       &lt;class name=&quot;tests.CheckoutOneTest&quot;/&gt;
+      &lt;class name=&quot;tests.CheckoutTwoTest&quot;/&gt;
       &lt;class name=&quot;tests.InventoryTest&quot;/&gt;
       &lt;class name=&quot;tests.ItemTest&quot;/&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
@@ -192,7 +202,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (5 classes)</span>
+                <span class="test-name">Surefire test (7 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -220,17 +230,17 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'continueToCheckout2')
-data.setCell(0, 2, 'tests.CheckoutOneTest')
-data.setCell(0, 3, 444);
+data.setCell(0, 1, 'backHome')
+data.setCell(0, 2, 'tests.CheckoutCompleteTest')
+data.setCell(0, 3, 597);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'continueToCheckout2WithNoData')
-data.setCell(1, 2, 'tests.CheckoutOneTest')
-data.setCell(1, 3, 326);
+data.setCell(1, 1, 'finishCheckout')
+data.setCell(1, 2, 'tests.CheckoutTwoTest')
+data.setCell(1, 3, 548);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'backToCart')
-data.setCell(2, 2, 'tests.CheckoutOneTest')
-data.setCell(2, 3, 326);
+data.setCell(2, 1, 'cancelCheckout')
+data.setCell(2, 2, 'tests.CheckoutTwoTest')
+data.setCell(2, 3, 472);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -250,51 +260,51 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">18 ignored methods</span>
+            <span class="header-content">21 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.CheckoutOneTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">backToCart</span>
+                <br/>
+                <span class="ignored-method-name">continueToCheckout2</span>
+                <br/>
+                <span class="ignored-method-name">continueToCheckout2WithNoData</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">tests.InventoryTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">goToItemPageFromLabel</span>
-                <br/>
-                <span class="ignored-method-name">goToCart</span>
+                <span class="ignored-method-name">goToItemPageFromImage</span>
                 <br/>
                 <span class="ignored-method-name">goToInventory</span>
                 <br/>
-                <span class="ignored-method-name">goToItemPageFromImage</span>
+                <span class="ignored-method-name">logout</span>
                 <br/>
                 <span class="ignored-method-name">filterChange</span>
                 <br/>
-                <span class="ignored-method-name">logout</span>
-                <br/>
                 <span class="ignored-method-name">closeMenu</span>
+                <br/>
+                <span class="ignored-method-name">goToAboutPage</span>
+                <br/>
+                <span class="ignored-method-name">goToItemPageFromLabel</span>
                 <br/>
                 <span class="ignored-method-name">goToCartWithAddedItem</span>
                 <br/>
-                <span class="ignored-method-name">goToAboutPage</span>
+                <span class="ignored-method-name">goToCart</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">tests.CartTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">goToInventoryB</span>
-                <br/>
                 <span class="ignored-method-name">goToCheckoutOne</span>
                 <br/>
+                <span class="ignored-method-name">goToInventoryB</span>
+                <br/>
                 <span class="ignored-method-name">goToInventoryA</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">correctLogin</span>
-                <br/>
-                <span class="ignored-method-name">titleToUserName</span>
-                <br/>
-                <span class="ignored-method-name">wrongLogin</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -303,9 +313,20 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">backToInventory</span>
                 <br/>
+                <span class="ignored-method-name">removeFromCart</span>
+                <br/>
                 <span class="ignored-method-name">addToCart</span>
                 <br/>
-                <span class="ignored-method-name">removeFromCart</span>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">correctLogin</span>
+                <br/>
+                <span class="ignored-method-name">wrongLogin</span>
+                <br/>
+                <span class="ignored-method-name">titleToUserName</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -317,42 +338,45 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.CheckoutOneTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.CheckoutCompleteTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">backToCart</span>
-                <span class="method-start">1290 ms</span>
+                <span class="method-name">backHome</span>
+                <span class="method-start">1339 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=backToCart status=SUCCESS method=CheckoutOneTest.backToCart()[pri:0, instance:tests...)</span>
-                <span class="method-start">1618 ms</span>
+                <span class="method-name">tearDown([TestResult name=backHome status=SUCCESS method=CheckoutCompleteTest.backHome()[pri:0, instance:test...)</span>
+                <span class="method-start">1937 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.CheckoutTwoTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2012 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">cancelCheckout</span>
+                <span class="method-start">3062 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=cancelCheckout status=SUCCESS method=CheckoutTwoTest.cancelCheckout()[pri:0, instan...)</span>
+                <span class="method-start">3534 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1710 ms</span>
+                <span class="method-start">3599 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">continueToCheckout2</span>
-                <span class="method-start">2691 ms</span>
+                <span class="method-name">finishCheckout</span>
+                <span class="method-start">4581 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=continueToCheckout2 status=SUCCESS method=CheckoutOneTest.continueToCheckout2()[pri...)</span>
-                <span class="method-start">3135 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">3210 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">continueToCheckout2WithNoData</span>
-                <span class="method-start">4204 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=continueToCheckout2WithNoData status=SUCCESS method=CheckoutOneTest.continueToCheck...)</span>
-                <span class="method-start">4531 ms</span>
+                <span class="method-name">tearDown([TestResult name=finishCheckout status=SUCCESS method=CheckoutTwoTest.finishCheckout()[pri:0, instan...)</span>
+                <span class="method-start">5130 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
