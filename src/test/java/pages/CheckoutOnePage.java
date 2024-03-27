@@ -18,12 +18,12 @@ public class CheckoutOnePage {
     public CheckoutOnePage(WebDriver driver) {
         this.driver = driver;
 
-        firstNameField = By.xpath("/html/body/div/div/div/div[2]/div/form/div[1]/div[1]/input");
-        lastNameField = By.xpath("/html/body/div/div/div/div[2]/div/form/div[1]/div[2]/input");
-        postalCodeField = By.xpath("/html/body/div/div/div/div[2]/div/form/div[1]/div[3]/input");
-        cancelButton = By.xpath("/html/body/div/div/div/div[2]/div/form/div[2]/button");
-        continueButton = By.xpath("/html/body/div/div/div/div[2]/div/form/div[2]/input");
-        errorField = By.xpath("/html/body/div/div/div/div[2]/div/form/div[1]/div[4]/h3");
+        firstNameField = By.id("first-name");
+        lastNameField = By.id("last-name");
+        postalCodeField = By.id("postal-code");
+        cancelButton = By.id("cancel");
+        continueButton = By.id("continue");
+        errorField = By.cssSelector("div > h3 > [data-test=\"error-button\"]");
     }
 
     public void assertPage() {

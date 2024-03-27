@@ -14,9 +14,9 @@ public class CheckoutTwoPage {
     public CheckoutTwoPage(WebDriver driver) {
         this.driver = driver;
         
-        cancelButton = By.xpath("/html/body/div/div/div/div[2]/div/div[2]/div[9]/button[1]");
-        finishButton = By.xpath("/html/body/div/div/div/div[2]/div/div[2]/div[9]/button[2]");
-        itemLabel = By.xpath("/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/a/div");
+        cancelButton = By.id("cancel");
+        finishButton = By.id("finish");
+        itemLabel = By.cssSelector("div > a > [data-test=\"inventory-item-name\"]");
     }
 
     public void assertPage() {

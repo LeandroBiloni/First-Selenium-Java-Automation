@@ -1,21 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-25T15:44:02 ART" name="Surefire suite" finished-at="2024-03-25T15:44:08 ART" duration-ms="5240">
+  <suite started-at="2024-03-26T22:06:32 ART" name="Surefire suite" finished-at="2024-03-26T22:07:38 ART" duration-ms="66121">
     <groups>
     </groups>
-    <test started-at="2024-03-25T15:44:02 ART" name="Surefire test" finished-at="2024-03-25T15:44:08 ART" duration-ms="5240">
-      <class name="tests.CheckoutTwoTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:04 ART" name="setUp" finished-at="2024-03-25T15:44:05 ART" duration-ms="1050" status="PASS">
+    <test started-at="2024-03-26T22:06:32 ART" name="Surefire test" finished-at="2024-03-26T22:07:38 ART" duration-ms="66121">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:35 ART" name="setUp" finished-at="2024-03-26T22:07:36 ART" duration-ms="1045" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="cancelCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:05 ART" name="cancelCheckout" description="Cancel checkout" finished-at="2024-03-25T15:44:06 ART" duration-ms="472" status="PASS">
+        <test-method signature="correctLogin()[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:36 ART" name="correctLogin" description="Login with correct credentials" finished-at="2024-03-26T22:07:36 ART" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:36 ART" name="tearDown" finished-at="2024-03-26T22:07:36 ART" duration-ms="39" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=correctLogin status=SUCCESS method=LoginTest.correctLogin()[pri:0, instance:tests.LoginTest@1f3f4916] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:36 ART" name="setUp" finished-at="2024-03-26T22:07:37 ART" duration-ms="939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="titleToUserName()[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:37 ART" name="titleToUserName" description="Set Web Title to User Name field" finished-at="2024-03-26T22:07:37 ART" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleToUserName -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:37 ART" name="tearDown" finished-at="2024-03-26T22:07:37 ART" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=titleToUserName status=SUCCESS method=LoginTest.titleToUserName()[pri:0, instance:tests.LoginTest@1f3f4916] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:37 ART" name="setUp" finished-at="2024-03-26T22:07:38 ART" duration-ms="988" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="wrongLogin()[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:38 ART" name="wrongLogin" description="Login with wrong credentials" finished-at="2024-03-26T22:07:38 ART" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@1f3f4916]" started-at="2024-03-26T22:07:38 ART" name="tearDown" finished-at="2024-03-26T22:07:38 ART" duration-ms="77" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=wrongLogin status=SUCCESS method=LoginTest.wrongLogin()[pri:0, instance:tests.LoginTest@1f3f4916] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.ItemTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:20 ART" name="setUp" finished-at="2024-03-26T22:07:21 ART" duration-ms="1030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addToCart()[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:21 ART" name="addToCart" description="Add to cart" finished-at="2024-03-26T22:07:21 ART" duration-ms="329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:21 ART" name="tearDown" finished-at="2024-03-26T22:07:22 ART" duration-ms="71" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addToCart status=SUCCESS method=ItemTest.addToCart()[pri:0, instance:tests.ItemTest@1ed1993a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:22 ART" name="setUp" finished-at="2024-03-26T22:07:23 ART" duration-ms="985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="backToInventory()[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:23 ART" name="backToInventory" description="Go back to inventory" finished-at="2024-03-26T22:07:23 ART" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToInventory -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:23 ART" name="tearDown" finished-at="2024-03-26T22:07:23 ART" duration-ms="90" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=backToInventory status=SUCCESS method=ItemTest.backToInventory()[pri:0, instance:tests.ItemTest@1ed1993a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:23 ART" name="setUp" finished-at="2024-03-26T22:07:24 ART" duration-ms="1016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeFromCart()[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:24 ART" name="removeFromCart" description="Remove from cart" finished-at="2024-03-26T22:07:34 ART" duration-ms="10478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFromCart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@1ed1993a]" started-at="2024-03-26T22:07:34 ART" name="tearDown" finished-at="2024-03-26T22:07:35 ART" duration-ms="97" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=removeFromCart status=SUCCESS method=ItemTest.removeFromCart()[pri:0, instance:tests.ItemTest@1ed1993a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ItemTest -->
+      <class name="tests.CheckoutTwoTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-26T22:06:46 ART" name="setUp" finished-at="2024-03-26T22:06:48 ART" duration-ms="1022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="cancelCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-26T22:06:48 ART" name="cancelCheckout" description="Cancel checkout" finished-at="2024-03-26T22:06:48 ART" duration-ms="462" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cancelCheckout -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:06 ART" name="tearDown" finished-at="2024-03-25T15:44:06 ART" duration-ms="64" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-26T22:06:48 ART" name="tearDown" finished-at="2024-03-26T22:06:48 ART" duration-ms="83" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +144,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:06 ART" name="setUp" finished-at="2024-03-25T15:44:07 ART" duration-ms="982" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-26T22:06:48 ART" name="setUp" finished-at="2024-03-26T22:06:49 ART" duration-ms="955" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="finishCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:07 ART" name="finishCheckout" description="Finish checkout" finished-at="2024-03-25T15:44:07 ART" duration-ms="548" status="PASS">
+        <test-method signature="finishCheckout()[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-26T22:06:49 ART" name="finishCheckout" description="Finish checkout" finished-at="2024-03-26T22:06:50 ART" duration-ms="503" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishCheckout -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-25T15:44:07 ART" name="tearDown" finished-at="2024-03-25T15:44:08 ART" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@96def03]" started-at="2024-03-26T22:06:50 ART" name="tearDown" finished-at="2024-03-26T22:06:50 ART" duration-ms="81" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,16 +164,307 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CheckoutTwoTest -->
-      <class name="tests.CheckoutCompleteTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-25T15:44:02 ART" name="setUp" finished-at="2024-03-25T15:44:04 ART" duration-ms="1339" status="PASS">
+      <class name="tests.InventoryTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:50 ART" name="setUp" finished-at="2024-03-26T22:06:51 ART" duration-ms="951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="backHome()[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-25T15:44:04 ART" name="backHome" description="Go back to home page" finished-at="2024-03-25T15:44:04 ART" duration-ms="597" status="PASS">
+        <test-method signature="closeMenu()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:51 ART" name="closeMenu" description="Close hamburger menu" finished-at="2024-03-26T22:06:57 ART" duration-ms="6313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeMenu -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:57 ART" name="tearDown" finished-at="2024-03-26T22:06:57 ART" duration-ms="84" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=closeMenu status=SUCCESS method=InventoryTest.closeMenu()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:57 ART" name="setUp" finished-at="2024-03-26T22:06:58 ART" duration-ms="1031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="filterChange()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:58 ART" name="filterChange" description="Change the shop filter" finished-at="2024-03-26T22:06:58 ART" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterChange -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:58 ART" name="tearDown" finished-at="2024-03-26T22:06:58 ART" duration-ms="66" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filterChange status=SUCCESS method=InventoryTest.filterChange()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:58 ART" name="setUp" finished-at="2024-03-26T22:06:59 ART" duration-ms="1016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToAboutPage()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:06:59 ART" name="goToAboutPage" description="Go to about page" finished-at="2024-03-26T22:07:06 ART" duration-ms="6627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToAboutPage -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:06 ART" name="tearDown" finished-at="2024-03-26T22:07:06 ART" duration-ms="79" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToAboutPage status=SUCCESS method=InventoryTest.goToAboutPage()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:06 ART" name="setUp" finished-at="2024-03-26T22:07:07 ART" duration-ms="984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToCart()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:07 ART" name="goToCart" description="Go to cart" finished-at="2024-03-26T22:07:07 ART" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToCart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:07 ART" name="tearDown" finished-at="2024-03-26T22:07:07 ART" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToCart status=SUCCESS method=InventoryTest.goToCart()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:07 ART" name="setUp" finished-at="2024-03-26T22:07:08 ART" duration-ms="980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToCartWithAddedItem()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:08 ART" name="goToCartWithAddedItem" description="Go to cart and check item" finished-at="2024-03-26T22:07:09 ART" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToCartWithAddedItem -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:09 ART" name="tearDown" finished-at="2024-03-26T22:07:09 ART" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToCartWithAddedItem status=SUCCESS method=InventoryTest.goToCartWithAddedItem()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:09 ART" name="setUp" finished-at="2024-03-26T22:07:10 ART" duration-ms="1002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToInventory()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:10 ART" name="goToInventory" description="Go back to Inventory page" finished-at="2024-03-26T22:07:13 ART" duration-ms="3360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToInventory -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:13 ART" name="tearDown" finished-at="2024-03-26T22:07:13 ART" duration-ms="86" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToInventory status=SUCCESS method=InventoryTest.goToInventory()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:13 ART" name="setUp" finished-at="2024-03-26T22:07:14 ART" duration-ms="1019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToItemPageFromImage()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:14 ART" name="goToItemPageFromImage" description="Go to item page from image" finished-at="2024-03-26T22:07:14 ART" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToItemPageFromImage -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:14 ART" name="tearDown" finished-at="2024-03-26T22:07:14 ART" duration-ms="47" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToItemPageFromImage status=SUCCESS method=InventoryTest.goToItemPageFromImage()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:14 ART" name="setUp" finished-at="2024-03-26T22:07:15 ART" duration-ms="1001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToItemPageFromLabel()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:15 ART" name="goToItemPageFromLabel" description="Go to item page from label" finished-at="2024-03-26T22:07:16 ART" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToItemPageFromLabel -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:16 ART" name="tearDown" finished-at="2024-03-26T22:07:16 ART" duration-ms="72" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToItemPageFromLabel status=SUCCESS method=InventoryTest.goToItemPageFromLabel()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:16 ART" name="setUp" finished-at="2024-03-26T22:07:17 ART" duration-ms="981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logout()[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:17 ART" name="logout" description="Try to logout" finished-at="2024-03-26T22:07:20 ART" duration-ms="3296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@5ccddd20]" started-at="2024-03-26T22:07:20 ART" name="tearDown" finished-at="2024-03-26T22:07:20 ART" duration-ms="80" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logout status=SUCCESS method=InventoryTest.logout()[pri:0, instance:tests.InventoryTest@5ccddd20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.InventoryTest -->
+      <class name="tests.CheckoutOneTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:42 ART" name="setUp" finished-at="2024-03-26T22:06:43 ART" duration-ms="1053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="backToCart()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:43 ART" name="backToCart" description="Go back to cart with cancel button" finished-at="2024-03-26T22:06:43 ART" duration-ms="321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backToCart -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:43 ART" name="tearDown" finished-at="2024-03-26T22:06:44 ART" duration-ms="75" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=backToCart status=SUCCESS method=CheckoutOneTest.backToCart()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:44 ART" name="setUp" finished-at="2024-03-26T22:06:45 ART" duration-ms="1006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="continueToCheckout2()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:45 ART" name="continueToCheckout2" description="Continue to checkout 2" finished-at="2024-03-26T22:06:45 ART" duration-ms="428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- continueToCheckout2 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:45 ART" name="tearDown" finished-at="2024-03-26T22:06:45 ART" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=continueToCheckout2 status=SUCCESS method=CheckoutOneTest.continueToCheckout2()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:45 ART" name="setUp" finished-at="2024-03-26T22:06:46 ART" duration-ms="1016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="continueToCheckout2WithNoData()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:46 ART" name="continueToCheckout2WithNoData" description="Continue to checkout 2 without inserting info" finished-at="2024-03-26T22:06:46 ART" duration-ms="324" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- continueToCheckout2WithNoData -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@6e0dec4a]" started-at="2024-03-26T22:06:46 ART" name="tearDown" finished-at="2024-03-26T22:06:46 ART" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=continueToCheckout2WithNoData status=SUCCESS method=CheckoutOneTest.continueToCheckout2WithNoData()[pri:0, instance:tests.CheckoutOneTest@6e0dec4a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CheckoutOneTest -->
+      <class name="tests.CartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:32 ART" name="setUp" finished-at="2024-03-26T22:06:34 ART" duration-ms="2195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToCheckoutOne()[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:34 ART" name="goToCheckoutOne" description="Go to checkout step one" finished-at="2024-03-26T22:06:34 ART" duration-ms="270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToCheckoutOne -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:34 ART" name="tearDown" finished-at="2024-03-26T22:06:35 ART" duration-ms="90" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToCheckoutOne status=SUCCESS method=CartTest.goToCheckoutOne()[pri:0, instance:tests.CartTest@3d121db3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:35 ART" name="setUp" finished-at="2024-03-26T22:06:36 ART" duration-ms="1000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToInventoryA()[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:36 ART" name="goToInventoryA" description="Go back to inventory page using All items button in menu" finished-at="2024-03-26T22:06:39 ART" duration-ms="3365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToInventoryA -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:39 ART" name="tearDown" finished-at="2024-03-26T22:06:39 ART" duration-ms="100" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToInventoryA status=SUCCESS method=CartTest.goToInventoryA()[pri:0, instance:tests.CartTest@3d121db3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:39 ART" name="setUp" finished-at="2024-03-26T22:06:40 ART" duration-ms="1071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="goToInventoryB()[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:40 ART" name="goToInventoryB" description="Go back to inventory page using Continue Shopping button" finished-at="2024-03-26T22:06:40 ART" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToInventoryB -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@3d121db3]" started-at="2024-03-26T22:06:40 ART" name="tearDown" finished-at="2024-03-26T22:06:40 ART" duration-ms="52" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToInventoryB status=SUCCESS method=CartTest.goToInventoryB()[pri:0, instance:tests.CartTest@3d121db3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CartTest -->
+      <class name="tests.CheckoutCompleteTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-26T22:06:40 ART" name="setUp" finished-at="2024-03-26T22:06:41 ART" duration-ms="992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="backHome()[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-26T22:06:41 ART" name="backHome" description="Go back to home page" finished-at="2024-03-26T22:06:42 ART" duration-ms="576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backHome -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-25T15:44:04 ART" name="tearDown" finished-at="2024-03-25T15:44:04 ART" duration-ms="74" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutCompleteTest@56528192]" started-at="2024-03-26T22:06:42 ART" name="tearDown" finished-at="2024-03-26T22:06:42 ART" duration-ms="77" status="PASS">
           <params>
             <param index="0">
               <value>

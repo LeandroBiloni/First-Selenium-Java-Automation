@@ -32,23 +32,23 @@ public class InventoryPage {
 
     public InventoryPage(WebDriver driver) {
         this.driver = driver;
-        titleText = By.xpath("/html/body/div/div/div/div[1]/div[2]/span");
-        filterDropdown = By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select");
-        filterResult = By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/span");
+        titleText = By.cssSelector("div > span[data-test=\"title\"]");
+        filterDropdown = By.cssSelector("div > span > select");
+        filterResult = By.cssSelector("div > span > [data-test=\"active-option\"]");
 
-        menuButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[1]/div/button");
-        allItemsButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[1]/nav/a[1]");
-        aboutButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[1]/nav/a[2]");
-        logoutButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[1]/nav/a[3]");
-        resetAppButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[1]/nav/a[4]");
-        closeMenuButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[2]/div/button");
+        menuButton = By.id("react-burger-menu-btn");
+        allItemsButton = By.id("inventory_sidebar_link");
+        aboutButton = By.id("about_sidebar_link");
+        logoutButton = By.id("logout_sidebar_link");
+        resetAppButton = By.id("reset_sidebar_link");
+        closeMenuButton = By.id("react-burger-cross-btn");
 
-        cartButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[3]/a");
+        cartButton = By.id("shopping_cart_container");
 
-        addToCartButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/button");
+        addToCartButton = By.id("add-to-cart-sauce-labs-backpack");
         
-        inventoryItemLabelButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div");
-        inventoryItemImageButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[1]/a/img");
+        inventoryItemLabelButton = By.id("item_4_title_link");
+        inventoryItemImageButton = By.id("item_4_img_link");
     }
 
     public void assertPage() {

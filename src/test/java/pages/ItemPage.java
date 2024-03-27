@@ -17,12 +17,12 @@ public class ItemPage {
     public ItemPage(WebDriver driver) {
         this.driver = driver;
 
-        backToProductsButton = By.xpath("/html/body/div/div/div/div[1]/div[2]/div/button");
-        addToCarttButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div[2]/button");
-        removeFromCartButton = By.xpath("/html/body/div/div/div/div[2]/div/div/div[2]/button");
-        itemLabel = By.xpath("/html/body/div/div/div/div[2]/div/div/div[2]/div[1]");
+        backToProductsButton = By.id("back-to-products");
+        addToCarttButton = By.id("add-to-cart");
+        removeFromCartButton = By.id("remove");
+        itemLabel = By.cssSelector("div > [data-test=\"inventory-item-name\"]");
 
-        cartButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[3]/a");
+        cartButton = By.id("shopping_cart_container");
     }
 
     public void assertPage() {

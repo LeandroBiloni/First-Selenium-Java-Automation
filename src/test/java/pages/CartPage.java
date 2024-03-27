@@ -24,13 +24,13 @@ public class CartPage {
     public CartPage(WebDriver driver) {
         this.driver = driver;
 
-        menuButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[1]/div/button");
-        allItemsButton = By.xpath("/html/body/div/div/div/div[1]/div[1]/div[1]/div/div[2]/div[1]/nav/a[1]");
-        continueShoppingButton = By.xpath("/html/body/div/div/div/div[2]/div/div[2]/button[1]");
-        checkoutButton = By.xpath("/html/body/div/div/div/div[2]/div/div[2]/button[2]");
-        itemName = By.xpath("/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/a/div");
+        menuButton = By.id("react-burger-menu-btn");
+        allItemsButton = By.id("inventory_sidebar_link");
+        continueShoppingButton = By.id("continue-shopping");
+        checkoutButton = By.id("checkout");
+        itemName = By.cssSelector("div > a > [data-test=\"inventory-item-name\"]");
 
-        removeButton = By.xpath("/html/body/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/button");
+        removeButton = By.name("remove-sauce-labs-backpack");
     }
 
     public void openMenu() {

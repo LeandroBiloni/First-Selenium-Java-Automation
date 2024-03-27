@@ -13,7 +13,7 @@ public class CheckoutCompletePage {
     public CheckoutCompletePage(WebDriver driver) {
         this.driver = driver;
         
-        homeButton = By.xpath("/html/body/div/div/div/div[2]/button");
+        homeButton = By.id("back-to-products");
     }
 
     public void assertPage() {

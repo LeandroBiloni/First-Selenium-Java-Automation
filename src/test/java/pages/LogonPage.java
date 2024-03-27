@@ -10,7 +10,7 @@ public class LogonPage {
     
     public LogonPage(WebDriver driver) {
         this.driver = driver;
-        titleText = By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/div[3]/h3");
+        titleText = By.cssSelector("div > h3");
     }    
 
     public void assertLogonPage() {
