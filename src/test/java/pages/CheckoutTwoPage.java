@@ -4,31 +4,35 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class CheckoutTwoPage {
-    private WebDriver driver;
+import base.BasePage;
+
+public class CheckoutTwoPage extends BasePage {
     
     private By cancelButton;
     private By finishButton;
     private By itemLabel;
 
     public CheckoutTwoPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
+        pageURL = "https://www.saucedemo.com/checkout-step-two.html";
         
         cancelButton = By.id("cancel");
         finishButton = By.id("finish");
         itemLabel = By.cssSelector("div > a > [data-test=\"inventory-item-name\"]");
     }
 
-    public void assertPage() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-two.html");
-    }
-
-    public void clickCancelButton() {
+    public InventoryPage clickCancelButton() {
         driver.findElement(cancelButton).click();
+
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        return inventoryPage;
     }
 
-    public void clickFinishButton() {
+    public CheckoutCompletePage clickFinishButton() {
         driver.findElement(finishButton).click();
+
+        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
+        return checkoutCompletePage;
     }
 
     public void assertItemAdded(String name) {

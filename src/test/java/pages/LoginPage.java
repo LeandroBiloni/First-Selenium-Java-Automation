@@ -2,37 +2,38 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class LoginPage {
+import base.BasePage;
+import components.LoginComponent;
+
+public class LoginPage extends BasePage {
     private WebDriver driver;
 
-    private By userField;
-    private By passwordField;
-    private By loginButton;
+    private By loginContainer;
+
+    private LoginComponent loginComponent;
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver; 
-        userField = By.id("user-name");
-        passwordField = By.id("password");
-        loginButton = By.id("login-button");    
+        super(driver);
+        pageURL = "https://www.saucedemo.com/";  
     }
 
-    public void login(String user, String pass) {
-        driver.findElement(userField).sendKeys(user);
-        driver.findElement(passwordField).sendKeys(pass);
-        driver.findElement(loginButton).click();
+    public InventoryPage login(String user, String pass) {
+        loginContainer = By.id("login_button_container");
+        loginComponent = new LoginComponent(driver, getContainer(loginContainer));
+
+        loginComponent.fillUsernameField(user)
+            .fillPasswordField(pass)
+            .clickLoginButton();
+
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        return inventoryPage;
+        // driver.findElement(userField).sendKeys(user);
+        // driver.findElement(passwordField).sendKeys(pass);
+        // driver.findElement(loginButton).click();
         
-        driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));       
-    }
-
-    public void putTitleInUserField() {
-        driver.findElement(userField).sendKeys(driver.getTitle());
-        Assert.assertEquals("Swag Labs", driver.getTitle());
-    }
-
-    public void assertPage() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/");
+        //driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));       
     }
 }
 

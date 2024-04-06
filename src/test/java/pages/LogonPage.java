@@ -4,16 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class LogonPage {
+import base.BasePage;
+
+public class LogonPage extends BasePage{
     private WebDriver driver;
     private By titleText;
     
     public LogonPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         titleText = By.cssSelector("div > h3");
     }    
 
-    public void assertLogonPage() {
+    public void assertPage() {
         Assert.assertTrue(driver.findElement(titleText).getText().contains("Epic sadface: Username"));
     }
 }

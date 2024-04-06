@@ -36,9 +36,4 @@ public class CommonConditions {
         }
         driver.close();
     }
-
-    protected void login (String user, String pass) {
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.login(user, pass);
-    }
 }

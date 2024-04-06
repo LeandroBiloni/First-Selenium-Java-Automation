@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import components.inventory.InventoryItem;
 import pages.InventoryPage;
 import pages.ItemPage;
 import pages.LoginPage;
@@ -12,8 +13,9 @@ public class InventoryTest extends CommonConditions {
 
     @Test(description = "Change the shop filter", enabled = true)
     public void filterChange() {
-        login(correctUser, correctPassword);
-        InventoryPage inventoryPage = new InventoryPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
         inventoryPage.selectFilter(3);
@@ -21,122 +23,126 @@ public class InventoryTest extends CommonConditions {
 
     @Test(description = "Go to about page", enabled = true)
     public void goToAboutPage() {
-        login(correctUser, correctPassword);
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        AboutPage aboutPage = new AboutPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
-        inventoryPage.openMenu();
-        inventoryPage.clickAboutButton();
+        inventoryPage.openMenu()
+            .clickAboutButton();
+        
+        AboutPage aboutPage = new AboutPage(driver);
         aboutPage.assertPage();
     }
 
     @Test(description = "Try to logout", enabled = true)
     public void logout() {
-        login(correctUser, correctPassword);
-        InventoryPage inventoryPage = new InventoryPage(driver);
         LoginPage loginPage = new LoginPage(driver);
 
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
-        inventoryPage.openMenu();
-        inventoryPage.clickLogoutButton();
-
-        loginPage.assertPage();
+        inventoryPage.openMenu()
+            .clickLogoutButton();
+        
+            loginPage.assertPage();
     }
 
     @Test(description = "Go back to Inventory page", enabled = true)
     public void goToInventory() {
-        login(correctUser, correctPassword);
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        CartPage cartPage = new CartPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
 
-        inventoryPage.assertPage();
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
+        inventoryPage.assertPage();       
 
-        inventoryPage.clickCartButton();
-        cartPage.openMenu();
-        cartPage.clickAllItemsButton();
+        CartPage cartPage = inventoryPage.clickCartButton();
+
+        cartPage.assertPage();
+
+        cartPage.openMenu()
+            .clickAllItemsButton();
+        
         inventoryPage.assertPage();
     }
 
     @Test(description = "Close hamburger menu", enabled = true)
     public void closeMenu() {
-        login(correctUser, correctPassword);
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        
+        LoginPage loginPage = new LoginPage(driver);
+
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
-        inventoryPage.openMenu();
-        inventoryPage.closeMenu();
+        inventoryPage.openMenu()
+            .closeMenuList();
     }
 
     @Test(description = "Go to item page from label", enabled = true)
     public void goToItemPageFromLabel() {
-        login(correctUser, correctPassword);
+        LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        ItemPage itemPage = new ItemPage(driver);
-
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
-        String itemName = inventoryPage.getItemName();
+        InventoryItem item = inventoryPage.getItems().get(0);
 
-        inventoryPage.clickItemLabelButton();
+        String itemName = item.getItemName();
+
+        item.clickItemLabelButton();
+
+        ItemPage itemPage = new ItemPage(driver);
 
         itemPage.assertPage();
 
-        itemPage.compareItem(itemName);
+        itemPage.assertItem(itemName);
     }
 
     @Test(description = "Go to item page from image", enabled = true)
     public void goToItemPageFromImage() {
-        login(correctUser, correctPassword);
+        LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        ItemPage itemPage = new ItemPage(driver);
-
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
-        String itemName = inventoryPage.getItemName();
+        InventoryItem item = inventoryPage.getItems().get(0);
 
-        inventoryPage.clickItemImageButton();
+        String itemName = item.getItemName();
 
+        item.clickImageButton();
+
+        ItemPage itemPage = new ItemPage(driver);
         itemPage.assertPage();
 
-        itemPage.compareItem(itemName);
+        itemPage.assertItem(itemName);
     }
 
     @Test(description = "Go to cart", enabled = true)
     public void goToCart() {
-        login(correctUser, correctPassword);
+        LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        CartPage cartPage = new CartPage(driver);
-
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
-        inventoryPage.clickCartButton();
-
-        cartPage.assertPage();
+        inventoryPage.clickCartButton()
+            .assertPage();
     }
 
-    @Test(description = "Go to cart and check item", enabled = true)
+    @Test(description = "Add item to cart and check if its the same item", enabled = true)
     public void goToCartWithAddedItem() {
-        login(correctUser, correctPassword);
+        LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        CartPage cartPage = new CartPage(driver);
-
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
-        inventoryPage.clickAddToCartButton();
-        
-        String itemName = inventoryPage.getItemName();
+        InventoryItem item = inventoryPage.getItems().get(0);
 
-        inventoryPage.clickCartButton();
+        String itemName = item.getItemName();
+
+        item.clickAddOrRemoveButton();
+        
+        CartPage cartPage = inventoryPage.clickCartButton();
 
         cartPage.assertPage();
 
-        cartPage.assertSameItem(itemName);
+        cartPage.assertSameItem(itemName, 0);
     }
 }

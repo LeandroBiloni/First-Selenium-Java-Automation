@@ -4,53 +4,56 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class CheckoutOnePage {
- 
-    private WebDriver driver;
+import base.BasePage;
+import components.checkoutOne.BuyerDataComponent;
 
-    private By firstNameField;
-    private By lastNameField;
-    private By postalCodeField;
-    private By cancelButton;
-    private By continueButton;
-    private By errorField;
+public class CheckoutOnePage extends BasePage {
     
+    private By cancelButton;
+    private By continueButton;    
+    private By buyerDataContainer;
+    private BuyerDataComponent buyerDataComponent;
+
     public CheckoutOnePage(WebDriver driver) {
-        this.driver = driver;
-
-        firstNameField = By.id("first-name");
-        lastNameField = By.id("last-name");
-        postalCodeField = By.id("postal-code");
+        super(driver);
+        pageURL = "https://www.saucedemo.com/checkout-step-one.html";  
         cancelButton = By.id("cancel");
-        continueButton = By.id("continue");
-        errorField = By.cssSelector("div > h3 > [data-test=\"error-button\"]");
-    }
+        continueButton = By.id("continue");        
 
-    public void assertPage() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html");
+        buyerDataContainer = By.cssSelector("[class=\"checkout_info\"]");
+        buyerDataComponent = new BuyerDataComponent(driver, getContainer(buyerDataContainer));
     }
 
     public void assertInvalidData() {
-        Assert.assertTrue(driver.findElement(errorField).isDisplayed());
+        Assert.assertTrue(buyerDataComponent.isErrorFieldDisplayed());
     }
 
-    public void setFirstNameFieldText(String text) {
-        driver.findElement(firstNameField).sendKeys(text);
+    public CheckoutOnePage setFirstNameFieldText(String text) {
+        buyerDataComponent.setFirstNameFieldText(text);
+        return this;
     }
     
-    public void setLastNameFieldText(String text) {
-        driver.findElement(lastNameField).sendKeys(text);
+    public CheckoutOnePage setLastNameFieldText(String text) {
+        buyerDataComponent.setLastNameFieldText(text);
+        return this;
     }
 
-    public void setFPostalCodeText(String text) {
-        driver.findElement(postalCodeField).sendKeys(text);
+    public CheckoutOnePage setPostalCodeText(String text) {
+        buyerDataComponent.setPostalCodeText(text);
+        return this;
     }
 
-    public void clickCancelButton() {
+    public CartPage clickCancelButton() {
         driver.findElement(cancelButton).click();
+
+        CartPage cartPage = new CartPage(driver);
+        return cartPage;
     }
 
-    public void clickContinueButton() {
+    public CheckoutTwoPage clickContinueButton() {
         driver.findElement(continueButton).click();
+
+        CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(driver);
+        return checkoutTwoPage;
     }
 }

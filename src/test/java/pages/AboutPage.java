@@ -1,16 +1,13 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
-public class AboutPage {
-    private WebDriver driver;
+import base.BasePage;
 
+public class AboutPage extends BasePage{
+    
     public AboutPage(WebDriver driver) {
-        this.driver = driver;
-    } 
-
-    public void assertPage() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://saucelabs.com/");
+        super(driver);
+        pageURL = "https://saucelabs.com/";
     }
 }

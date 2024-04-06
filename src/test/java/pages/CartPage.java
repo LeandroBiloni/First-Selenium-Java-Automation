@@ -1,73 +1,80 @@
 package pages;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import helpers.Helper;
+import base.BasePage;
+import components.HeaderComponent;
+import components.MenuListComponent;
+import components.cart.CartFooter;
+import components.cart.CartItem;
+import components.cart.CartItemListComponent;
 
-public class CartPage {
-    private WebDriver driver;
-
-    private By menuButton;
-    private By allItemsButton;
-    private By continueShoppingButton;
-    private By checkoutButton;
-    private By itemName;
-
-    private By removeButton;
+public class CartPage extends BasePage{
+    
+    private By headerContainer;
+    private HeaderComponent headerComponent;
+    private By cartFooterContainer;
+    private CartFooter cartFooter;
+    private By cartItemsContainer;
+    private CartItemListComponent cartItemListComponent;
 
 
     public CartPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
+        pageURL = "https://www.saucedemo.com/cart.html";
 
-        menuButton = By.id("react-burger-menu-btn");
-        allItemsButton = By.id("inventory_sidebar_link");
-        continueShoppingButton = By.id("continue-shopping");
-        checkoutButton = By.id("checkout");
-        itemName = By.cssSelector("div > a > [data-test=\"inventory-item-name\"]");
+        headerContainer = By.cssSelector("div > div[data-test=\"primary-header\"]");
+        headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
+        
+        cartFooterContainer = By.cssSelector("div > div > div > div[class=\"cart_footer\"]");
+        cartFooter = new CartFooter(driver, getContainer(cartFooterContainer));
 
-        removeButton = By.name("remove-sauce-labs-backpack");
+        cartItemsContainer = By.cssSelector("[data-test=\"cart-list\"]");
+        cartItemListComponent = new CartItemListComponent(driver, getContainer(cartItemsContainer));
+    }    
+
+    public MenuListComponent openMenu() {
+        return headerComponent.openMenu();
     }
 
-    public void openMenu() {
-        driver.findElement(menuButton).click();
-
-        Helper helper = new Helper();
-        helper.waitForSeconds(3);
-        Assert.assertTrue(driver.findElement(allItemsButton).isDisplayed(), "Menu didn't open");
+    public InventoryPage clickContinueShoppingButton() {
+        cartFooter.clickContinueShoppingButton();
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        return inventoryPage;
     }
 
-    public void clickAllItemsButton() {
-        driver.findElement(allItemsButton).click();
+    public CheckoutOnePage clickCheckoutButton() {
+        cartFooter.clickCheckoutButton();
+        CheckoutOnePage checkoutOnePage = new CheckoutOnePage(driver);
+        return checkoutOnePage;
     }
 
-    public void clickContinueShoppingButton() {
-        driver.findElement(continueShoppingButton).click();
+    public CartPage clickRemoveButtonFWithIndex(int index) {
+        cartItemListComponent.getItemWithIndex(index).clickRemoveButton();
+        CartPage cartPage = new CartPage(driver);
+        return cartPage;
     }
 
-    public void clickCheckoutButton() {
-        driver.findElement(checkoutButton).click();
+    public void assertSameItem(String name, int index) {
+        String cartItemName = cartItemListComponent.getItemWithIndex(index).getItemName();
+        Assert.assertEquals(cartItemName, name);
     }
 
-    public void clickRemoveButton() {
-        driver.findElement(removeButton).click();
-    }
+    public void assertItemRemoved(String name) {
+        ArrayList<CartItem> items = cartItemListComponent.getItems();
 
-    public void assertPage() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
-    }
+        boolean exists = false;
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getItemName() == name) {
+                exists = true;
+                break;
+            }
+        }
 
-    public void assertSameItem(String name) {
-        Assert.assertEquals(driver.findElement(itemName).getText(), name);
-    }
-
-    public void assertItemRemoved() {
-        List<WebElement> elements = driver.findElements(itemName);
-
-        Assert.assertEquals(elements.size(), 0);
+        Assert.assertFalse(exists, "Item " + name + " was not removed!");
     }
 }

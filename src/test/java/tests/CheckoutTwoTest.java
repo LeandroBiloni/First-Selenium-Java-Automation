@@ -2,70 +2,69 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import components.inventory.InventoryItem;
 import pages.CartPage;
 import pages.CheckoutCompletePage;
 import pages.CheckoutOnePage;
 import pages.CheckoutTwoPage;
 import pages.InventoryPage;
+import pages.LoginPage;
 
 public class CheckoutTwoTest extends CommonConditions{
     
     @Test(description = "Cancel checkout", enabled = true)
     public void cancelCheckout() {
-        login(correctUser, correctPassword);
+        LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        CartPage cartPage = new CartPage(driver);
-        CheckoutOnePage checkoutOnePage = new CheckoutOnePage(driver);
-        CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(driver);
-
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
-        inventoryPage.clickCartButton();
+
+        CartPage cartPage = inventoryPage.clickCartButton();
 
         cartPage.assertPage();
-        cartPage.clickCheckoutButton();
+        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
 
         checkoutOnePage.assertPage();
-        checkoutOnePage.setFirstNameFieldText("test");
-        checkoutOnePage.setLastNameFieldText("test");
-        checkoutOnePage.setFPostalCodeText("1234");
-        checkoutOnePage.clickContinueButton();
+        checkoutOnePage.setFirstNameFieldText("test")
+            .setLastNameFieldText("test")
+            .setPostalCodeText("1234");
+
+        CheckoutTwoPage checkoutTwoPage = checkoutOnePage.clickContinueButton();
         
         checkoutTwoPage.assertPage();
 
-        checkoutTwoPage.clickCancelButton();
-
-        inventoryPage.assertPage();
+        checkoutTwoPage.clickCancelButton()
+            .assertPage();
     }
 
     @Test(description = "Finish checkout", enabled = true)
     public void finishCheckout() {
-        login(correctUser, correctPassword);
+        LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        CartPage cartPage = new CartPage(driver);
-        CheckoutOnePage checkoutOnePage = new CheckoutOnePage(driver);
-        CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(driver);
-        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
-
+        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
-        inventoryPage.clickAddToCartButton();        
-        String itemName = inventoryPage.getItemName();
-        inventoryPage.clickCartButton();
+
+        InventoryItem item = inventoryPage.getItems().get(0);
+
+        String itemName = item.getItemName();
+
+        item.clickAddOrRemoveButton();
+        CartPage cartPage = inventoryPage.clickCartButton();
 
         cartPage.assertPage();
-        cartPage.assertSameItem(itemName);
-        cartPage.clickCheckoutButton();
+        cartPage.assertSameItem(itemName, 0);
+        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
 
         checkoutOnePage.assertPage();
-        checkoutOnePage.setFirstNameFieldText("test");
-        checkoutOnePage.setLastNameFieldText("test");
-        checkoutOnePage.setFPostalCodeText("1234");
-        checkoutOnePage.clickContinueButton();
+        checkoutOnePage.setFirstNameFieldText("test")
+            .setLastNameFieldText("test")
+            .setPostalCodeText("1234");
+        
+        CheckoutTwoPage checkoutTwoPage = checkoutOnePage.clickContinueButton();
         
         checkoutTwoPage.assertPage();
         checkoutTwoPage.assertItemAdded(itemName);
-        checkoutTwoPage.clickFinishButton();
+        CheckoutCompletePage checkoutCompletePage = checkoutTwoPage.clickFinishButton();
 
         checkoutCompletePage.assertPage();
     }
