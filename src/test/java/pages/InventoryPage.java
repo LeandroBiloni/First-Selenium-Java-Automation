@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v120.domstorage.model.Item;
 
 import base.BasePage;
 import components.HeaderComponent;
@@ -27,15 +26,17 @@ public class InventoryPage extends BasePage {
         pageURL = "https://www.saucedemo.com/inventory.html";
 
         headerContainer = By.cssSelector("div > div[data-test=\"primary-header\"]");
-        headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
-
-        inventoryListContainer = By.cssSelector("[data-test=\"inventory-container\"]");
-        inventoryListComponent = new InventoryListComponent(driver, getContainer(inventoryListContainer));
+        initHeader();
 
         secondaryHeaderContainer = By.cssSelector("[data-test=\"secondary-header\"]");
         secondaryHeader = new SecondaryHeader(driver, getContainer(secondaryHeaderContainer));
     }
-    
+
+    public InventoryPage initHeader() {
+        headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
+        return this;
+    }
+
     public InventoryPage selectFilter(int filterIndex) {
         secondaryHeader.selectFilter(filterIndex);
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -68,6 +69,11 @@ public class InventoryPage extends BasePage {
         inventoryListComponent.getItemWithID(id).clickImageButton();
         ItemPage itemPage = new ItemPage(driver);
         return itemPage;
+    }
+
+    public InventoryListComponent createInventoryList() {
+        inventoryListContainer = By.cssSelector("[data-test=\"inventory-container\"]");
+        return inventoryListComponent = new InventoryListComponent(driver, getContainer(inventoryListContainer));
     }
 
     public String getItemNameWithID(int id) {

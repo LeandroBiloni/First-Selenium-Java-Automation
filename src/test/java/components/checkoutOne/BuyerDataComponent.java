@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BaseComponent;
-import pages.CheckoutOnePage;
 
 public class BuyerDataComponent extends BaseComponent {
 

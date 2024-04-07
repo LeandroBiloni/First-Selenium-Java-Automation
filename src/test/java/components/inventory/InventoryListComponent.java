@@ -16,7 +16,7 @@ public class InventoryListComponent extends BaseComponent {
     public InventoryListComponent(WebDriver driver, WebElement container) {
         super(driver, container);
 
-        itemContainer = By.cssSelector("data-test=\"inventory-item\"");
+        itemContainer = By.cssSelector("[data-test=\"inventory-item\"]");
 
         initializeList();
     }

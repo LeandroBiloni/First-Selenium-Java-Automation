@@ -18,6 +18,7 @@ public class CheckoutCompleteTest extends CommonConditions {
         InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
+        inventoryPage.createInventoryList();
         InventoryItem item = inventoryPage.getItems().get(0);
 
         String itemName = item.getItemName();

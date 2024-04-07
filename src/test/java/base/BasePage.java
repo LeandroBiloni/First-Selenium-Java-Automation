@@ -9,7 +9,7 @@ public abstract class BasePage extends BaseWaitableObject{
     
     protected String pageURL;
     
-    protected final static int TIMEOUT = 10;
+    protected final static int TIMEOUT = 3;
 
     public BasePage(WebDriver driver) {
         super(driver);

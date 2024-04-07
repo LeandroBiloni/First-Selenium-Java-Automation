@@ -21,12 +21,11 @@ public class CartItemListComponent extends BaseComponent{
         initializeList();
     }
 
-    private void initializeList() {
+    public void initializeList() {
         cartItems = new ArrayList<CartItem>();
-        
+
         for (WebElement webElement : container.findElements(itemContainer)) {    
             CartItem item = new CartItem(driver, webElement);
-
             cartItems.add(item);
         }
     }

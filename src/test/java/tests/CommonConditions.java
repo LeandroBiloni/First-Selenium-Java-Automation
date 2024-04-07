@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeMethod;
 
 import helpers.Screenshoter;
 import helpers.WebDriverManager;
-import pages.LoginPage;
 
 public class CommonConditions {
     protected WebDriver driver;

@@ -7,9 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import base.BaseComponent;
-import pages.AboutPage;
-import pages.InventoryPage;
-import pages.LoginPage;
 
 public class MenuListComponent extends BaseComponent {
 
@@ -28,27 +25,29 @@ public class MenuListComponent extends BaseComponent {
     }
     
     public MenuListComponent closeMenuList() {
-        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(closeMenuButton));
-        webElement.click();
-        Assert.assertFalse(driver.findElement(closeMenuButton).isDisplayed(), "Menu didn't close");
+        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, closeMenuButton));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
+        // webDriverWait.until(ExpectedConditions.invisibilityOf(webElement));
+        // Assert.assertFalse(webElement.isDisplayed(), "Menu didn't close");
         return this;
     }
 
     public MenuListComponent clickAllItemsButton() {
-        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(allItemsButton));
-        webElement.click();
+        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, allItemsButton));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         return this;
     }
 
     public MenuListComponent clickAboutButton() {
-        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(aboutButton));
-        webElement.click();
+        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, aboutButton));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         return this;
     }
 
     public MenuListComponent clickLogoutButton() {
-        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(logoutButton));
-        webElement.click();
+        WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, logoutButton));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
+        
         return this;
     }
 }

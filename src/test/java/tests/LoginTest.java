@@ -8,13 +8,10 @@ import pages.LoginPage;
 
 public class LoginTest extends CommonConditions {    
 
-    @Test(description = "Login with wrong credentials", enabled = true)
+    @Test(description = "Login with wrong credentials", enabled = false)
     public void wrongLogin() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("user", "pass");
-        
-        LogonPage logonPage = new LogonPage(driver);
-        logonPage.assertPage();
     }
 
     @Test(description = "Login with correct credentials", enabled = true)

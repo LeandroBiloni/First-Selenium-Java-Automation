@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import base.BaseComponent;
-import pages.CartPage;
 
 public class HeaderComponent extends BaseComponent {
 
@@ -21,7 +20,7 @@ public class HeaderComponent extends BaseComponent {
         super(driver, container);
 
         menuButton = By.id("react-burger-menu-btn");
-        menuButtonsListContainer = By.cssSelector("div > nav");
+        menuButtonsListContainer = By.cssSelector("div[class=\"bm-menu-wrap\"]");
         cartButton = By.id("shopping_cart_container");
 
         initMenuComponent();
@@ -34,22 +33,18 @@ public class HeaderComponent extends BaseComponent {
         menuListComponent.closeMenuList();
     }
 
-    public MenuListComponent getMenuListComponent(){
-        return menuListComponent;
-    }
-
     public MenuListComponent openMenu() {
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(menuButton)).click();
+        webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, menuButton)).click();
         
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(menuButtonsListContainer));
+        WebElement menuList = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, menuButtonsListContainer));
 
-        Assert.assertTrue(driver.findElement(menuButtonsListContainer).isDisplayed(), "Menu didn't open");
+        Assert.assertTrue(menuList.isDisplayed(), "Menu didn't open");
 
         return menuListComponent;
     } 
 
     public HeaderComponent clickCartButton() {
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(cartButton)).click();
+        webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, cartButton)).click();
         return this;
     }
 }

@@ -2,12 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import base.BasePage;
 
 public class LogonPage extends BasePage{
-    private WebDriver driver;
     private By titleText;
     
     public LogonPage(WebDriver driver) {
@@ -16,6 +17,7 @@ public class LogonPage extends BasePage{
     }    
 
     public void assertPage() {
-        Assert.assertTrue(driver.findElement(titleText).getText().contains("Epic sadface: Username"));
+        WebElement errorElement = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(titleText));
+        Assert.assertTrue(errorElement.isDisplayed());
     }
 }

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import base.BasePage;
@@ -26,27 +27,34 @@ public class ItemPage extends BasePage {
         itemLabel = By.cssSelector("div > [data-test=\"inventory-item-name\"]");
 
         headerContainer = By.cssSelector("div > div[data-test=\"primary-header\"]");
-        headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
+        
+        initHeader();
     }
 
+    public ItemPage initHeader() {
+        headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
+        return this;
+    }
+    
     public void assertPage() {
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://www.saucedemo.com/inventory-item.html?id"));
+        String  currentURL = driver.getCurrentUrl();
+        Assert.assertTrue(currentURL.contains("https://www.saucedemo.com/inventory-item.html?id"), "Current url is: " + currentURL);
     }
 
     public InventoryPage clickBackToProductsButton() {
-        driver.findElement(backToProductsButton).click();
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(backToProductsButton)).click();
 
         InventoryPage inventoryPage = new InventoryPage(driver);
         return inventoryPage;
     }
 
     public ItemPage clickAddToCartButton() {
-        driver.findElement(addToCarttButton).click();
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(addToCarttButton)).click();
         return this;
     }
 
     public ItemPage clickRemoveFromCartButton() {
-        driver.findElement(removeFromCartButton).click();
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(removeFromCartButton)).click();
         return this;
     }
 
@@ -57,6 +65,7 @@ public class ItemPage extends BasePage {
     }
 
     public void assertItem(String name) {
-        Assert.assertEquals(driver.findElement(itemLabel).getText(), name);
+        String item = driver.findElement(itemLabel).getText();
+        Assert.assertEquals(item, name, "Actual Item: " + item + " - Expected Item: " + name);
     }
 }

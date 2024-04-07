@@ -18,6 +18,8 @@ public class ItemTest extends CommonConditions {
         InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
 
+        inventoryPage.createInventoryList();
+
         InventoryItem item = inventoryPage.getItems().get(0);
 
         String itemName = item.getItemName();
@@ -40,6 +42,8 @@ public class ItemTest extends CommonConditions {
 
         InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();
+
+        inventoryPage.createInventoryList();
 
         InventoryItem item = inventoryPage.getItems().get(0);
 
@@ -68,10 +72,17 @@ public class ItemTest extends CommonConditions {
         InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
         inventoryPage.assertPage();    
         
-        ArrayList<InventoryItem> items = new ArrayList<InventoryItem>();
-        items = inventoryPage.getItems();
+        inventoryPage.createInventoryList();
 
-        for(int i = 0; i < items.size(); i++) {
+        int itemsCount = inventoryPage.getItemsCount();
+
+        for(int i = 0; i < itemsCount; i++) {
+           
+            ArrayList<InventoryItem> items = new ArrayList<InventoryItem>();
+
+            inventoryPage.createInventoryList();
+
+            items = inventoryPage.getItems();
 
             InventoryItem item = items.get(i);
             String itemName = item.getItemName();
@@ -89,22 +100,37 @@ public class ItemTest extends CommonConditions {
     
             cartPage.assertPage();
     
-            cartPage.assertSameItem(itemName, i);
+            cartPage.initCartItemsComponent()
+                .assertSameItem(itemName, 0);
     
             cartPage.clickContinueShoppingButton()
                 .assertPage();
     
+            items = new ArrayList<InventoryItem>();
+
+            inventoryPage.createInventoryList();
+
+            items = inventoryPage.getItems();
+
+            item = items.get(i);
+
             item.clickItemLabelButton();
             
             itemPage.assertPage();
             
             itemPage.assertItem(itemName);
     
-            itemPage.clickRemoveFromCartButton()
+            itemPage.initHeader()
+                .clickRemoveFromCartButton()
                 .clickCartButton()
                 .assertPage();
             
-            cartPage.assertItemRemoved(itemName);
+            cartPage.initCartItemsComponent()
+                .assertItemRemoved(itemName);
+
+            cartPage.initHeader()
+                .openMenu()
+                .clickAllItemsButton();
         }
         
     }

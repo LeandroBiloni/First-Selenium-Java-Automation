@@ -1,7 +1,6 @@
 package pages;
 
 import java.util.ArrayList;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -21,21 +20,31 @@ public class CartPage extends BasePage{
     private CartFooter cartFooter;
     private By cartItemsContainer;
     private CartItemListComponent cartItemListComponent;
-
+    
 
     public CartPage(WebDriver driver) {
         super(driver);
         pageURL = "https://www.saucedemo.com/cart.html";
 
         headerContainer = By.cssSelector("div > div[data-test=\"primary-header\"]");
-        headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
+        initHeader();
         
         cartFooterContainer = By.cssSelector("div > div > div > div[class=\"cart_footer\"]");
         cartFooter = new CartFooter(driver, getContainer(cartFooterContainer));
 
         cartItemsContainer = By.cssSelector("[data-test=\"cart-list\"]");
-        cartItemListComponent = new CartItemListComponent(driver, getContainer(cartItemsContainer));
+        initCartItemsComponent();
     }    
+
+    public CartPage initHeader() {
+        headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
+        return this;
+    }
+
+    public CartPage initCartItemsComponent() {
+        cartItemListComponent = new CartItemListComponent(driver, getContainer(cartItemsContainer));
+        return this;
+    }
 
     public MenuListComponent openMenu() {
         return headerComponent.openMenu();
@@ -60,11 +69,15 @@ public class CartPage extends BasePage{
     }
 
     public void assertSameItem(String name, int index) {
+        cartItemListComponent.initializeList();
+
         String cartItemName = cartItemListComponent.getItemWithIndex(index).getItemName();
         Assert.assertEquals(cartItemName, name);
     }
 
     public void assertItemRemoved(String name) {
+        cartItemListComponent.initializeList();
+
         ArrayList<CartItem> items = cartItemListComponent.getItems();
 
         boolean exists = false;
