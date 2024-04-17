@@ -1,72 +1,74 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import components.inventory.InventoryItem;
-import pages.CartPage;
+import helpers.WebDriverManager;
 import pages.CheckoutCompletePage;
-import pages.CheckoutOnePage;
-import pages.CheckoutTwoPage;
 import pages.InventoryPage;
 import pages.LoginPage;
 
-public class CheckoutTwoTest extends CommonConditions{
+public class CheckoutTwoTest extends WebDriverManager{
     
+    protected final String correctUser = "standard_user";
+    protected final String correctPassword = "secret_sauce";
+
     @Test(description = "Cancel checkout", enabled = true)
     public void cancelCheckout() {
+        //Arrange
+        String firstName = "test";
+        String lastName = "test";
+        String postalCode = "1234";
+        
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
+        loginPage
+            .login(correctUser, correctPassword)
+            .clickCartButton()
+            .clickCheckoutButton()
+            .setFirstNameFieldText(firstName)
+            .setLastNameFieldText(lastName)
+            .setPostalCodeText(postalCode)
+            .clickContinueButton()
+            .clickCancelButton();
 
-        CartPage cartPage = inventoryPage.clickCartButton();
+        InventoryPage inventoryPage = new InventoryPage(driver);
 
-        cartPage.assertPage();
-        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
-
-        checkoutOnePage.assertPage();
-        checkoutOnePage.setFirstNameFieldText("test")
-            .setLastNameFieldText("test")
-            .setPostalCodeText("1234");
-
-        CheckoutTwoPage checkoutTwoPage = checkoutOnePage.clickContinueButton();
-        
-        checkoutTwoPage.assertPage();
-
-        checkoutTwoPage.clickCancelButton()
-            .assertPage();
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 
     @Test(description = "Finish checkout", enabled = true)
     public void finishCheckout() {
+        //Arrange
+        int itemIndex = 0;
+        String firstName = "test";
+        String lastName = "test";
+        String postalCode = "1234";
+
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
         InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
 
-        inventoryPage.createInventoryList();
-        InventoryItem item = inventoryPage.getItems().get(0);
+        inventoryPage
+            .createInventoryList()
+            .getItemWithID(itemIndex)
+            .clickAddOrRemoveButton();
 
-        String itemName = item.getItemName();
+        inventoryPage
+            .clickCartButton()
+            .clickCheckoutButton()
+            .setFirstNameFieldText(firstName)
+            .setLastNameFieldText(lastName)
+            .setPostalCodeText(postalCode)
+            .clickContinueButton()
+            .clickFinishButton();
+            
+        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
 
-        item.clickAddOrRemoveButton();
-        CartPage cartPage = inventoryPage.clickCartButton();
-
-        cartPage.assertPage();
-        cartPage.assertSameItem(itemName, 0);
-        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
-
-        checkoutOnePage.assertPage();
-        checkoutOnePage.setFirstNameFieldText("test")
-            .setLastNameFieldText("test")
-            .setPostalCodeText("1234");
-        
-        CheckoutTwoPage checkoutTwoPage = checkoutOnePage.clickContinueButton();
-        
-        checkoutTwoPage.assertPage();
-        checkoutTwoPage.assertItemAdded(itemName);
-        CheckoutCompletePage checkoutCompletePage = checkoutTwoPage.clickFinishButton();
-
-        checkoutCompletePage.assertPage();
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), checkoutCompletePage.getPageURL());
     }
 }

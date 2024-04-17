@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import base.BasePage;
@@ -35,7 +36,7 @@ public class CheckoutTwoPage extends BasePage {
         return checkoutCompletePage;
     }
 
-    public void assertItemAdded(String name) {
-        Assert.assertEquals(driver.findElement(itemLabel).getText(), name);
+    public String getItemText() {
+        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
     }
 }

@@ -64,8 +64,7 @@ public class ItemPage extends BasePage {
         return cartPage;
     }
 
-    public void assertItem(String name) {
-        String item = driver.findElement(itemLabel).getText();
-        Assert.assertEquals(item, name, "Actual Item: " + item + " - Expected Item: " + name);
+    public String getItemName() {
+        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
     }
 }

@@ -3,11 +3,18 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
+      <class name="tests.InventoryTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="closeMenu"/>
+        </methods>
+      </class> <!-- tests.InventoryTest -->
       <class name="tests.ItemTest">
         <methods>
-          <include name="removeFromCart"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="removeFromCart"/>
         </methods>
       </class> <!-- tests.ItemTest -->
     </classes>

@@ -68,13 +68,6 @@ public class CartPage extends BasePage{
         return cartPage;
     }
 
-    public void assertSameItem(String name, int index) {
-        cartItemListComponent.initializeList();
-
-        String cartItemName = cartItemListComponent.getItemWithIndex(index).getItemName();
-        Assert.assertEquals(cartItemName, name);
-    }
-
     public void assertItemRemoved(String name) {
         cartItemListComponent.initializeList();
 
@@ -89,5 +82,25 @@ public class CartPage extends BasePage{
         }
 
         Assert.assertFalse(exists, "Item " + name + " was not removed!");
+    }
+
+    public boolean isItemInCart(String name) {
+        cartItemListComponent.initializeList();
+
+        ArrayList<CartItem> items = cartItemListComponent.getItems();
+
+        boolean exists = false;
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getItemName() == name) {
+                exists = true;
+                break;
+            }
+        }
+
+        return exists;
+    }
+
+    public CartItem getCartItemWithIndex(int index) {
+        return cartItemListComponent.getItemWithIndex(index);
     }
 }

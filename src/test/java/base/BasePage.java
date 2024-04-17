@@ -3,7 +3,6 @@ package base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 public abstract class BasePage extends BaseWaitableObject{
     
@@ -18,10 +17,6 @@ public abstract class BasePage extends BaseWaitableObject{
 
     public String getPageURL() {
         return pageURL;
-    }
-
-    public void assertPage() {
-        Assert.assertEquals(driver.getCurrentUrl(), pageURL);
     }
 
     protected WebElement getContainer(By containerBy) {

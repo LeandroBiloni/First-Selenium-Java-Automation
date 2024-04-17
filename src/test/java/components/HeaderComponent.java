@@ -43,6 +43,10 @@ public class HeaderComponent extends BaseComponent {
         return menuListComponent;
     } 
 
+    public boolean isMenuOpen() {
+        return menuListComponent.isMenuClosed();
+    }
+
     public HeaderComponent clickCartButton() {
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, cartButton)).click();
         return this;

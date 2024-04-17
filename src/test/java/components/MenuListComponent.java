@@ -50,4 +50,8 @@ public class MenuListComponent extends BaseComponent {
         
         return this;
     }
+
+    public boolean isMenuClosed() {
+        return webDriverWait.until(ExpectedConditions.invisibilityOf(container));
+    }
 }

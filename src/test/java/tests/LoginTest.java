@@ -1,12 +1,16 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.LogonPage;
+import helpers.WebDriverManager;
 import pages.InventoryPage;
 import pages.LoginPage;
 
-public class LoginTest extends CommonConditions {    
+public class LoginTest extends WebDriverManager {    
+
+    protected final String correctUser = "standard_user";
+    protected final String correctPassword = "secret_sauce";
 
     @Test(description = "Login with wrong credentials", enabled = false)
     public void wrongLogin() {
@@ -16,12 +20,13 @@ public class LoginTest extends CommonConditions {
 
     @Test(description = "Login with correct credentials", enabled = true)
     public void correctLogin() {
-        //login(correctUser, correctPassword);
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-        // InventoryPage inventoryPage = new InventoryPage(driver);
-        // inventoryPage.assertPage();
+        loginPage.login(correctUser, correctPassword);
+
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 }

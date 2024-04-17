@@ -1,69 +1,75 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.InventoryPage;
+import helpers.WebDriverManager;
 import pages.LoginPage;
 import pages.CartPage;
 import pages.CheckoutOnePage;
 import pages.CheckoutTwoPage;
 
-public class CheckoutOneTest extends CommonConditions{
+public class CheckoutOneTest extends WebDriverManager{
+
+    protected final String correctUser = "standard_user";
+    protected final String correctPassword = "secret_sauce";
 
     @Test(description = "Go back to cart with cancel button", enabled = true)
-    public void backToCart() {
+    public void backToCart() {        
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
+        loginPage
+            .login(correctUser, correctPassword)
+            .clickCartButton()
+            .clickCheckoutButton()
+            .clickCancelButton();
 
-        CartPage cartPage = inventoryPage.clickCartButton();
+        CartPage cartPage = new CartPage(driver);
 
-        cartPage.assertPage();
-        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
-
-        checkoutOnePage.assertPage();
-        
-        checkoutOnePage.clickCancelButton()
-            .assertPage();
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), cartPage.getPageURL());
     }
 
     @Test(description = "Continue to checkout 2 without inserting info", enabled = true)
     public void continueToCheckout2WithNoData() {
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
+        loginPage
+            .login(correctUser, correctPassword)
+            .clickCartButton()
+            .clickCheckoutButton()
+            .clickContinueButton();
 
-        CartPage cartPage = inventoryPage.clickCartButton();
+        CheckoutOnePage checkoutOnePage = new CheckoutOnePage(driver);
 
-        cartPage.assertPage();
-        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
-
-        checkoutOnePage.assertPage();
-        checkoutOnePage.clickContinueButton();
-        checkoutOnePage.assertInvalidData();
+        //Assert
+        Assert.assertTrue(checkoutOnePage.isErrorFieldDisplayed());
     }
 
     @Test(description = "Continue to checkout 2", enabled = true)
     public void continueToCheckout2() {
+        //Arrange
+        String firstName = "test";
+        String lastName = "test";
+        String postalCode = "1234";
+        
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
+        loginPage
+            .login(correctUser, correctPassword)
+            .clickCartButton()
+            .clickCheckoutButton()
+            .setFirstNameFieldText(firstName)
+            .setLastNameFieldText(lastName)
+            .setPostalCodeText(postalCode)
+            .clickContinueButton();
 
-        CartPage cartPage = inventoryPage.clickCartButton();
+        CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(driver);
 
-        cartPage.assertPage();
-        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
-
-        checkoutOnePage.assertPage();
-        checkoutOnePage.setFirstNameFieldText("test")
-            .setLastNameFieldText("test")
-            .setPostalCodeText("1234");
-        
-        CheckoutTwoPage checkoutTwoPage = checkoutOnePage.clickContinueButton();
-        
-        checkoutTwoPage.assertPage();
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), checkoutTwoPage.getPageURL());
     }
 }

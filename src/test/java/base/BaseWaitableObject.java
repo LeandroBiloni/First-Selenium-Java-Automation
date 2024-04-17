@@ -3,6 +3,7 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class BaseWaitableObject {
     
     protected WebDriver driver;
@@ -15,4 +16,6 @@ public class BaseWaitableObject {
     protected void initializeWaiter(int waitTimeInSeconds) {
         webDriverWait = new WebDriverWait(driver, java.time.Duration.ofSeconds(waitTimeInSeconds));
     }
+
+    
 }

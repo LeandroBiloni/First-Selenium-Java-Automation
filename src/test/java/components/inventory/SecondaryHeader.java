@@ -33,4 +33,8 @@ public class SecondaryHeader extends BaseComponent{
 
         return this;
     }
+
+    public String getSelectedFilterText() {
+        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(filterResult)).getText();
+    }
 }

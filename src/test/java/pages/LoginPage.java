@@ -25,17 +25,8 @@ public class LoginPage extends BasePage {
             .fillPasswordField(pass)
             .clickLoginButton();
 
-            // if (loginComponent.isErrorDisplayed()) {
-            //     assertWrongLogin();
-            // }
-    
-            InventoryPage inventoryPage = new InventoryPage(driver);
-            return inventoryPage;
-        // driver.findElement(userField).sendKeys(user);
-        // driver.findElement(passwordField).sendKeys(pass);
-        // driver.findElement(loginButton).click();
-        
-        //driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));       
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        return inventoryPage;     
     }
 
     private void assertWrongLogin()  {

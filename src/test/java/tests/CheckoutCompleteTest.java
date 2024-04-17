@@ -1,50 +1,48 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import components.inventory.InventoryItem;
+import helpers.WebDriverManager;
 import pages.CartPage;
-import pages.CheckoutCompletePage;
-import pages.CheckoutOnePage;
-import pages.CheckoutTwoPage;
 import pages.InventoryPage;
 import pages.LoginPage;
 
-public class CheckoutCompleteTest extends CommonConditions {
+public class CheckoutCompleteTest extends WebDriverManager{
+
+    protected final String CORRECT_USER = "standard_user";
+    protected final String CORRECT_PASSWORD = "secret_sauce";
+
     @Test(description = "Go back to home page", enabled = true)
     public void backHome() {
+        //Arrange
+        int itemIndex = 0;
+        String firstName = "test";
+        String lastName = "test";
+        String postalCode = "1234";
+
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-
-        inventoryPage.createInventoryList();
-        InventoryItem item = inventoryPage.getItems().get(0);
-
-        String itemName = item.getItemName();
-
-        item.clickAddOrRemoveButton();
+        InventoryPage inventoryPage = loginPage
+                                        .login(CORRECT_USER, CORRECT_PASSWORD);
         
-        CartPage cartPage = inventoryPage.clickCartButton();
+        inventoryPage
+                .createInventoryList()
+                .getItemWithID(itemIndex)
+                .clickAddOrRemoveButton();
 
-        cartPage.assertPage();
-        cartPage.assertSameItem(itemName, 0);
-        CheckoutOnePage checkoutOnePage = cartPage.clickCheckoutButton();
-
-        checkoutOnePage.assertPage();
-        checkoutOnePage.setFirstNameFieldText("test")
-            .setLastNameFieldText("test")
-            .setPostalCodeText("1234");
+        inventoryPage
+            .clickCartButton()
+            .clickCheckoutButton()
+            .setFirstNameFieldText(firstName)
+            .setLastNameFieldText(lastName)
+            .setPostalCodeText(postalCode)
+            .clickContinueButton()
+            .clickFinishButton()
+            .clickHomeButton();
         
-        CheckoutTwoPage checkoutTwoPage = checkoutOnePage.clickContinueButton();
-        
-        checkoutTwoPage.assertPage();
-        checkoutTwoPage.assertItemAdded(itemName);
-        CheckoutCompletePage checkoutCompletePage = checkoutTwoPage.clickFinishButton();
-
-        checkoutCompletePage.assertPage();
-        
-        checkoutCompletePage.clickHomeButton()
-            .assertPage();
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 }

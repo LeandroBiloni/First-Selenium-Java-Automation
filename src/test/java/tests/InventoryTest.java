@@ -1,91 +1,117 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import components.inventory.InventoryItem;
+import helpers.WebDriverManager;
 import pages.InventoryPage;
 import pages.ItemPage;
 import pages.LoginPage;
 import pages.AboutPage;
 import pages.CartPage;
 
-public class InventoryTest extends CommonConditions {
+public class InventoryTest extends WebDriverManager {
+
+    protected final String correctUser = "standard_user";
+    protected final String correctPassword = "secret_sauce";
 
     @Test(description = "Change the shop filter", enabled = true)
     public void filterChange() {
+        //Arrange
+        int filterIndex = 3;
+        String filterTextToCheck = "Price (high to low)";
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
+        loginPage
+            .login(correctUser, correctPassword)
+            .selectFilter(filterIndex);
+        
+        InventoryPage inventoryPage = new InventoryPage(driver);
 
-        inventoryPage.selectFilter(3);
+        String filterText = inventoryPage
+                                .getSelectedFilterText();
+
+        //Assert
+        Assert.assertTrue(filterText.contains(filterTextToCheck));
     }    
 
     @Test(description = "Go to about page", enabled = true)
     public void goToAboutPage() {
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-
-        inventoryPage.openMenu()
+        loginPage
+            .login(correctUser, correctPassword)
+            .openMenu()
             .clickAboutButton();
-        
+
         AboutPage aboutPage = new AboutPage(driver);
-        aboutPage.assertPage();
+
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), aboutPage.getPageURL());
     }
 
     @Test(description = "Try to logout", enabled = true)
     public void logout() {
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-
-        inventoryPage.openMenu()
+        loginPage
+            .login(correctUser, correctPassword)
+            .openMenu()
             .clickLogoutButton();
-        
-            loginPage.assertPage();
+
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), loginPage.getPageURL());
     }
 
     @Test(description = "Go back to Inventory page", enabled = true)
     public void goToInventory() {
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();       
+        loginPage
+            .login(correctUser, correctPassword)
+            .clickCartButton()
+            .openMenu()
+            .clickAllItemsButton();    
 
-        CartPage cartPage = inventoryPage.clickCartButton();
+        InventoryPage inventoryPage = new InventoryPage(driver);
 
-        cartPage.assertPage();
-
-        cartPage.openMenu()
-            .clickAllItemsButton();
-        
-        inventoryPage.assertPage();
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 
     @Test(description = "Close hamburger menu", enabled = true)
     public void closeMenu() {
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-
-        inventoryPage.openMenu()
+        loginPage
+            .login(correctUser, correctPassword)
+            .openMenu()
             .closeMenuList();
+
+        InventoryPage inventoryPage = new InventoryPage(driver);
+
+        //Assert
+        Assert.assertTrue(inventoryPage.isMenuOpen());
     }
 
     @Test(description = "Go to item page from label", enabled = true)
     public void goToItemPageFromLabel() {
+        //Arrange
+        int itemIndex = 0;
+
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-
-        inventoryPage.createInventoryList();
-
-        InventoryItem item = inventoryPage.getItems().get(0);
+        InventoryItem item = loginPage
+                                .login(correctUser, correctPassword)
+                                .createInventoryList()
+                                .getItemWithID(itemIndex);
 
         String itemName = item.getItemName();
 
@@ -93,62 +119,72 @@ public class InventoryTest extends CommonConditions {
 
         ItemPage itemPage = new ItemPage(driver);
 
-        itemPage.assertPage();
-
-        itemPage.assertItem(itemName);
+        //Assert
+        Assert.assertEquals(itemPage.getItemName(), itemName);
     }
 
     @Test(description = "Go to item page from image", enabled = true)
     public void goToItemPageFromImage() {
+        //Arrange
+        int itemIndex = 0;
+
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-
-        inventoryPage.createInventoryList();
-
-        InventoryItem item = inventoryPage.getItems().get(0);
+        InventoryItem item = loginPage
+                                .login(correctUser, correctPassword)
+                                .createInventoryList()
+                                .getItemWithID(itemIndex);
 
         String itemName = item.getItemName();
 
         item.clickImageButton();
 
         ItemPage itemPage = new ItemPage(driver);
-        itemPage.assertPage();
 
-        itemPage.assertItem(itemName);
+        //Assert
+        Assert.assertEquals(itemPage.getItemName(), itemName);
     }
 
     @Test(description = "Go to cart", enabled = true)
     public void goToCart() {
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
+        loginPage
+            .login(correctUser, correctPassword)
+            .clickCartButton();
+        
+        CartPage cartPage = new CartPage(driver);
 
-        inventoryPage.clickCartButton()
-            .assertPage();
+        //Assert
+        Assert.assertEquals(driver.getCurrentUrl(), cartPage.getPageURL());
     }
 
     @Test(description = "Add item to cart and check if its the same item", enabled = true)
     public void goToCartWithAddedItem() {
+        //Arrange
+        int itemIndex = 0;
+
+        //Act
         LoginPage loginPage = new LoginPage(driver);
 
-        InventoryPage inventoryPage = loginPage.login(correctUser, correctPassword);
-        inventoryPage.assertPage();
-
-        inventoryPage.createInventoryList();
-        
-        InventoryItem item = inventoryPage.getItems().get(0);
+        InventoryItem item = loginPage
+                                .login(correctUser, correctPassword)
+                                .createInventoryList()
+                                .getItemWithID(itemIndex);
 
         String itemName = item.getItemName();
 
         item.clickAddOrRemoveButton();
         
-        CartPage cartPage = inventoryPage.clickCartButton();
+        InventoryPage inventoryPage = new InventoryPage(driver);
 
-        cartPage.assertPage();
-
-        cartPage.assertSameItem(itemName, 0);
+        String cartItemName = inventoryPage
+                                    .clickCartButton()
+                                    .getCartItemWithIndex(itemIndex)
+                                    .getItemName();
+        //Assert
+        Assert.assertEquals(cartItemName, itemName);
     }
 }

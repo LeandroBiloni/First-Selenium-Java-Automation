@@ -43,8 +43,16 @@ public class InventoryPage extends BasePage {
         return inventoryPage;
     }
 
+    public String getSelectedFilterText() {
+        return secondaryHeader.getSelectedFilterText();
+    }
+
     public MenuListComponent openMenu() {
         return headerComponent.openMenu();
+    }
+
+    public boolean isMenuOpen() {
+        return headerComponent.isMenuOpen();
     }
 
     public CartPage clickCartButton() {

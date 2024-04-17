@@ -24,10 +24,10 @@ public class CheckoutOnePage extends BasePage {
         buyerDataComponent = new BuyerDataComponent(driver, getContainer(buyerDataContainer));
     }
 
-    public void assertInvalidData() {
-        Assert.assertTrue(buyerDataComponent.isErrorFieldDisplayed());
+    public boolean isErrorFieldDisplayed() {
+        return buyerDataComponent.isErrorFieldDisplayed();
     }
-
+    
     public CheckoutOnePage setFirstNameFieldText(String text) {
         buyerDataComponent.setFirstNameFieldText(text);
         return this;

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BaseComponent;
+import pages.ItemPage;
 
 public class InventoryItem extends BaseComponent {
 
@@ -24,14 +25,16 @@ public class InventoryItem extends BaseComponent {
         addRemoveButton = By.cssSelector("div+button");
     }
     
-    public InventoryItem clickImageButton() {
+    public ItemPage clickImageButton() {
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, imageButton)).click();
-        return this;
+        ItemPage itemPage = new ItemPage(driver);
+        return itemPage;
     }
 
-    public InventoryItem clickItemLabelButton() {
+    public ItemPage clickItemLabelButton() {
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, itemLabelButton)).click();
-        return this;
+        ItemPage itemPage = new ItemPage(driver);
+        return itemPage;
     }
 
     public InventoryItem clickAddOrRemoveButton() {
