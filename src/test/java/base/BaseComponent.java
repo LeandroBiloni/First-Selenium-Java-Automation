@@ -3,6 +3,9 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+/**
+ * Base class for components
+ */
 public class BaseComponent extends BaseWaitableObject{
 
     protected WebElement container;

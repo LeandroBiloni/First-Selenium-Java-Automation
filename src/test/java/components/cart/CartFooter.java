@@ -7,6 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BaseComponent;
 
+/**
+ * Component class for the Footer of the CartPage
+ */
 public class CartFooter extends BaseComponent{
 
     private By continueShoppingButton;
@@ -19,12 +22,20 @@ public class CartFooter extends BaseComponent{
         checkoutButton = By.id("checkout");
     }
 
+    /**
+     * Clicks the Continue Shopping button
+     * @return this CartFooter instance
+     */
     public CartFooter clickContinueShoppingButton() {
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(continueShoppingButton)).click();
 
         return this;
     }
 
+    /**
+     * Clicks the Checkout button
+     * @return this CartFooter instance
+     */
     public CartFooter clickCheckoutButton() {
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(checkoutButton)).click();
 

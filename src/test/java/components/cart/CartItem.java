@@ -7,6 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BaseComponent;
 
+/**
+ * Component class for the Items in the Cart list from the Cart Page
+ */
 public class CartItem extends BaseComponent{
 
     private By itemName;
@@ -19,12 +22,20 @@ public class CartItem extends BaseComponent{
         removeButton = By.cssSelector("div > a+div+div");
     }
     
+    /**
+     * Clicks the Remove from cart button
+     * @return this CartItem instance
+     */
     public CartItem clickRemoveButton() {
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, removeButton)).click();
 
         return this;
     }
 
+    /**
+     * Get the Item Name
+     * @return this Item name
+     */
     public String getItemName() {
         return webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, itemName)).getText();
     }

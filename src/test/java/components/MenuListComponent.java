@@ -4,10 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 import base.BaseComponent;
 
+/**
+ * Class for the Hamburger Menu
+ */
 public class MenuListComponent extends BaseComponent {
 
     private By closeMenuButton;
@@ -24,26 +26,40 @@ public class MenuListComponent extends BaseComponent {
         logoutButton = By.id("logout_sidebar_link");
     }
     
+    /**
+     * Close the Hamburger menu
+     * @return this MenuListComponent instance
+     */
     public MenuListComponent closeMenuList() {
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, closeMenuButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
-        // webDriverWait.until(ExpectedConditions.invisibilityOf(webElement));
-        // Assert.assertFalse(webElement.isDisplayed(), "Menu didn't close");
         return this;
     }
 
+    /**
+     * Click the All Items button
+     * @return this MenuListComponent instance
+     */
     public MenuListComponent clickAllItemsButton() {
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, allItemsButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         return this;
     }
 
+    /**
+     * Click the About button
+     * @return this MenuListComponent instance
+     */
     public MenuListComponent clickAboutButton() {
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, aboutButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         return this;
     }
 
+    /**
+     * Click the Logout button
+     * @return this MenuListComponent instance
+     */
     public MenuListComponent clickLogoutButton() {
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, logoutButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
@@ -51,6 +67,10 @@ public class MenuListComponent extends BaseComponent {
         return this;
     }
 
+    /**
+     * Checks if the Hamburger menu is closed
+     * @return True if the menu is closed. False otherwise
+     */
     public boolean isMenuClosed() {
         return webDriverWait.until(ExpectedConditions.invisibilityOf(container));
     }

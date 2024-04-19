@@ -3,11 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 import base.BasePage;
 import components.HeaderComponent;
 
+/**
+ * Class for the Item page PageObject
+ */
 public class ItemPage extends BasePage {
 
     private By backToProductsButton;
@@ -31,16 +33,19 @@ public class ItemPage extends BasePage {
         initHeader();
     }
 
+    /**
+     * Initializes the HeaderComponent
+     * @return this InventoryPage instance
+     */
     public ItemPage initHeader() {
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
-    
-    public void assertPage() {
-        String  currentURL = driver.getCurrentUrl();
-        Assert.assertTrue(currentURL.contains("https://www.saucedemo.com/inventory-item.html?id"), "Current url is: " + currentURL);
-    }
 
+    /**
+     * Click Back To Products button
+     * @return an InventoryPage instance
+     */
     public InventoryPage clickBackToProductsButton() {
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(backToProductsButton)).click();
 
@@ -48,22 +53,38 @@ public class ItemPage extends BasePage {
         return inventoryPage;
     }
 
+    /**
+     * Click Add To Cart button
+     * @return this ItemPage instance
+     */
     public ItemPage clickAddToCartButton() {
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(addToCarttButton)).click();
         return this;
     }
 
+    /**
+     * Click Remove From Cart button
+     * @return this ItemPage instance
+     */
     public ItemPage clickRemoveFromCartButton() {
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(removeFromCartButton)).click();
         return this;
     }
 
+    /**
+     * Clicks the Cart button
+     * @return a CartPage instance
+     */
     public CartPage clickCartButton() {
         headerComponent.clickCartButton();
         CartPage cartPage = new CartPage(driver);
         return cartPage;
     }
 
+    /**
+     * Get this Item name
+     * @return the Item name
+     */
     public String getItemName() {
         return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
     }

@@ -9,11 +9,17 @@ import pages.CartPage;
 import pages.CheckoutOnePage;
 import pages.CheckoutTwoPage;
 
+/**
+ * Class for the Checkout One page Tests
+ */
 public class CheckoutOneTest extends WebDriverManager{
 
     protected final String correctUser = "standard_user";
     protected final String correctPassword = "secret_sauce";
 
+    /**
+     * Test to go back to cart with cancel button
+     */
     @Test(description = "Go back to cart with cancel button", enabled = true)
     public void backToCart() {        
         //Act
@@ -31,6 +37,9 @@ public class CheckoutOneTest extends WebDriverManager{
         Assert.assertEquals(driver.getCurrentUrl(), cartPage.getPageURL());
     }
 
+    /**
+     * Test to continue to checkout 2 without inserting info
+     */
     @Test(description = "Continue to checkout 2 without inserting info", enabled = true)
     public void continueToCheckout2WithNoData() {
         //Act
@@ -48,6 +57,9 @@ public class CheckoutOneTest extends WebDriverManager{
         Assert.assertTrue(checkoutOnePage.isErrorFieldDisplayed());
     }
 
+    /**
+     * Test to continue to checkout 2 without inserting info
+     */
     @Test(description = "Continue to checkout 2", enabled = true)
     public void continueToCheckout2() {
         //Arrange

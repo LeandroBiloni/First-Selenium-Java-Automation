@@ -8,11 +8,17 @@ import pages.CheckoutOnePage;
 import pages.InventoryPage;
 import pages.LoginPage;
 
+/**
+ * Class for the Cart page Tests
+ */
 public class CartTest extends WebDriverManager {
 
     protected final String correctUser = "standard_user";
     protected final String correctPassword = "secret_sauce";
 
+    /**
+     * Test to go back to inventory page using All items button in menu
+     */
     @Test(description = "Go back to inventory page using All items button in menu", enabled = true)
     public void goToInventoryA() {
         //Act
@@ -30,6 +36,9 @@ public class CartTest extends WebDriverManager {
         Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 
+    /**
+     * Test to go back to inventory page using Continue Shopping button
+     */
     @Test(description = "Go back to inventory page using Continue Shopping button", enabled = true)
     public void goToInventoryB() {
         //Act
@@ -46,6 +55,9 @@ public class CartTest extends WebDriverManager {
         Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 
+    /**
+     * Test to go to checkout step one
+     */
     @Test(description = "Go to checkout step one", enabled = true)
     public void goToCheckoutOne() {
         //Act

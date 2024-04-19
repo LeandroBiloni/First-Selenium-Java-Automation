@@ -8,6 +8,9 @@ import pages.CheckoutCompletePage;
 import pages.InventoryPage;
 import pages.LoginPage;
 
+/**
+ * Class for the Checkout Two page Tests
+ */
 public class CheckoutTwoTest extends WebDriverManager{
     
     protected final String correctUser = "standard_user";

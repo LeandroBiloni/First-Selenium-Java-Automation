@@ -4,15 +4,20 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import helpers.WebDriverManager;
-import pages.CartPage;
 import pages.InventoryPage;
 import pages.LoginPage;
 
+/**
+ * Class for the Checkout Complete page Tests
+ */
 public class CheckoutCompleteTest extends WebDriverManager{
 
     protected final String CORRECT_USER = "standard_user";
     protected final String CORRECT_PASSWORD = "secret_sauce";
 
+    /**
+     * Test to go back to home page
+     */
     @Test(description = "Go back to home page", enabled = true)
     public void backHome() {
         //Arrange

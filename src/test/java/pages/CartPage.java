@@ -3,7 +3,6 @@ package pages;
 import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 import base.BasePage;
 import components.HeaderComponent;
@@ -12,6 +11,9 @@ import components.cart.CartFooter;
 import components.cart.CartItem;
 import components.cart.CartItemListComponent;
 
+/**
+ * Class for the Cart page PageObject
+ */
 public class CartPage extends BasePage{
     
     private By headerContainer;
@@ -36,54 +38,67 @@ public class CartPage extends BasePage{
         initCartItemsComponent();
     }    
 
+    /**
+     * Initializes the HeaderComponent
+     * @return this CartPage instance
+     */
     public CartPage initHeader() {
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
 
+    /**
+     * Initializes the CartItemListComponent
+     * @return this CartPage instance
+     */
     public CartPage initCartItemsComponent() {
         cartItemListComponent = new CartItemListComponent(driver, getContainer(cartItemsContainer));
         return this;
     }
 
+    /**
+     * Opens the Hamburger menu
+     * @return a MenuListComponent instance
+     */
     public MenuListComponent openMenu() {
         return headerComponent.openMenu();
     }
 
+    /**
+     * Clicks the Continue Shopping button
+     * @return an InventoryPage instance
+     */
     public InventoryPage clickContinueShoppingButton() {
         cartFooter.clickContinueShoppingButton();
         InventoryPage inventoryPage = new InventoryPage(driver);
         return inventoryPage;
     }
 
+    /**
+     * Click the Checkout button
+     * @return a CheckoutOnePage instance
+     */
     public CheckoutOnePage clickCheckoutButton() {
         cartFooter.clickCheckoutButton();
         CheckoutOnePage checkoutOnePage = new CheckoutOnePage(driver);
         return checkoutOnePage;
     }
 
+    /**
+     * Click the Remove button from the CartItem with the given index
+     * @param index the index of the Item to remove
+     * @return this CartPage instance
+     */
     public CartPage clickRemoveButtonFWithIndex(int index) {
         cartItemListComponent.getItemWithIndex(index).clickRemoveButton();
-        CartPage cartPage = new CartPage(driver);
-        return cartPage;
+        return this;
     }
 
-    public void assertItemRemoved(String name) {
-        cartItemListComponent.initializeList();
-
-        ArrayList<CartItem> items = cartItemListComponent.getItems();
-
-        boolean exists = false;
-        for (int i = 0; i < items.size(); i++) {
-            if (items.get(i).getItemName() == name) {
-                exists = true;
-                break;
-            }
-        }
-
-        Assert.assertFalse(exists, "Item " + name + " was not removed!");
-    }
-
+    /**
+     * Checks if the CartItem with the given name is present in the cart
+     * @param name the name of the CartItem
+     * @return True if the CartItem is present. False otherwise
+     */
     public boolean isItemInCart(String name) {
         cartItemListComponent.initializeList();
 
@@ -96,10 +111,14 @@ public class CartPage extends BasePage{
                 break;
             }
         }
-
         return exists;
     }
 
+    /**
+     * Get the CartItem with the given index
+     * @param index the index of the CartItem
+     * @return the found CartItem
+     */
     public CartItem getCartItemWithIndex(int index) {
         return cartItemListComponent.getItemWithIndex(index);
     }

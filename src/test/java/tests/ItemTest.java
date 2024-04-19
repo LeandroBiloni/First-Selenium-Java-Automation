@@ -10,11 +10,17 @@ import pages.InventoryPage;
 import pages.ItemPage;
 import pages.LoginPage;
 
+/**
+ * Class for the Item page Tests
+ */
 public class ItemTest extends WebDriverManager {
 
     protected final String correctUser = "standard_user";
     protected final String correctPassword = "secret_sauce";
 
+    /**
+     * Test to go back to inventory
+     */
     @Test(description = "Go back to inventory", enabled = true)
     public void backToInventory() {
         //Arrange
@@ -36,8 +42,11 @@ public class ItemTest extends WebDriverManager {
         Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
     
-    @Test(description = "Add to cart", enabled = true)
-    public void addToCart() {
+    /**
+     * Test to add item to cart
+     */
+    @Test(description = "Add item to cart", enabled = true)
+    public void addItemToCart() {
         //Arrange
         int itemIndex = 0;
 
@@ -62,8 +71,11 @@ public class ItemTest extends WebDriverManager {
         Assert.assertEquals(cartItemName, itemName);
     }
 
-    @Test(description = "Remove from cart", enabled = true)
-    public void removeFromCart() {
+    /**
+     * Test to remove item from cart
+     */
+    @Test(description = "Remove item from cart", enabled = true)
+    public void removeItemFromCart() {
         //Act
         LoginPage loginPage = new LoginPage(driver);
 

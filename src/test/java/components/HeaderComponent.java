@@ -4,10 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 import base.BaseComponent;
 
+/**
+ * Class for the Header
+ */
 public class HeaderComponent extends BaseComponent {
 
     private By menuButton;
@@ -26,6 +28,9 @@ public class HeaderComponent extends BaseComponent {
         initMenuComponent();
     }
 
+    /**
+     * Initializes the MenuListComponent
+     */
     private void initMenuComponent() {
         openMenu();
         menuListComponent = new MenuListComponent(driver, driver.findElement(menuButtonsListContainer));
@@ -33,20 +38,27 @@ public class HeaderComponent extends BaseComponent {
         menuListComponent.closeMenuList();
     }
 
+    /**
+     * Opens the Hamburger Menu
+     * @return the MenuListComponent instance
+     */
     public MenuListComponent openMenu() {
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, menuButton)).click();
-        
-        WebElement menuList = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, menuButtonsListContainer));
-
-        Assert.assertTrue(menuList.isDisplayed(), "Menu didn't open");
-
         return menuListComponent;
     } 
 
-    public boolean isMenuOpen() {
+    /**
+     * Checks if the Hamburger Menu is closed
+     * @return True if closed. False otherwise
+     */
+    public boolean isMenuClosed() {
         return menuListComponent.isMenuClosed();
     }
 
+    /**
+     * Clicks the Cart button
+     * @return this HeaderComponent instance
+     */
     public HeaderComponent clickCartButton() {
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, cartButton)).click();
         return this;

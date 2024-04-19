@@ -11,11 +11,17 @@ import pages.LoginPage;
 import pages.AboutPage;
 import pages.CartPage;
 
+/**
+ * Class for the Inventory page Tests
+ */
 public class InventoryTest extends WebDriverManager {
 
     protected final String correctUser = "standard_user";
     protected final String correctPassword = "secret_sauce";
 
+    /**
+     * Test to change the shop filter
+     */
     @Test(description = "Change the shop filter", enabled = true)
     public void filterChange() {
         //Arrange
@@ -37,6 +43,9 @@ public class InventoryTest extends WebDriverManager {
         Assert.assertTrue(filterText.contains(filterTextToCheck));
     }    
 
+    /**
+     * Test to go to about page
+     */
     @Test(description = "Go to about page", enabled = true)
     public void goToAboutPage() {
         //Act
@@ -53,6 +62,9 @@ public class InventoryTest extends WebDriverManager {
         Assert.assertEquals(driver.getCurrentUrl(), aboutPage.getPageURL());
     }
 
+    /**
+     * Test to try to logout
+     */
     @Test(description = "Try to logout", enabled = true)
     public void logout() {
         //Act
@@ -67,6 +79,9 @@ public class InventoryTest extends WebDriverManager {
         Assert.assertEquals(driver.getCurrentUrl(), loginPage.getPageURL());
     }
 
+    /**
+     * Test to go back to Inventory page
+     */
     @Test(description = "Go back to Inventory page", enabled = true)
     public void goToInventory() {
         //Act
@@ -84,6 +99,9 @@ public class InventoryTest extends WebDriverManager {
         Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 
+    /**
+     * Test to close hamburger menu
+     */
     @Test(description = "Close hamburger menu", enabled = true)
     public void closeMenu() {
         //Act
@@ -97,9 +115,12 @@ public class InventoryTest extends WebDriverManager {
         InventoryPage inventoryPage = new InventoryPage(driver);
 
         //Assert
-        Assert.assertTrue(inventoryPage.isMenuOpen());
+        Assert.assertTrue(inventoryPage.isMenuClosed());
     }
 
+    /**
+     * Test to go to item page from label
+     */
     @Test(description = "Go to item page from label", enabled = true)
     public void goToItemPageFromLabel() {
         //Arrange
@@ -123,6 +144,9 @@ public class InventoryTest extends WebDriverManager {
         Assert.assertEquals(itemPage.getItemName(), itemName);
     }
 
+    /**
+     * Test to go to item page from image
+     */
     @Test(description = "Go to item page from image", enabled = true)
     public void goToItemPageFromImage() {
         //Arrange
@@ -146,6 +170,9 @@ public class InventoryTest extends WebDriverManager {
         Assert.assertEquals(itemPage.getItemName(), itemName);
     }
 
+    /**
+     * Test to go to cart
+     */
     @Test(description = "Go to cart", enabled = true)
     public void goToCart() {
         //Act
@@ -161,6 +188,9 @@ public class InventoryTest extends WebDriverManager {
         Assert.assertEquals(driver.getCurrentUrl(), cartPage.getPageURL());
     }
 
+    /**
+     * Test to add item to cart and check if its the same item
+     */
     @Test(description = "Add item to cart and check if its the same item", enabled = true)
     public void goToCartWithAddedItem() {
         //Arrange

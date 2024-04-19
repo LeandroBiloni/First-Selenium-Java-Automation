@@ -12,6 +12,9 @@ import components.inventory.InventoryItem;
 import components.inventory.InventoryListComponent;
 import components.inventory.SecondaryHeader;
 
+/**
+ * Class for the Inventory page PageObject
+ */
 public class InventoryPage extends BasePage {
     
     private By headerContainer;
@@ -32,65 +35,121 @@ public class InventoryPage extends BasePage {
         secondaryHeader = new SecondaryHeader(driver, getContainer(secondaryHeaderContainer));
     }
 
+    /**
+     * Initializes the HeaderComponent
+     * @return this InventoryPage instance
+     */
     public InventoryPage initHeader() {
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
 
+    /**
+     * Select the sort filter with the given index
+     * @param filterIndex the index of the sort option to use
+     * @return this InventoryPage instance
+     */
     public InventoryPage selectFilter(int filterIndex) {
         secondaryHeader.selectFilter(filterIndex);
-        InventoryPage inventoryPage = new InventoryPage(driver);
-        return inventoryPage;
+        return this;
     }
 
+    /**
+     * Get the selected filter option text
+     * @return the selected filter text
+     */
     public String getSelectedFilterText() {
         return secondaryHeader.getSelectedFilterText();
     }
 
+    /**
+     * Opens the Hamburger Menu
+     * @return the MenuListComponent instance
+     */
     public MenuListComponent openMenu() {
         return headerComponent.openMenu();
     }
 
-    public boolean isMenuOpen() {
-        return headerComponent.isMenuOpen();
+    /**
+     * Checks if the Hamburger Menu is closed
+     * @return True if closed. False otherwise
+     */
+    public boolean isMenuClosed() {
+        return headerComponent.isMenuClosed();
     }
 
+    /**
+     * Clicks the Cart button
+     * @return a CartPage instance
+     */
     public CartPage clickCartButton() {
         headerComponent.clickCartButton();
         CartPage cartPage = new CartPage(driver);
         return cartPage;
     }
 
-    public ItemPage clickItemAddOrRemoveButtonWithID(int id) {
+    /**
+     * Clicks the Add/Remove button from an InventoryItem with the given id
+     * @param id the id of the InventoryItem
+     * @return this InventoryPage instance
+     */
+    public InventoryPage clickItemAddOrRemoveButtonWithID(int id) {
         inventoryListComponent.getItemWithID(id).clickAddOrRemoveButton();
-        ItemPage itemPage = new ItemPage(driver);
-        return itemPage;
+        return this;
     }
 
+    /**
+     * Clicks the Name label button from an InventoryItem with the given id
+     * @param id the id of the InventoryItem
+     * @return an ItemPage instance
+     */
     public ItemPage clickItemLabelButtonWithID(int id) {
         inventoryListComponent.getItemWithID(id).clickItemLabelButton();
         ItemPage itemPage = new ItemPage(driver);
         return itemPage;
     }
 
+    /**
+     * Clicks the Image button from an InventoryItem with the given id
+     * @param id the id of the InventoryItem
+     * @return an ItemPage instance
+     */
     public ItemPage clickItemImageButtonWithID(int id) {
         inventoryListComponent.getItemWithID(id).clickImageButton();
         ItemPage itemPage = new ItemPage(driver);
         return itemPage;
     }
 
+    /**
+     * Create the InventoryListComponent
+     * @return an InventoryListComponent instance
+     */
     public InventoryListComponent createInventoryList() {
         inventoryListContainer = By.cssSelector("[data-test=\"inventory-container\"]");
         return inventoryListComponent = new InventoryListComponent(driver, getContainer(inventoryListContainer));
     }
 
+    /**
+     * Get the name of an InventoryItem with the given id
+     * @param id the id of the InventoryItem
+     * @return the name of the InventoryItem
+     */
     public String getItemNameWithID(int id) {
         return inventoryListComponent.getItemWithID(id).getItemName();
     }
 
+    /**
+     * Get a collection of all the InventoryItems
+     * @return the InventoryItems found
+     */
     public ArrayList<InventoryItem> getItems() {
         return inventoryListComponent.getItems();
     }
+
+    /**
+     * Get the amount of InventoryItems
+     * @return the InventoryItems amount
+     */
     public int getItemsCount() {
         return getItems().size();
     }

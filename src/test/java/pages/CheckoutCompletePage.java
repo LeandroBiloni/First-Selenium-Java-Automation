@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 import base.BasePage;
 
+/**
+ * Class for the CheckoutComplete page PageObject
+ */
 public class CheckoutCompletePage extends BasePage {
     
     private By homeButton;
@@ -16,6 +19,10 @@ public class CheckoutCompletePage extends BasePage {
         homeButton = By.id("back-to-products");
     }
 
+    /**
+     * Clicks the Home button
+     * @return an InventoryPage instance
+     */
     public InventoryPage clickHomeButton() {
         driver.findElement(homeButton).click();
 

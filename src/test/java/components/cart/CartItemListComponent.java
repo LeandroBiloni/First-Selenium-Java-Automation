@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 
 import base.BaseComponent;
 
+/**
+ * Class for the list of Items in the Cart Page
+ */
 public class CartItemListComponent extends BaseComponent{
 
     private ArrayList<CartItem> cartItems;
@@ -21,6 +24,9 @@ public class CartItemListComponent extends BaseComponent{
         initializeList();
     }
 
+    /**
+     * Initializes the CartList with all the items
+     */
     public void initializeList() {
         cartItems = new ArrayList<CartItem>();
 
@@ -30,10 +36,19 @@ public class CartItemListComponent extends BaseComponent{
         }
     }
     
+    /**
+     * Get all the items in the Cart list
+     * @return the items from the Cart list
+     */
     public ArrayList<CartItem> getItems() {
         return cartItems;
     }
     
+    /**
+     * Get an Item from the Cart list with the given index
+     * @param index the index of the Item
+     * @return the item that corresponds to that index
+     */
     public CartItem getItemWithIndex(int index) {
         return cartItems.get(index);
     }

@@ -3,10 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 import base.BasePage;
 
+/**
+ * Class for the CheckoutTwo page PageObject
+ */
 public class CheckoutTwoPage extends BasePage {
     
     private By cancelButton;
@@ -22,6 +24,10 @@ public class CheckoutTwoPage extends BasePage {
         itemLabel = By.cssSelector("div > a > [data-test=\"inventory-item-name\"]");
     }
 
+    /**
+     * Clicks the Cancel button
+     * @return an InventoryPage instance
+     */
     public InventoryPage clickCancelButton() {
         driver.findElement(cancelButton).click();
 
@@ -29,6 +35,10 @@ public class CheckoutTwoPage extends BasePage {
         return inventoryPage;
     }
 
+    /**
+     * Clicks the Finish button
+     * @return a CheckoutCompletePage instance
+     */
     public CheckoutCompletePage clickFinishButton() {
         driver.findElement(finishButton).click();
 
@@ -36,7 +46,11 @@ public class CheckoutTwoPage extends BasePage {
         return checkoutCompletePage;
     }
 
-    public String getItemText() {
+    /**
+     * Get the Item name
+     * @return the Item name
+     */
+    public String getItemName() {
         return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
     }
 }

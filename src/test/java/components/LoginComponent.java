@@ -7,12 +7,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BaseComponent;
 
+/**
+ * Class for the Login section in the Login Page
+ */
 public class LoginComponent extends BaseComponent {
 
     private By userField;
     private By passwordField;
     private By loginButton;
-    private By errorLabel;
 
     public LoginComponent(WebDriver driver, WebElement container) {
         super(driver, container);
@@ -20,9 +22,13 @@ public class LoginComponent extends BaseComponent {
         userField = By.id("user-name");
         passwordField = By.id("password");
         loginButton = By.id("login-button");  
-        //errorLabel = By.cssSelector("div > h3");
     }
     
+    /**
+     * Set the text for the Username field
+     * @param username the text to write
+     * @return this LoginComponent instance
+     */
     public LoginComponent fillUsernameField(String username) {
         //WebElement element = container.findElement(userField);
         WebElement element = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, userField));
@@ -30,19 +36,24 @@ public class LoginComponent extends BaseComponent {
         return this;
     }
 
+    /**
+     * Set the text for the Password field
+     * @param password the text to write
+     * @return this LoginComponent instance
+     */
     public LoginComponent fillPasswordField(String password) {
         WebElement element = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, passwordField));
         element.sendKeys(password);
         return this;
     }
 
+    /**
+     * Clicks the Login button
+     * @return this LoginComponent instance
+     */
     public LoginComponent clickLoginButton() {
         WebElement element = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, loginButton));
         element.click();
         return this;
-    }
-
-    public boolean isErrorDisplayed() {
-        return webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, errorLabel)).isDisplayed();
     }
 }
