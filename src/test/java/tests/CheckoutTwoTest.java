@@ -16,6 +16,9 @@ public class CheckoutTwoTest extends WebDriverManager{
     protected final String correctUser = "standard_user";
     protected final String correctPassword = "secret_sauce";
 
+    /**
+     * Test to cancel checkout
+     */
     @Test(description = "Cancel checkout", enabled = true)
     public void cancelCheckout() {
         //Arrange
@@ -42,6 +45,9 @@ public class CheckoutTwoTest extends WebDriverManager{
         Assert.assertEquals(driver.getCurrentUrl(), inventoryPage.getPageURL());
     }
 
+    /**
+     * Test to finish checkout
+     */
     @Test(description = "Finish checkout", enabled = true)
     public void finishCheckout() {
         //Arrange
