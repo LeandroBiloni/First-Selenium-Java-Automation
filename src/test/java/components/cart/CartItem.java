@@ -27,6 +27,7 @@ public class CartItem extends BaseComponent{
      * @return this CartItem instance
      */
     public CartItem clickRemoveButton() {
+        logger.debug("Click Remove button");
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, removeButton)).click();
 
         return this;
@@ -37,6 +38,9 @@ public class CartItem extends BaseComponent{
      * @return this Item name
      */
     public String getItemName() {
-        return webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, itemName)).getText();
+        String name = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, itemName)).getText();
+        logger.debug("Get Item name: {}", name);
+
+        return name;
     }
 }

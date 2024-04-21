@@ -29,6 +29,7 @@ public class CheckoutTwoPage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage clickCancelButton() {
+        logger.debug("Click Cancel button");
         driver.findElement(cancelButton).click();
 
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -40,6 +41,7 @@ public class CheckoutTwoPage extends BasePage {
      * @return a CheckoutCompletePage instance
      */
     public CheckoutCompletePage clickFinishButton() {
+        logger.debug("Click Finish button");
         driver.findElement(finishButton).click();
 
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
@@ -51,6 +53,8 @@ public class CheckoutTwoPage extends BasePage {
      * @return the Item name
      */
     public String getItemName() {
-        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
+        String name = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
+        logger.debug("Get Item name: {}", name);
+        return name;
     }
 }

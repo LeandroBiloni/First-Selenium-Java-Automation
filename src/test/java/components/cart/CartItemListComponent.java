@@ -28,10 +28,13 @@ public class CartItemListComponent extends BaseComponent{
      * Initializes the CartList with all the items
      */
     public void initializeList() {
+        logger.debug("Initialize CartItems list");
         cartItems = new ArrayList<CartItem>();
 
         for (WebElement webElement : container.findElements(itemContainer)) {    
             CartItem item = new CartItem(driver, webElement);
+            logger.debug("Adding CartItem: {}", item.getItemName());
+
             cartItems.add(item);
         }
     }
@@ -40,7 +43,8 @@ public class CartItemListComponent extends BaseComponent{
      * Get all the items in the Cart list
      * @return the items from the Cart list
      */
-    public ArrayList<CartItem> getItems() {
+    public ArrayList<CartItem> getCartItems() {
+        logger.debug("Get Cart Items");
         return cartItems;
     }
     
@@ -49,7 +53,10 @@ public class CartItemListComponent extends BaseComponent{
      * @param index the index of the Item
      * @return the item that corresponds to that index
      */
-    public CartItem getItemWithIndex(int index) {
-        return cartItems.get(index);
+    public CartItem getCartItemWithIndex(int index) {
+        CartItem item = cartItems.get(index);
+        logger.debug("Get CartItem '{}'' with index '{}'", item.getItemName(), index);
+
+        return item;
     }
 }

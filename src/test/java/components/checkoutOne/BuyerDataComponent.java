@@ -32,6 +32,7 @@ public class BuyerDataComponent extends BaseComponent {
      * @return this BuyerDataComponent instance
      */
     public BuyerDataComponent setFirstNameFieldText(String text) {
+        logger.debug("Enter First Name: {}", text);
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, firstNameField)).sendKeys(text);;
         return this;
     }
@@ -42,6 +43,7 @@ public class BuyerDataComponent extends BaseComponent {
      * @return this BuyerDataComponent instance
      */
     public BuyerDataComponent setLastNameFieldText(String text) {
+        logger.debug("Enter Last Name: {}", text);
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, lastNameField)).sendKeys(text);;
         return this;
     }
@@ -52,6 +54,7 @@ public class BuyerDataComponent extends BaseComponent {
      * @return this BuyerDataComponent instance
      */
     public BuyerDataComponent setPostalCodeText(String text) {
+        logger.debug("Enter Postal Code: {}", text);
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, postalCodeField)).sendKeys(text);;
         return this;
     }
@@ -61,6 +64,8 @@ public class BuyerDataComponent extends BaseComponent {
      * @return True if the error is displayed. False otherwise
      */
     public boolean isErrorFieldDisplayed() {
-        return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(errorField)).isDisplayed();
+        boolean isDisplayed = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(errorField)).isDisplayed();
+        logger.debug("Is error field displayed: {}", isDisplayed);
+        return isDisplayed;
     }
 }

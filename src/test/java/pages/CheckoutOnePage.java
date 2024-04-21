@@ -31,7 +31,9 @@ public class CheckoutOnePage extends BasePage {
      * @return True if the error is displayed. False otherwise
      */
     public boolean isErrorFieldDisplayed() {
-        return buyerDataComponent.isErrorFieldDisplayed();
+        boolean isDisplayed = buyerDataComponent.isErrorFieldDisplayed();
+        logger.debug("Is Error displayed: {}", isDisplayed);
+        return isDisplayed;
     }
     
     /**
@@ -40,6 +42,7 @@ public class CheckoutOnePage extends BasePage {
      * @return this CheckoutOnePage instance
      */
     public CheckoutOnePage setFirstNameFieldText(String text) {
+        logger.debug("Enter First Name: {}", text);
         buyerDataComponent.setFirstNameFieldText(text);
         return this;
     }
@@ -50,6 +53,7 @@ public class CheckoutOnePage extends BasePage {
      * @return this CheckoutOnePage instance
      */
     public CheckoutOnePage setLastNameFieldText(String text) {
+        logger.debug("Enter Last Name: {}", text);
         buyerDataComponent.setLastNameFieldText(text);
         return this;
     }
@@ -60,6 +64,7 @@ public class CheckoutOnePage extends BasePage {
      * @return this CheckoutOnePage instance
      */
     public CheckoutOnePage setPostalCodeText(String text) {
+        logger.debug("Enter Postal Name: {}", text);
         buyerDataComponent.setPostalCodeText(text);
         return this;
     }
@@ -69,6 +74,7 @@ public class CheckoutOnePage extends BasePage {
      * @return a CartPage instance
      */
     public CartPage clickCancelButton() {
+        logger.debug("Click Cancel button");
         driver.findElement(cancelButton).click();
 
         CartPage cartPage = new CartPage(driver);
@@ -80,6 +86,7 @@ public class CheckoutOnePage extends BasePage {
      * @return a CheckoutTwoPage instance
      */
     public CheckoutTwoPage clickContinueButton() {
+        logger.debug("Click Continue button");
         driver.findElement(continueButton).click();
 
         CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(driver);

@@ -27,6 +27,8 @@ public class CartFooter extends BaseComponent{
      * @return this CartFooter instance
      */
     public CartFooter clickContinueShoppingButton() {
+        logger.debug("Click Continue Shopping button");
+
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(continueShoppingButton)).click();
 
         return this;
@@ -37,6 +39,7 @@ public class CartFooter extends BaseComponent{
      * @return this CartFooter instance
      */
     public CartFooter clickCheckoutButton() {
+        logger.debug("Click Checkout button");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(checkoutButton)).click();
 
         return this;

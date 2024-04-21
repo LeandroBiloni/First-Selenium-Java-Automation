@@ -38,6 +38,7 @@ public class ItemPage extends BasePage {
      * @return this InventoryPage instance
      */
     public ItemPage initHeader() {
+        logger.debug("Initialize Header Component", driver);
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
@@ -47,6 +48,7 @@ public class ItemPage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage clickBackToProductsButton() {
+        logger.debug("Click Back to Products button");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(backToProductsButton)).click();
 
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -58,6 +60,7 @@ public class ItemPage extends BasePage {
      * @return this ItemPage instance
      */
     public ItemPage clickAddToCartButton() {
+        logger.debug("Click Add to Cart button");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(addToCarttButton)).click();
         return this;
     }
@@ -67,6 +70,7 @@ public class ItemPage extends BasePage {
      * @return this ItemPage instance
      */
     public ItemPage clickRemoveFromCartButton() {
+        logger.debug("Click Remove from Cart button");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(removeFromCartButton)).click();
         return this;
     }
@@ -76,6 +80,7 @@ public class ItemPage extends BasePage {
      * @return a CartPage instance
      */
     public CartPage clickCartButton() {
+        logger.debug("Click Cart button");
         headerComponent.clickCartButton();
         CartPage cartPage = new CartPage(driver);
         return cartPage;
@@ -86,6 +91,8 @@ public class ItemPage extends BasePage {
      * @return the Item name
      */
     public String getItemName() {
-        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
+        String name = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
+        logger.debug("Get Item name: {}", name);
+        return name;
     }
 }

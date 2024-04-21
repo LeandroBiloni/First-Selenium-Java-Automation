@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="102.868" tests="22" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="28.779" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="webdriver.chrome.driver" value="Drivers/chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\test-classes;C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\classes;C:\Users\leand\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\leand\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\leand\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\leand\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\leand\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\leand\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\leand\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\leand\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\leand\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\leand\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\leand\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\leand\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\leand\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\leand\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\leand\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;"/>
+    <property name="java.class.path" value="C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\test-classes;C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\classes;C:\Users\leand\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\leand\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\leand\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\leand\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\leand\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\leand\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\leand\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\leand\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\leand\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\leand\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\leand\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\leand\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\leand\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\leand\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\leand\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\leand\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;C:\Users\leand\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\leand\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\leand\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\leand\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\leand\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\leand\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\leand\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -16,9 +16,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\leand\AppData\Local\Temp\surefire18294585289182414842\surefirebooter-20240416234334529_3.jar C:\Users\leand\AppData\Local\Temp\surefire18294585289182414842 2024-04-16T23-43-34_449-jvmRun1 surefire-20240416234334529_1tmp surefire_0-20240416234334529_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\leand\AppData\Local\Temp\surefire15600537160856924928\surefirebooter-20240421174602918_3.jar C:\Users\leand\AppData\Local\Temp\surefire15600537160856924928 2024-04-21T17-46-02_844-jvmRun1 surefire-20240421174602918_1tmp surefire_0-20240421174602918_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\test-classes;C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\classes;C:\Users\leand\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\leand\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\leand\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\leand\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\leand\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\leand\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\leand\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\leand\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\leand\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\leand\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\leand\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\leand\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\leand\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\leand\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\leand\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\test-classes;C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\target\classes;C:\Users\leand\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\leand\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\leand\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\leand\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\leand\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\leand\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\leand\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\leand\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\leand\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\leand\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\leand\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\leand\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\leand\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\leand\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\leand\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\leand\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\leand\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\leand\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\leand\.m2\repository\org\apache\logging\log4j\log4j-core\2.23.1\log4j-core-2.23.1.jar;C:\Users\leand\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\leand\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\leand\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\leand\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\leand\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\leand\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\leand\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\leand"/>
     <property name="user.language" value="es"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\leand\AppData\Local\Temp\surefire18294585289182414842\surefirebooter-20240416234334529_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\leand\AppData\Local\Temp\surefire15600537160856924928\surefirebooter-20240421174602918_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -59,215 +59,428 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="goToCheckoutOne" classname="tests.CartTest" time="1.529">
+  <testcase name="closeMenu" classname="tests.InventoryTest" time="2.01">
+    <system-out><![CDATA[2024-04-21 17:46:04.853 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:04.855 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:04.910 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:04.955 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:05.011 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:05.012 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:05.022 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:05.022 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:05.022 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:05.059 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:05.068 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:05.068 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:05.624 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:05.632 [main] DEBUG pages.InventoryPage - Click Open Menu button
+2024-04-21 17:46:05.632 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:05.957 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:05.991 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:05.996 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:05.996 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:05.996 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:06.016 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:06.020 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:06.020 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:06.051 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:06.057 [main] DEBUG pages.InventoryPage - Is menu closed
+2024-04-21 17:46:06.583 [main] DEBUG components.MenuListComponent - Is menu closed: true
+2024-04-21 17:46:06.583 [main] DEBUG components.HeaderComponent - Is menu closed: true
+]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-abr 16, 2024 11:43:35 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+abr 21, 2024 5:46:04 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="goToInventoryA" classname="tests.CartTest" time="2.448">
-    <system-out><![CDATA[El test Go to checkout step one resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:43:38 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="goToInventoryB" classname="tests.CartTest" time="2.446">
-    <system-out><![CDATA[El test Go back to inventory page using All items button in menu resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:43:41 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="backHome" classname="tests.CheckoutCompleteTest" time="2.33">
-    <system-out><![CDATA[El test Go back to inventory page using Continue Shopping button resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:43:45 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="backToCart" classname="tests.CheckoutOneTest" time="2.497">
-    <system-out><![CDATA[El test Go back to home page resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:43:48 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="continueToCheckout2" classname="tests.CheckoutOneTest" time="1.613">
-    <system-out><![CDATA[El test Go back to cart with cancel button resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:43:52 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="continueToCheckout2WithNoData" classname="tests.CheckoutOneTest" time="1.517">
-    <system-out><![CDATA[El test Continue to checkout 2 resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:43:55 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="cancelCheckout" classname="tests.CheckoutTwoTest" time="2.62">
-    <system-out><![CDATA[El test Continue to checkout 2 without inserting info resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:43:57 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="finishCheckout" classname="tests.CheckoutTwoTest" time="1.714">
-    <system-out><![CDATA[El test Cancel checkout resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:01 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="closeMenu" classname="tests.InventoryTest" time="2.344">
-    <system-out><![CDATA[El test Finish checkout resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:04 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="filterChange" classname="tests.InventoryTest" time="1.794">
+  <testcase name="filterChange" classname="tests.InventoryTest" time="1.212">
     <system-out><![CDATA[El test Close hamburger menu resultó: 1
+2024-04-21 17:46:07.679 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:07.679 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:07.745 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:07.799 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:07.854 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:07.854 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:07.863 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:07.863 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:07.863 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:07.898 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:07.906 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:07.906 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:08.459 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:08.465 [main] DEBUG pages.InventoryPage - Select filter with index: 3
+2024-04-21 17:46:08.465 [main] DEBUG components.inventory.SecondaryHeaderComponent - Select filter with index: 3
+2024-04-21 17:46:08.548 [main] DEBUG components.inventory.SecondaryHeaderComponent - Get selected filter: Price (high to low)
+2024-04-21 17:46:08.548 [main] DEBUG components.inventory.SecondaryHeaderComponent - Selected filter: Price (high to low)
+2024-04-21 17:46:08.548 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:08.554 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:08.554 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:08.554 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:08.826 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:08.832 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:08.832 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:08.864 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:08.870 [main] DEBUG pages.InventoryPage - Get selected filter
+2024-04-21 17:46:08.883 [main] DEBUG components.inventory.SecondaryHeaderComponent - Get selected filter: Price (high to low)
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:07 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:06 P. M. org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
+
+abr 21, 2024 5:46:07 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="goToAboutPage" classname="tests.InventoryTest" time="4.5">
+  <testcase name="goToAboutPage" classname="tests.InventoryTest" time="4.16">
     <system-out><![CDATA[El test Change the shop filter resultó: 1
+2024-04-21 17:46:09.964 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:09.964 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:10.032 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:10.086 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:10.145 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:10.145 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:10.153 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:10.153 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:10.153 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:10.188 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:10.197 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:10.198 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:10.749 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:10.757 [main] DEBUG pages.InventoryPage - Click Open Menu button
+2024-04-21 17:46:10.757 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:11.099 [main] DEBUG components.MenuListComponent - Click About button
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:11 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:08 P. M. org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
+
+abr 21, 2024 5:46:09 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="goToCart" classname="tests.InventoryTest" time="1.844">
+  <testcase name="goToCart" classname="tests.InventoryTest" time="1.827">
     <system-out><![CDATA[El test Go to about page resultó: 1
+2024-04-21 17:46:15.227 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:15.227 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:15.294 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:15.351 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:15.410 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:15.410 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:15.420 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:15.420 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:15.420 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:15.454 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:15.462 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:15.462 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:16.013 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:16.021 [main] DEBUG pages.InventoryPage - Click Cart button
+2024-04-21 17:46:16.021 [main] DEBUG components.HeaderComponent - Click Cart button
+2024-04-21 17:46:16.056 [main] DEBUG pages.CartPage - Initialize Header Component
+2024-04-21 17:46:16.063 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:16.063 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:16.063 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:16.088 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:16.093 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:16.093 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:16.637 [main] DEBUG pages.CartPage - Initialize CartItem List Component
+2024-04-21 17:46:16.643 [main] DEBUG components.cart.CartItemListComponent - Initialize CartItems list
+2024-04-21 17:46:16.650 [main] DEBUG pages.CartPage - Initialize Header Component
+2024-04-21 17:46:16.654 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:16.654 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:16.654 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:16.988 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:16.992 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:16.992 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:17.032 [main] DEBUG pages.CartPage - Initialize CartItem List Component
+2024-04-21 17:46:17.038 [main] DEBUG components.cart.CartItemListComponent - Initialize CartItems list
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:16 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:14 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="goToCartWithAddedItem" classname="tests.InventoryTest" time="1.857">
+  <testcase name="goToCartWithAddedItem" classname="tests.InventoryTest" time="1.848">
     <system-out><![CDATA[El test Go to cart resultó: 1
+2024-04-21 17:46:18.148 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:18.148 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:18.211 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:18.266 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:18.323 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:18.323 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:18.330 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:18.330 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:18.330 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:18.361 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:18.371 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:18.372 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:18.929 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:18.935 [main] DEBUG pages.InventoryPage - Create Inventory List Component
+2024-04-21 17:46:18.943 [main] DEBUG components.inventory.InventoryListComponent - Initialize Inventory List
+2024-04-21 17:46:18.964 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:18.964 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Backpack
+2024-04-21 17:46:18.972 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Bike Light
+2024-04-21 17:46:18.972 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Bike Light
+2024-04-21 17:46:18.982 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Bolt T-Shirt
+2024-04-21 17:46:18.982 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Bolt T-Shirt
+2024-04-21 17:46:18.990 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Fleece Jacket
+2024-04-21 17:46:18.990 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Fleece Jacket
+2024-04-21 17:46:19.000 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Onesie
+2024-04-21 17:46:19.000 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Onesie
+2024-04-21 17:46:19.011 [main] DEBUG components.inventory.InventoryItem - Get Item name: Test.allTheThings() T-Shirt (Red)
+2024-04-21 17:46:19.011 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Test.allTheThings() T-Shirt (Red)
+2024-04-21 17:46:19.021 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:19.021 [main] DEBUG components.inventory.InventoryListComponent - Get Item 'Sauce Labs Backpack' with ID '0'
+2024-04-21 17:46:19.030 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:19.030 [main] DEBUG components.inventory.InventoryItem - Click Add/Remove button
+2024-04-21 17:46:19.054 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:19.058 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:19.060 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:19.060 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:19.275 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:19.279 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:19.280 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:19.310 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:19.315 [main] DEBUG pages.InventoryPage - Click Cart button
+2024-04-21 17:46:19.315 [main] DEBUG components.HeaderComponent - Click Cart button
+2024-04-21 17:46:19.346 [main] DEBUG pages.CartPage - Initialize Header Component
+2024-04-21 17:46:19.352 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:19.352 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:19.352 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:19.374 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:19.380 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:19.380 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:19.934 [main] DEBUG pages.CartPage - Initialize CartItem List Component
+2024-04-21 17:46:19.941 [main] DEBUG components.cart.CartItemListComponent - Initialize CartItems list
+2024-04-21 17:46:19.958 [main] DEBUG components.cart.CartItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:19.958 [main] DEBUG components.cart.CartItemListComponent - Adding CartItem: Sauce Labs Backpack
+2024-04-21 17:46:19.968 [main] DEBUG components.cart.CartItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:19.968 [main] DEBUG components.cart.CartItemListComponent - Get CartItem 'Sauce Labs Backpack'' with index '0'
+2024-04-21 17:46:19.977 [main] DEBUG components.cart.CartItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:19.977 [main] DEBUG pages.CartPage - Get CartItem 'Sauce Labs Backpack' with index: 0
+2024-04-21 17:46:19.986 [main] DEBUG components.cart.CartItem - Get Item name: Sauce Labs Backpack
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:19 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="goToInventory" classname="tests.InventoryTest" time="2.42">
+  <testcase name="goToInventory" classname="tests.InventoryTest" time="2.407">
     <system-out><![CDATA[El test Add item to cart and check if its the same item resultó: 1
+2024-04-21 17:46:21.097 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:21.097 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:21.164 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:21.223 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:21.282 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:21.282 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:21.291 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:21.291 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:21.291 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:21.326 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:21.334 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:21.334 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:21.892 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:21.899 [main] DEBUG pages.InventoryPage - Click Cart button
+2024-04-21 17:46:21.899 [main] DEBUG components.HeaderComponent - Click Cart button
+2024-04-21 17:46:21.929 [main] DEBUG pages.CartPage - Initialize Header Component
+2024-04-21 17:46:21.934 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:21.934 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:21.934 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:21.956 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:21.962 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:21.962 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:22.522 [main] DEBUG pages.CartPage - Initialize CartItem List Component
+2024-04-21 17:46:22.528 [main] DEBUG components.cart.CartItemListComponent - Initialize CartItems list
+2024-04-21 17:46:22.533 [main] DEBUG pages.CartPage - Open Hamburger menu
+2024-04-21 17:46:22.533 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:22.863 [main] DEBUG components.MenuListComponent - Click All Items button
+2024-04-21 17:46:22.908 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:22.915 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:22.915 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:22.915 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:22.939 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:22.945 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:22.945 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:23.489 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:22 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:20 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="goToItemPageFromImage" classname="tests.InventoryTest" time="1.847">
+  <testcase name="goToItemPageFromImage" classname="tests.InventoryTest" time="1.87">
     <system-out><![CDATA[El test Go back to Inventory page resultó: 1
+2024-04-21 17:46:24.570 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:24.570 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:24.631 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:24.683 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:24.736 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:24.737 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:24.744 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:24.744 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:24.744 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:24.778 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:24.784 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:24.784 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:25.337 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:25.344 [main] DEBUG pages.InventoryPage - Create Inventory List Component
+2024-04-21 17:46:25.349 [main] DEBUG components.inventory.InventoryListComponent - Initialize Inventory List
+2024-04-21 17:46:25.367 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:25.368 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Backpack
+2024-04-21 17:46:25.377 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Bike Light
+2024-04-21 17:46:25.377 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Bike Light
+2024-04-21 17:46:25.386 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Bolt T-Shirt
+2024-04-21 17:46:25.386 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Bolt T-Shirt
+2024-04-21 17:46:25.395 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Fleece Jacket
+2024-04-21 17:46:25.395 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Fleece Jacket
+2024-04-21 17:46:25.405 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Onesie
+2024-04-21 17:46:25.405 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Onesie
+2024-04-21 17:46:25.414 [main] DEBUG components.inventory.InventoryItem - Get Item name: Test.allTheThings() T-Shirt (Red)
+2024-04-21 17:46:25.414 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Test.allTheThings() T-Shirt (Red)
+2024-04-21 17:46:25.423 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:25.423 [main] DEBUG components.inventory.InventoryListComponent - Get Item 'Sauce Labs Backpack' with ID '0'
+2024-04-21 17:46:25.432 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:25.432 [main] DEBUG components.inventory.InventoryItem - Click Image button
+2024-04-21 17:46:25.464 [main] DEBUG pages.ItemPage - Initialize Header Component
+2024-04-21 17:46:25.473 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:25.473 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:25.473 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:25.499 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:25.504 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:25.504 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:26.048 [main] DEBUG pages.ItemPage - Initialize Header Component
+2024-04-21 17:46:26.052 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:26.052 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:26.052 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:26.389 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:26.394 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:26.394 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:26.431 [main] DEBUG pages.ItemPage - Get Item name: Sauce Labs Backpack
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:26 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:23 P. M. org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
+
+abr 21, 2024 5:46:24 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="goToItemPageFromLabel" classname="tests.InventoryTest" time="1.836">
+  <testcase name="goToItemPageFromLabel" classname="tests.InventoryTest" time="1.878">
     <system-out><![CDATA[El test Go to item page from image resultó: 1
+2024-04-21 17:46:27.584 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:27.584 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:27.648 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:27.698 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:27.756 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:27.756 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:27.764 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:27.764 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:27.764 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:27.795 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:27.803 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:27.803 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:28.360 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:28.368 [main] DEBUG pages.InventoryPage - Create Inventory List Component
+2024-04-21 17:46:28.374 [main] DEBUG components.inventory.InventoryListComponent - Initialize Inventory List
+2024-04-21 17:46:28.393 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:28.393 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Backpack
+2024-04-21 17:46:28.404 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Bike Light
+2024-04-21 17:46:28.404 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Bike Light
+2024-04-21 17:46:28.413 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Bolt T-Shirt
+2024-04-21 17:46:28.413 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Bolt T-Shirt
+2024-04-21 17:46:28.423 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Fleece Jacket
+2024-04-21 17:46:28.423 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Fleece Jacket
+2024-04-21 17:46:28.431 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Onesie
+2024-04-21 17:46:28.431 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Sauce Labs Onesie
+2024-04-21 17:46:28.440 [main] DEBUG components.inventory.InventoryItem - Get Item name: Test.allTheThings() T-Shirt (Red)
+2024-04-21 17:46:28.441 [main] DEBUG components.inventory.InventoryListComponent - Adding Item: Test.allTheThings() T-Shirt (Red)
+2024-04-21 17:46:28.449 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:28.449 [main] DEBUG components.inventory.InventoryListComponent - Get Item 'Sauce Labs Backpack' with ID '0'
+2024-04-21 17:46:28.458 [main] DEBUG components.inventory.InventoryItem - Get Item name: Sauce Labs Backpack
+2024-04-21 17:46:28.458 [main] DEBUG components.inventory.InventoryItem - Click Label button
+2024-04-21 17:46:28.485 [main] DEBUG pages.ItemPage - Initialize Header Component
+2024-04-21 17:46:28.492 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:28.492 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:28.492 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:28.519 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:28.524 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:28.524 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:29.075 [main] DEBUG pages.ItemPage - Initialize Header Component
+2024-04-21 17:46:29.079 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:29.079 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:29.079 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:29.410 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:29.414 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:29.414 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:29.454 [main] DEBUG pages.ItemPage - Get Item name: Sauce Labs Backpack
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:28 P. M. org.openqa.selenium.remote.http.WebSocket$Listener onError
-WARNING: Connection reset
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
-
-abr 16, 2024 11:44:29 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:27 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>
-  <testcase name="logout" classname="tests.InventoryTest" time="1.171">
+  <testcase name="logout" classname="tests.InventoryTest" time="1.155">
     <system-out><![CDATA[El test Go to item page from label resultó: 1
+2024-04-21 17:46:30.605 [main] DEBUG pages.LoginPage - Enter Username 'standard_user' and Password 'secret_sauce'
+2024-04-21 17:46:30.605 [main] DEBUG components.LoginComponent - Enter Username: standard_user
+2024-04-21 17:46:30.671 [main] DEBUG components.LoginComponent - Enter Password: secret_sauce
+2024-04-21 17:46:30.723 [main] DEBUG components.LoginComponent - Click Login button
+2024-04-21 17:46:30.779 [main] DEBUG pages.LoginPage - Click Login button
+2024-04-21 17:46:30.780 [main] DEBUG pages.InventoryPage - Initialize Header Component
+2024-04-21 17:46:30.788 [main] DEBUG components.HeaderComponent - Initialize Menu Component
+2024-04-21 17:46:30.788 [main] DEBUG components.HeaderComponent - Open Menu List
+2024-04-21 17:46:30.788 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:30.821 [main] DEBUG components.HeaderComponent - Create new MenuListComponent instance
+2024-04-21 17:46:30.828 [main] DEBUG components.HeaderComponent - Close Menu List
+2024-04-21 17:46:30.828 [main] DEBUG components.MenuListComponent - Click Close Menu button
+2024-04-21 17:46:31.374 [main] DEBUG pages.InventoryPage - Initialize Secondary Header Component
+2024-04-21 17:46:31.380 [main] DEBUG pages.InventoryPage - Click Open Menu button
+2024-04-21 17:46:31.380 [main] DEBUG components.HeaderComponent - Click Open Menu button
+2024-04-21 17:46:31.713 [main] DEBUG components.MenuListComponent - Click Logout button
 ]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:31 P. M. org.openqa.selenium.remote.http.WebSocket$Listener onError
-WARNING: Connection reset
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
-
-abr 16, 2024 11:44:32 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="addToCart" classname="tests.ItemTest" time="2.11">
-    <system-out><![CDATA[El test Try to logout resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="backToInventory" classname="tests.ItemTest" time="2.67">
-    <system-out><![CDATA[El test Add to cart resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:37 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="removeFromCart" classname="tests.ItemTest" time="33.148">
-    <system-out><![CDATA[El test Go back to inventory resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:44:40 P. M. org.openqa.selenium.remote.http.WebSocket$Listener onError
-WARNING: Connection reset
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
-
-abr 16, 2024 11:44:41 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
-]]></system-err>
-  </testcase>
-  <testcase name="correctLogin" classname="tests.LoginTest" time="1.182">
-    <system-out><![CDATA[El test Remove from cart resultó: 1
-]]></system-out>
-    <system-err><![CDATA[abr 16, 2024 11:45:15 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[abr 21, 2024 5:46:30 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 122; Please update to a Selenium version that supports CDP version 123
 ]]></system-err>
   </testcase>

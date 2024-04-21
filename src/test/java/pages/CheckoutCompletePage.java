@@ -24,6 +24,7 @@ public class CheckoutCompletePage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage clickHomeButton() {
+        logger.debug("Click Home button");
         driver.findElement(homeButton).click();
 
         InventoryPage inventoryPage = new InventoryPage(driver);

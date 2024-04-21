@@ -29,10 +29,12 @@ public class LoginPage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage login(String user, String pass) {
+        logger.debug("Enter Username '{}' and Password '{}'", user, pass);
         loginComponent.fillUsernameField(user)
             .fillPasswordField(pass)
             .clickLoginButton();
 
+        logger.debug("Click Login button");
         InventoryPage inventoryPage = new InventoryPage(driver);
         return inventoryPage;     
     }

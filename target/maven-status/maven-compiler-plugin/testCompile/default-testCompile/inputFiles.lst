@@ -8,7 +8,7 @@ C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\prim
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\components\HeaderComponent.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\components\inventory\InventoryItem.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\components\inventory\InventoryListComponent.java
-C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\components\inventory\SecondaryHeader.java
+C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\components\inventory\SecondaryHeaderComponent.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\components\LoginComponent.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\components\MenuListComponent.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\helpers\Helper.java
@@ -22,7 +22,6 @@ C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\prim
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\InventoryPage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\ItemPage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\LoginPage.java
-C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\pages\LogonPage.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CartTest.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CheckoutCompleteTest.java
 C:\Users\leand\Desktop\Proyectos\Otros Proyectos\Automation\Primer Proyecto\primer_proyecto\src\test\java\tests\CheckoutOneTest.java

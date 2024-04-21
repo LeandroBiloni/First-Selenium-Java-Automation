@@ -28,6 +28,8 @@ public class InventoryListComponent extends BaseComponent {
      * Initializes the InventoryList with all the items
      */
     private void initializeList() {
+        logger.debug("Initialize Inventory List");
+
         inventoryItems = new ArrayList<InventoryItem>();
         
         int i = 0;
@@ -35,6 +37,7 @@ public class InventoryListComponent extends BaseComponent {
         for (WebElement webElement : container.findElements(itemContainer)) {    
             InventoryItem item = new InventoryItem(driver, webElement, i);
 
+            logger.debug("Adding Item: {}", item.getItemName());
             inventoryItems.add(item);
         }
     }
@@ -44,6 +47,7 @@ public class InventoryListComponent extends BaseComponent {
      * @return the items from the Inventory list
      */
     public ArrayList<InventoryItem> getItems() {
+        logger.debug("Get Inventory Items");
         return inventoryItems;
     }
     
@@ -53,6 +57,8 @@ public class InventoryListComponent extends BaseComponent {
      * @return the item that corresponds to that ID
      */
     public InventoryItem getItemWithID(int id) {
-        return inventoryItems.get(id);
+        InventoryItem item = inventoryItems.get(id);
+        logger.debug("Get Item '{}' with ID '{}'", item.getItemName(), id);
+        return item;
     }
 }

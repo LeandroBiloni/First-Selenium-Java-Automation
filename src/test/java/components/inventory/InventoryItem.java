@@ -33,6 +33,7 @@ public class InventoryItem extends BaseComponent {
      * @return an instance of an ItemPage
      */
     public ItemPage clickImageButton() {
+        logger.debug("Click Image button");
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, imageButton)).click();
         ItemPage itemPage = new ItemPage(driver);
         return itemPage;
@@ -43,6 +44,7 @@ public class InventoryItem extends BaseComponent {
      * @return an instance of an ItemPage
      */
     public ItemPage clickItemLabelButton() {
+        logger.debug("Click Label button");
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, itemLabelButton)).click();
         ItemPage itemPage = new ItemPage(driver);
         return itemPage;
@@ -53,6 +55,7 @@ public class InventoryItem extends BaseComponent {
      * @return an instance of an ItemPage
      */
     public InventoryItem clickAddOrRemoveButton() {
+        logger.debug("Click Add/Remove button");
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, addRemoveButton)).click();
         return this;
     }
@@ -62,8 +65,9 @@ public class InventoryItem extends BaseComponent {
      * @return the Item name
      */
     public String getItemName() {
-        WebElement label = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, itemLabelButton));
-        return label.getText();
+        String itemName = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, itemLabelButton)).getText();
+        logger.debug("Get Item name: {}", itemName);
+        return itemName;
     }
 
     /**
@@ -71,6 +75,7 @@ public class InventoryItem extends BaseComponent {
      * @return the item ID
      */
     public int getItemID() {
+        logger.debug("Get Item id: {}", itemID);
         return itemID;
     }
 }

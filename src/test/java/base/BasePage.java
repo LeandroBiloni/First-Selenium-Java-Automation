@@ -3,6 +3,7 @@ package base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * Base class for PageObjects
@@ -32,6 +33,6 @@ public abstract class BasePage extends BaseWaitableObject{
      * @return a WebElement
      */
     protected WebElement getContainer(By containerBy) {
-        return driver.findElement(containerBy);
+        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(containerBy));
     }
 }

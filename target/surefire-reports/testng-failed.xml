@@ -6,17 +6,10 @@
       <class name="tests.InventoryTest">
         <methods>
           <include name="setUp"/>
+          <include name="filterChange"/>
           <include name="tearDown"/>
-          <include name="closeMenu"/>
         </methods>
       </class> <!-- tests.InventoryTest -->
-      <class name="tests.ItemTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="removeFromCart"/>
-        </methods>
-      </class> <!-- tests.ItemTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

@@ -32,9 +32,15 @@ public class HeaderComponent extends BaseComponent {
      * Initializes the MenuListComponent
      */
     private void initMenuComponent() {
+        logger.debug("Initialize Menu Component");
+
+        logger.debug("Open Menu List");
         openMenu();
+
+        logger.debug("Create new MenuListComponent instance");
         menuListComponent = new MenuListComponent(driver, driver.findElement(menuButtonsListContainer));
         
+        logger.debug("Close Menu List");
         menuListComponent.closeMenuList();
     }
 
@@ -43,6 +49,7 @@ public class HeaderComponent extends BaseComponent {
      * @return the MenuListComponent instance
      */
     public MenuListComponent openMenu() {
+        logger.debug("Click Open Menu button");
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, menuButton)).click();
         return menuListComponent;
     } 
@@ -52,7 +59,9 @@ public class HeaderComponent extends BaseComponent {
      * @return True if closed. False otherwise
      */
     public boolean isMenuClosed() {
-        return menuListComponent.isMenuClosed();
+        boolean isClosed = menuListComponent.isMenuClosed();
+        logger.debug("Is menu closed: {}", isClosed);
+        return isClosed;
     }
 
     /**
@@ -60,6 +69,7 @@ public class HeaderComponent extends BaseComponent {
      * @return this HeaderComponent instance
      */
     public HeaderComponent clickCartButton() {
+        logger.debug("Click Cart button");
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, cartButton)).click();
         return this;
     }

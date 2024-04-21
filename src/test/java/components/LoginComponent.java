@@ -30,7 +30,7 @@ public class LoginComponent extends BaseComponent {
      * @return this LoginComponent instance
      */
     public LoginComponent fillUsernameField(String username) {
-        //WebElement element = container.findElement(userField);
+        logger.debug("Enter Username: {}", username);
         WebElement element = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, userField));
         element.sendKeys(username);
         return this;
@@ -42,6 +42,7 @@ public class LoginComponent extends BaseComponent {
      * @return this LoginComponent instance
      */
     public LoginComponent fillPasswordField(String password) {
+        logger.debug("Enter Password: {}", password);
         WebElement element = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, passwordField));
         element.sendKeys(password);
         return this;
@@ -52,6 +53,7 @@ public class LoginComponent extends BaseComponent {
      * @return this LoginComponent instance
      */
     public LoginComponent clickLoginButton() {
+        logger.debug("Click Login button");
         WebElement element = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, loginButton));
         element.click();
         return this;

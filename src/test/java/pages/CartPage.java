@@ -43,6 +43,7 @@ public class CartPage extends BasePage{
      * @return this CartPage instance
      */
     public CartPage initHeader() {
+        logger.debug("Initialize Header Component");
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
@@ -52,6 +53,7 @@ public class CartPage extends BasePage{
      * @return this CartPage instance
      */
     public CartPage initCartItemsComponent() {
+        logger.debug("Initialize CartItem List Component");
         cartItemListComponent = new CartItemListComponent(driver, getContainer(cartItemsContainer));
         return this;
     }
@@ -61,6 +63,7 @@ public class CartPage extends BasePage{
      * @return a MenuListComponent instance
      */
     public MenuListComponent openMenu() {
+        logger.debug("Open Hamburger menu");
         return headerComponent.openMenu();
     }
 
@@ -69,6 +72,7 @@ public class CartPage extends BasePage{
      * @return an InventoryPage instance
      */
     public InventoryPage clickContinueShoppingButton() {
+        logger.debug("Click Continue Shopping button");
         cartFooter.clickContinueShoppingButton();
         InventoryPage inventoryPage = new InventoryPage(driver);
         return inventoryPage;
@@ -79,6 +83,7 @@ public class CartPage extends BasePage{
      * @return a CheckoutOnePage instance
      */
     public CheckoutOnePage clickCheckoutButton() {
+        logger.debug("Click Checkout button");
         cartFooter.clickCheckoutButton();
         CheckoutOnePage checkoutOnePage = new CheckoutOnePage(driver);
         return checkoutOnePage;
@@ -89,8 +94,9 @@ public class CartPage extends BasePage{
      * @param index the index of the Item to remove
      * @return this CartPage instance
      */
-    public CartPage clickRemoveButtonFWithIndex(int index) {
-        cartItemListComponent.getItemWithIndex(index).clickRemoveButton();
+    public CartPage clickRemoveButtonWithIndex(int index) {
+        logger.debug("Click Remove button from CartItem with index: {}", index);
+        cartItemListComponent.getCartItemWithIndex(index).clickRemoveButton();
         return this;
     }
 
@@ -102,7 +108,7 @@ public class CartPage extends BasePage{
     public boolean isItemInCart(String name) {
         cartItemListComponent.initializeList();
 
-        ArrayList<CartItem> items = cartItemListComponent.getItems();
+        ArrayList<CartItem> items = cartItemListComponent.getCartItems();
 
         boolean exists = false;
         for (int i = 0; i < items.size(); i++) {
@@ -111,6 +117,8 @@ public class CartPage extends BasePage{
                 break;
             }
         }
+
+        logger.debug("Is item '{}' in cart: {}", name, exists);
         return exists;
     }
 
@@ -120,6 +128,8 @@ public class CartPage extends BasePage{
      * @return the found CartItem
      */
     public CartItem getCartItemWithIndex(int index) {
-        return cartItemListComponent.getItemWithIndex(index);
+        CartItem cartItem = cartItemListComponent.getCartItemWithIndex(index);
+        logger.debug("Get CartItem '{}' with index: {}", cartItem.getItemName(), index);
+        return cartItem;
     }
 }

@@ -31,6 +31,7 @@ public class MenuListComponent extends BaseComponent {
      * @return this MenuListComponent instance
      */
     public MenuListComponent closeMenuList() {
+        logger.debug("Click Close Menu button");
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, closeMenuButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         return this;
@@ -41,6 +42,7 @@ public class MenuListComponent extends BaseComponent {
      * @return this MenuListComponent instance
      */
     public MenuListComponent clickAllItemsButton() {
+        logger.debug("Click All Items button");
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, allItemsButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         return this;
@@ -51,6 +53,7 @@ public class MenuListComponent extends BaseComponent {
      * @return this MenuListComponent instance
      */
     public MenuListComponent clickAboutButton() {
+        logger.debug("Click About button");
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, aboutButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         return this;
@@ -61,6 +64,7 @@ public class MenuListComponent extends BaseComponent {
      * @return this MenuListComponent instance
      */
     public MenuListComponent clickLogoutButton() {
+        logger.debug("Click Logout button");
         WebElement webElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, logoutButton));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         
@@ -72,6 +76,8 @@ public class MenuListComponent extends BaseComponent {
      * @return True if the menu is closed. False otherwise
      */
     public boolean isMenuClosed() {
-        return webDriverWait.until(ExpectedConditions.invisibilityOf(container));
+        boolean isClosed = webDriverWait.until(ExpectedConditions.invisibilityOf(container));
+        logger.debug("Is menu closed: {}", isClosed);
+        return isClosed;
     }
 }

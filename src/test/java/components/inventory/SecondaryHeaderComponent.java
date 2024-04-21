@@ -11,12 +11,12 @@ import base.BaseComponent;
 /**
  * Class for the Header of the Inventory Page
  */
-public class SecondaryHeader extends BaseComponent{
+public class SecondaryHeaderComponent extends BaseComponent{
 
     private By filterDropdown;
     private By filterResult;
 
-    public SecondaryHeader(WebDriver driver, WebElement container) {
+    public SecondaryHeaderComponent(WebDriver driver, WebElement container) {
         super(driver, container);
         
         filterDropdown = By.cssSelector("span > select");
@@ -28,11 +28,15 @@ public class SecondaryHeader extends BaseComponent{
      * @param filterIndex the index of the sort option to use
      * @return this SecondaryHeader instance
      */
-    public SecondaryHeader selectFilter(int filterIndex) {
+    public SecondaryHeaderComponent selectFilter(int filterIndex) {
+        logger.debug("Select filter with index: {}", filterIndex);
+        
         WebElement filterElement = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, filterDropdown));
         
         Select selectFilter = new Select(filterElement);
         selectFilter.selectByIndex(filterIndex);
+        
+        logger.debug("Selected filter: {}", getSelectedFilterText());
         return this;
     }
 
@@ -41,6 +45,9 @@ public class SecondaryHeader extends BaseComponent{
      * @return the selected filter text
      */
     public String getSelectedFilterText() {
-        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(filterResult)).getText();
+        String selectedFilter = webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, filterResult)).getText();
+
+        logger.debug("Get selected filter: {}", selectedFilter);
+        return selectedFilter;
     }
 }
