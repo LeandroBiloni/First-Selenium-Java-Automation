@@ -10,6 +10,7 @@ import components.MenuListComponent;
 import components.cart.CartFooter;
 import components.cart.CartItem;
 import components.cart.CartItemListComponent;
+import helpers.TestReports;
 
 /**
  * Class for the Cart page PageObject
@@ -42,8 +43,8 @@ public class CartPage extends BasePage{
      * Initializes the HeaderComponent
      * @return this CartPage instance
      */
-    public CartPage initHeader() {
-        logger.debug("Initialize Header Component");
+    public CartPage initHeader() {      
+        TestReports.reportInfo("Initialize Header");  
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
@@ -53,7 +54,7 @@ public class CartPage extends BasePage{
      * @return this CartPage instance
      */
     public CartPage initCartItemsComponent() {
-        logger.debug("Initialize CartItem List Component");
+        TestReports.reportInfo("Initialize Cart Items List");  
         cartItemListComponent = new CartItemListComponent(driver, getContainer(cartItemsContainer));
         return this;
     }
@@ -63,7 +64,7 @@ public class CartPage extends BasePage{
      * @return a MenuListComponent instance
      */
     public MenuListComponent openMenu() {
-        logger.debug("Open Hamburger menu");
+        TestReports.reportInfo("Open Menu");
         return headerComponent.openMenu();
     }
 
@@ -72,7 +73,7 @@ public class CartPage extends BasePage{
      * @return an InventoryPage instance
      */
     public InventoryPage clickContinueShoppingButton() {
-        logger.debug("Click Continue Shopping button");
+        TestReports.reportInfo("Click Continue Shopping");
         cartFooter.clickContinueShoppingButton();
         InventoryPage inventoryPage = new InventoryPage(driver);
         return inventoryPage;
@@ -83,7 +84,7 @@ public class CartPage extends BasePage{
      * @return a CheckoutOnePage instance
      */
     public CheckoutOnePage clickCheckoutButton() {
-        logger.debug("Click Checkout button");
+        TestReports.reportInfo("Click Checkout");
         cartFooter.clickCheckoutButton();
         CheckoutOnePage checkoutOnePage = new CheckoutOnePage(driver);
         return checkoutOnePage;
@@ -95,8 +96,14 @@ public class CartPage extends BasePage{
      * @return this CartPage instance
      */
     public CartPage clickRemoveButtonWithIndex(int index) {
-        logger.debug("Click Remove button from CartItem with index: {}", index);
-        cartItemListComponent.getCartItemWithIndex(index).clickRemoveButton();
+        TestReports.reportInfo("Click Remove button from Cart Item with index: " + index);
+
+        try {
+            cartItemListComponent.getCartItemWithIndex(index).clickRemoveButton();    
+        } catch (Exception e) {
+            TestReports.reportError(e.getMessage());
+        }
+        
         return this;
     }
 
@@ -106,19 +113,22 @@ public class CartPage extends BasePage{
      * @return True if the CartItem is present. False otherwise
      */
     public boolean isItemInCart(String name) {
+        TestReports.reportInfo("Checking if item with name '" + name +"' is in cart");
         cartItemListComponent.initializeList();
 
-        ArrayList<CartItem> items = cartItemListComponent.getCartItems();
-
         boolean exists = false;
-        for (int i = 0; i < items.size(); i++) {
-            if (items.get(i).getItemName() == name) {
-                exists = true;
-                break;
+        try {
+            ArrayList<CartItem> items = cartItemListComponent.getCartItems();
+            for (int i = 0; i < items.size(); i++) {
+                if (items.get(i).getItemName() == name) {
+                    exists = true;
+                    break;
+                }
             }
+        } catch (Exception e) {
+            TestReports.reportError(e.getMessage());
         }
-
-        logger.debug("Is item '{}' in cart: {}", name, exists);
+        TestReports.reportInfo("Item '" + name + "' is present: " + exists);
         return exists;
     }
 
@@ -128,8 +138,15 @@ public class CartPage extends BasePage{
      * @return the found CartItem
      */
     public CartItem getCartItemWithIndex(int index) {
-        CartItem cartItem = cartItemListComponent.getCartItemWithIndex(index);
-        logger.debug("Get CartItem '{}' with index: {}", cartItem.getItemName(), index);
-        return cartItem;
+        TestReports.reportInfo("Get Cart Item with index: " + index);
+        try {
+            CartItem cartItem = cartItemListComponent.getCartItemWithIndex(index);
+            return cartItem;
+        } catch (Exception e) {
+            TestReports.reportError(e.getMessage());
+            TestReports.reportError("Cart Item is not present");
+        }
+        
+        return null;
     }
 }

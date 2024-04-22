@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BasePage;
 import components.HeaderComponent;
+import helpers.TestReports;
 
 /**
  * Class for the Item page PageObject
@@ -38,7 +39,7 @@ public class ItemPage extends BasePage {
      * @return this InventoryPage instance
      */
     public ItemPage initHeader() {
-        logger.debug("Initialize Header Component", driver);
+        TestReports.reportInfo("Initializing Header");
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
@@ -48,7 +49,7 @@ public class ItemPage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage clickBackToProductsButton() {
-        logger.debug("Click Back to Products button");
+        TestReports.reportInfo("Clicking Back to Products");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(backToProductsButton)).click();
 
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -60,7 +61,7 @@ public class ItemPage extends BasePage {
      * @return this ItemPage instance
      */
     public ItemPage clickAddToCartButton() {
-        logger.debug("Click Add to Cart button");
+        TestReports.reportInfo("Clicking Add to Cart");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(addToCarttButton)).click();
         return this;
     }
@@ -70,7 +71,7 @@ public class ItemPage extends BasePage {
      * @return this ItemPage instance
      */
     public ItemPage clickRemoveFromCartButton() {
-        logger.debug("Click Remove from Cart button");
+        TestReports.reportInfo("Clicking Remove from Cart");
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(removeFromCartButton)).click();
         return this;
     }
@@ -80,7 +81,7 @@ public class ItemPage extends BasePage {
      * @return a CartPage instance
      */
     public CartPage clickCartButton() {
-        logger.debug("Click Cart button");
+        TestReports.reportInfo("Clicking Cart");
         headerComponent.clickCartButton();
         CartPage cartPage = new CartPage(driver);
         return cartPage;
@@ -92,7 +93,7 @@ public class ItemPage extends BasePage {
      */
     public String getItemName() {
         String name = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
-        logger.debug("Get Item name: {}", name);
+        TestReports.reportInfo("Get Item name: " + name);
         return name;
     }
 }

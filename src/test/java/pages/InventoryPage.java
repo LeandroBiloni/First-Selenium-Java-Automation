@@ -11,6 +11,7 @@ import components.MenuListComponent;
 import components.inventory.InventoryItem;
 import components.inventory.InventoryListComponent;
 import components.inventory.SecondaryHeaderComponent;
+import helpers.TestReports;
 
 /**
  * Class for the Inventory page PageObject
@@ -39,7 +40,7 @@ public class InventoryPage extends BasePage {
      * @return this InventoryPage instance
      */
     public InventoryPage initHeader() {
-        logger.debug("Initialize Header Component");
+        TestReports.reportInfo("Initializing Header");
         headerComponent = new HeaderComponent(driver, getContainer(headerContainer));
         return this;
     }
@@ -49,7 +50,7 @@ public class InventoryPage extends BasePage {
      * @return this InventoryPage instance
      */
     public InventoryPage initSecondaryHeader() {
-        logger.debug("Initialize Secondary Header Component");
+        TestReports.reportInfo("Initializing Secondary Header");
         secondaryHeader = new SecondaryHeaderComponent(driver, getContainer(secondaryHeaderContainer));
         return this;
     }
@@ -60,7 +61,7 @@ public class InventoryPage extends BasePage {
      * @return this InventoryPage instance
      */
     public InventoryPage selectFilter(int filterIndex) {
-        logger.debug("Select filter with index: {}", filterIndex);
+        TestReports.reportInfo("Selecting filter with index: " + filterIndex);
         secondaryHeader.selectFilter(filterIndex);
         return this;
     }
@@ -70,8 +71,9 @@ public class InventoryPage extends BasePage {
      * @return the selected filter text
      */
     public String getSelectedFilterText() {
-        logger.debug("Get selected filter");
-        return secondaryHeader.getSelectedFilterText();
+        String filterText = secondaryHeader.getSelectedFilterText();
+        TestReports.reportInfo("Getting Selected Filter Text: " + filterText);
+        return filterText;
     }
 
     /**
@@ -79,7 +81,7 @@ public class InventoryPage extends BasePage {
      * @return the MenuListComponent instance
      */
     public MenuListComponent openMenu() {
-        logger.debug("Click Open Menu button");
+        TestReports.reportInfo("Clicking Open Menu");
         return headerComponent.openMenu();
     }
 
@@ -88,8 +90,17 @@ public class InventoryPage extends BasePage {
      * @return True if closed. False otherwise
      */
     public boolean isMenuClosed() {
-        logger.debug("Is menu closed");
-        return headerComponent.isMenuClosed();
+        TestReports.reportInfo("Checking if Menu is closed");
+
+        boolean isClosed = false;
+
+        try {
+            isClosed = headerComponent.isMenuClosed();
+        } catch (Exception e) {
+            TestReports.reportError(e.getMessage());
+        }
+        TestReports.reportInfo("Menu is closed: " + isClosed);
+        return isClosed;
     }
 
     /**
@@ -97,7 +108,7 @@ public class InventoryPage extends BasePage {
      * @return a CartPage instance
      */
     public CartPage clickCartButton() {
-        logger.debug("Click Cart button");
+        TestReports.reportInfo("Clicking Cart");
         headerComponent.clickCartButton();
         CartPage cartPage = new CartPage(driver);
         return cartPage;
@@ -109,7 +120,7 @@ public class InventoryPage extends BasePage {
      * @return this InventoryPage instance
      */
     public InventoryPage clickItemAddOrRemoveButtonWithID(int id) {
-        logger.debug("Click Add/Remove button from Inventory Item with ID: {}", id);
+        TestReports.reportInfo("Clicking Add/Remove on Item with id: " + id);
         inventoryListComponent.getItemWithID(id).clickAddOrRemoveButton();
         return this;
     }
@@ -120,7 +131,7 @@ public class InventoryPage extends BasePage {
      * @return an ItemPage instance
      */
     public ItemPage clickItemLabelButtonWithID(int id) {
-        logger.debug("Click Item Label button from Inventory Item with ID: {}", id);
+        TestReports.reportInfo("Click Item Label button from Inventory Item with ID:" + id);
         inventoryListComponent.getItemWithID(id).clickItemLabelButton();
         ItemPage itemPage = new ItemPage(driver);
         return itemPage;
@@ -132,7 +143,7 @@ public class InventoryPage extends BasePage {
      * @return an ItemPage instance
      */
     public ItemPage clickItemImageButtonWithID(int id) {
-        logger.debug("Click Item Image button from Inventory Item with ID: {}", id);
+        TestReports.reportInfo("Click Item Image button from Inventory Item with ID: " + id);
         inventoryListComponent.getItemWithID(id).clickImageButton();
         ItemPage itemPage = new ItemPage(driver);
         return itemPage;
@@ -143,7 +154,7 @@ public class InventoryPage extends BasePage {
      * @return an InventoryListComponent instance
      */
     public InventoryListComponent createInventoryList() {
-        logger.debug("Create Inventory List Component", driver);
+        TestReports.reportInfo("Creating Inventory Items List");
         inventoryListContainer = By.cssSelector("[data-test=\"inventory-container\"]");
         return inventoryListComponent = new InventoryListComponent(driver, getContainer(inventoryListContainer));
     }
@@ -154,7 +165,7 @@ public class InventoryPage extends BasePage {
      * @return the name of the InventoryItem
      */
     public String getItemNameWithID(int id) {
-        logger.debug("Get InventoryItem name with id: {}", id);
+        TestReports.reportInfo("Get InventoryItem name with id: " + id);
         return inventoryListComponent.getItemWithID(id).getItemName();
     }
 
@@ -163,7 +174,7 @@ public class InventoryPage extends BasePage {
      * @return the InventoryItems found
      */
     public ArrayList<InventoryItem> getItems() {
-        logger.debug("Get Inventory Items");
+        TestReports.reportInfo("Get Inventory Items");
         return inventoryListComponent.getItems();
     }
 
@@ -173,7 +184,7 @@ public class InventoryPage extends BasePage {
      */
     public int getItemsCount() {
         int count = getItems().size();
-        logger.debug("Get InventoryItems count: {}", count);
+        TestReports.reportInfo("Get InventoryItems count: " + count);
         return count;
     }
 }

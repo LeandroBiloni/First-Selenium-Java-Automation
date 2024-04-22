@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import base.BasePage;
 import components.LoginComponent;
+import helpers.TestReports;
 
 /**
  * Class for the Login page PageObject
@@ -29,12 +30,12 @@ public class LoginPage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage login(String user, String pass) {
-        logger.debug("Enter Username '{}' and Password '{}'", user, pass);
+        TestReports.reportInfo("Login in with Username '" + user + "' and Password '" + pass +"'");
         loginComponent.fillUsernameField(user)
             .fillPasswordField(pass)
             .clickLoginButton();
 
-        logger.debug("Click Login button");
+        TestReports.reportInfo("Clicking Log In");
         InventoryPage inventoryPage = new InventoryPage(driver);
         return inventoryPage;     
     }

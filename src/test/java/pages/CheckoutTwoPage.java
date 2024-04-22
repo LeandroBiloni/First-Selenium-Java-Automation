@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import base.BasePage;
+import helpers.TestReports;
 
 /**
  * Class for the CheckoutTwo page PageObject
@@ -29,7 +30,8 @@ public class CheckoutTwoPage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage clickCancelButton() {
-        logger.debug("Click Cancel button");
+        TestReports.reportInfo("Clicking Cancel");
+
         driver.findElement(cancelButton).click();
 
         InventoryPage inventoryPage = new InventoryPage(driver);
@@ -41,7 +43,7 @@ public class CheckoutTwoPage extends BasePage {
      * @return a CheckoutCompletePage instance
      */
     public CheckoutCompletePage clickFinishButton() {
-        logger.debug("Click Finish button");
+        TestReports.reportInfo("Clicking Finish");
         driver.findElement(finishButton).click();
 
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
@@ -54,7 +56,7 @@ public class CheckoutTwoPage extends BasePage {
      */
     public String getItemName() {
         String name = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(itemLabel)).getText();
-        logger.debug("Get Item name: {}", name);
+        TestReports.reportInfo("Get Item name: " + name);
         return name;
     }
 }

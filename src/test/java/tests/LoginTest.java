@@ -3,6 +3,7 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import helpers.TestReports;
 import helpers.WebDriverManager;
 import pages.InventoryPage;
 import pages.LoginPage;
@@ -29,6 +30,7 @@ public class LoginTest extends WebDriverManager {
      */
     @Test(description = "Login with correct credentials", enabled = true)
     public void correctLogin() {
+
         //Act
         LoginPage loginPage = new LoginPage(driver);
 

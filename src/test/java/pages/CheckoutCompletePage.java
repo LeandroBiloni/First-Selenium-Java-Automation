@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import base.BasePage;
+import helpers.TestReports;
 
 /**
  * Class for the CheckoutComplete page PageObject
@@ -24,7 +25,7 @@ public class CheckoutCompletePage extends BasePage {
      * @return an InventoryPage instance
      */
     public InventoryPage clickHomeButton() {
-        logger.debug("Click Home button");
+        TestReports.reportInfo("Click Home");
         driver.findElement(homeButton).click();
 
         InventoryPage inventoryPage = new InventoryPage(driver);

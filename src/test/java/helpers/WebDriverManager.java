@@ -1,5 +1,7 @@
 package helpers;
 
+import java.lang.reflect.Method;
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +16,6 @@ import org.testng.annotations.BeforeMethod;
 public class WebDriverManager {
 
     protected WebDriver driver;
-
     /**
      * Set the browser window size
      * @param driver the WebDriver to use
@@ -47,7 +48,10 @@ public class WebDriverManager {
     }
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp(Method method) {
+        TestReports.initializeReporter(this.getClass().getName());
+        TestReports.createTest(method.getName());
+
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -61,8 +65,13 @@ public class WebDriverManager {
     public void tearDown(ITestResult result) {
         System.out.println("El test " + result.getMethod().getDescription() + " resultó: " + result.getStatus());
         if(!result.isSuccess()){
+            TestReports.reportError("El test " + result.getMethod().getMethodName() + ": " + result.getMethod().getDescription() + "falló!");
             Screenshoter.takeScreenshot("Error", driver);
         }
+        else {
+            TestReports.reportSuccess("El test " + result.getMethod().getMethodName() + ": " + result.getMethod().getDescription() + "pasó!");
+        }
+        TestReports.flushReport();
         driver.close();
     }
 }

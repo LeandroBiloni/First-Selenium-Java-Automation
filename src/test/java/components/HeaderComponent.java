@@ -34,13 +34,11 @@ public class HeaderComponent extends BaseComponent {
     private void initMenuComponent() {
         logger.debug("Initialize Menu Component");
 
-        logger.debug("Open Menu List");
         openMenu();
 
         logger.debug("Create new MenuListComponent instance");
         menuListComponent = new MenuListComponent(driver, driver.findElement(menuButtonsListContainer));
         
-        logger.debug("Close Menu List");
         menuListComponent.closeMenuList();
     }
 
@@ -49,7 +47,6 @@ public class HeaderComponent extends BaseComponent {
      * @return the MenuListComponent instance
      */
     public MenuListComponent openMenu() {
-        logger.debug("Click Open Menu button");
         webDriverWait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(container, menuButton)).click();
         return menuListComponent;
     } 

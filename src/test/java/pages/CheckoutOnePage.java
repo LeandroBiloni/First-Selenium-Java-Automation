@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import base.BasePage;
 import components.checkoutOne.BuyerDataComponent;
+import helpers.TestReports;
 
 /**
  * Class for the CheckoutOne page PageObject
@@ -31,8 +32,15 @@ public class CheckoutOnePage extends BasePage {
      * @return True if the error is displayed. False otherwise
      */
     public boolean isErrorFieldDisplayed() {
-        boolean isDisplayed = buyerDataComponent.isErrorFieldDisplayed();
-        logger.debug("Is Error displayed: {}", isDisplayed);
+        TestReports.reportInfo("Check if error field is displayed");
+
+        boolean isDisplayed = false;
+        try {
+            isDisplayed = buyerDataComponent.isErrorFieldDisplayed();   
+        } catch (Exception e) {
+            TestReports.reportError(e.getMessage());
+        }
+        TestReports.reportInfo("Error field is displayed: " + isDisplayed);
         return isDisplayed;
     }
     
@@ -42,7 +50,7 @@ public class CheckoutOnePage extends BasePage {
      * @return this CheckoutOnePage instance
      */
     public CheckoutOnePage setFirstNameFieldText(String text) {
-        logger.debug("Enter First Name: {}", text);
+        TestReports.reportInfo("Entering First Name: " + text);
         buyerDataComponent.setFirstNameFieldText(text);
         return this;
     }
@@ -53,7 +61,7 @@ public class CheckoutOnePage extends BasePage {
      * @return this CheckoutOnePage instance
      */
     public CheckoutOnePage setLastNameFieldText(String text) {
-        logger.debug("Enter Last Name: {}", text);
+        TestReports.reportInfo("Entering Last Name: " + text);
         buyerDataComponent.setLastNameFieldText(text);
         return this;
     }
@@ -64,7 +72,7 @@ public class CheckoutOnePage extends BasePage {
      * @return this CheckoutOnePage instance
      */
     public CheckoutOnePage setPostalCodeText(String text) {
-        logger.debug("Enter Postal Name: {}", text);
+        TestReports.reportInfo("Entering Postal Code: " + text);
         buyerDataComponent.setPostalCodeText(text);
         return this;
     }
@@ -74,7 +82,7 @@ public class CheckoutOnePage extends BasePage {
      * @return a CartPage instance
      */
     public CartPage clickCancelButton() {
-        logger.debug("Click Cancel button");
+        TestReports.reportInfo("Clicking Cancel");
         driver.findElement(cancelButton).click();
 
         CartPage cartPage = new CartPage(driver);
@@ -86,7 +94,7 @@ public class CheckoutOnePage extends BasePage {
      * @return a CheckoutTwoPage instance
      */
     public CheckoutTwoPage clickContinueButton() {
-        logger.debug("Click Continue button");
+        TestReports.reportInfo("Clicking Continue");
         driver.findElement(continueButton).click();
 
         CheckoutTwoPage checkoutTwoPage = new CheckoutTwoPage(driver);
