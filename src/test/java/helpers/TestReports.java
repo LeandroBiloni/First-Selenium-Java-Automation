@@ -12,6 +12,10 @@ public class TestReports {
     private static ExtentReports extentReport;
 
     public static void initializeReporter(String docTitle) {
+        if (extentReport != null){
+            return;
+        }
+        
         extentReport = new ExtentReports();
         sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\test-output\\testReport");
 

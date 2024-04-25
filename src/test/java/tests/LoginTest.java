@@ -3,7 +3,6 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import helpers.TestReports;
 import helpers.WebDriverManager;
 import pages.InventoryPage;
 import pages.LoginPage;

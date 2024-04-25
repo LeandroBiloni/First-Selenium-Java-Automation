@@ -3,13 +3,70 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.InventoryTest">
+      <class name="tests.LoginTest">
         <methods>
           <include name="setUp"/>
-          <include name="filterChange"/>
+          <include name="correctLogin"/>
           <include name="tearDown"/>
         </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.ItemTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="addItemToCart"/>
+          <include name="backToInventory"/>
+          <include name="removeItemFromCart"/>
+        </methods>
+      </class> <!-- tests.ItemTest -->
+      <class name="tests.CheckoutCompleteTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="backHome"/>
+        </methods>
+      </class> <!-- tests.CheckoutCompleteTest -->
+      <class name="tests.InventoryTest">
+        <methods>
+          <include name="goToItemPageFromLabel"/>
+          <include name="setUp"/>
+          <include name="goToCartWithAddedItem"/>
+          <include name="filterChange"/>
+          <include name="goToInventory"/>
+          <include name="goToItemPageFromImage"/>
+          <include name="tearDown"/>
+          <include name="logout"/>
+          <include name="goToAboutPage"/>
+          <include name="closeMenu"/>
+          <include name="goToCart"/>
+        </methods>
       </class> <!-- tests.InventoryTest -->
+      <class name="tests.CheckoutOneTest">
+        <methods>
+          <include name="continueToCheckout2WithNoData"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="backToCart"/>
+          <include name="continueToCheckout2"/>
+        </methods>
+      </class> <!-- tests.CheckoutOneTest -->
+      <class name="tests.CartTest">
+        <methods>
+          <include name="goToCheckoutOne"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="goToInventoryA"/>
+          <include name="goToInventoryB"/>
+        </methods>
+      </class> <!-- tests.CartTest -->
+      <class name="tests.CheckoutTwoTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="finishCheckout"/>
+          <include name="cancelCheckout"/>
+        </methods>
+      </class> <!-- tests.CheckoutTwoTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

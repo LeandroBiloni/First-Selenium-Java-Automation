@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="22" passed="22" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-21T20:59:27 ART" name="Surefire suite" finished-at="2024-04-21T21:01:13 ART" duration-ms="105761">
+  <suite started-at="2024-04-25T19:30:04 ART" name="Surefire suite" finished-at="2024-04-25T19:31:49 ART" duration-ms="105360">
     <groups>
     </groups>
-    <test started-at="2024-04-21T20:59:27 ART" name="Surefire test" finished-at="2024-04-21T21:01:13 ART" duration-ms="105761">
+    <test started-at="2024-04-25T19:30:04 ART" name="Surefire test" finished-at="2024-04-25T19:31:49 ART" duration-ms="105360">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@1184ab05]" started-at="2024-04-21T21:01:11 ART" name="setUp" finished-at="2024-04-21T21:01:12 ART" duration-ms="1044" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@1184ab05]" started-at="2024-04-25T19:31:47 ART" name="setUp" finished-at="2024-04-25T19:31:48 ART" duration-ms="983" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="correctLogin()[pri:0, instance:tests.LoginTest@1184ab05]" started-at="2024-04-21T21:01:12 ART" name="correctLogin" description="Login with correct credentials" finished-at="2024-04-21T21:01:13 ART" duration-ms="1181" status="PASS">
+        <test-method signature="correctLogin()[pri:0, instance:tests.LoginTest@1184ab05]" started-at="2024-04-25T19:31:48 ART" name="correctLogin" description="Login with correct credentials" finished-at="2024-04-25T19:31:49 ART" duration-ms="1222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- correctLogin -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@1184ab05]" started-at="2024-04-21T21:01:13 ART" name="tearDown" finished-at="2024-04-21T21:01:13 ART" duration-ms="94" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@1184ab05]" started-at="2024-04-25T19:31:49 ART" name="tearDown" finished-at="2024-04-25T19:31:49 ART" duration-ms="80" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,7 +35,7 @@
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.ItemTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:29 ART" name="setUp" finished-at="2024-04-21T21:00:30 ART" duration-ms="1007" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:05 ART" name="setUp" finished-at="2024-04-25T19:31:06 ART" duration-ms="958" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,11 +46,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addItemToCart()[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:30 ART" name="addItemToCart" description="Add item to cart" finished-at="2024-04-21T21:00:32 ART" duration-ms="2130" status="PASS">
+        <test-method signature="addItemToCart()[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:06 ART" name="addItemToCart" description="Add item to cart" finished-at="2024-04-25T19:31:08 ART" duration-ms="2197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItemToCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:32 ART" name="tearDown" finished-at="2024-04-21T21:00:32 ART" duration-ms="161" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:08 ART" name="tearDown" finished-at="2024-04-25T19:31:08 ART" duration-ms="110" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -61,7 +61,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:32 ART" name="setUp" finished-at="2024-04-21T21:00:33 ART" duration-ms="950" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:08 ART" name="setUp" finished-at="2024-04-25T19:31:09 ART" duration-ms="913" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -72,11 +72,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="backToInventory()[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:33 ART" name="backToInventory" description="Go back to inventory" finished-at="2024-04-21T21:00:36 ART" duration-ms="2699" status="PASS">
+        <test-method signature="backToInventory()[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:09 ART" name="backToInventory" description="Go back to inventory" finished-at="2024-04-25T19:31:11 ART" duration-ms="2670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToInventory -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:36 ART" name="tearDown" finished-at="2024-04-21T21:00:36 ART" duration-ms="118" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:11 ART" name="tearDown" finished-at="2024-04-25T19:31:12 ART" duration-ms="106" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,7 +87,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:36 ART" name="setUp" finished-at="2024-04-21T21:00:37 ART" duration-ms="1058" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:12 ART" name="setUp" finished-at="2024-04-25T19:31:13 ART" duration-ms="961" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,11 +98,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="removeItemFromCart()[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:00:37 ART" name="removeItemFromCart" description="Remove item from cart" finished-at="2024-04-21T21:01:11 ART" duration-ms="33563" status="PASS">
+        <test-method signature="removeItemFromCart()[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:13 ART" name="removeItemFromCart" description="Remove item from cart" finished-at="2024-04-25T19:31:47 ART" duration-ms="34009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeItemFromCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-21T21:01:11 ART" name="tearDown" finished-at="2024-04-21T21:01:11 ART" duration-ms="111" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.ItemTest@47d90b9e]" started-at="2024-04-25T19:31:47 ART" name="tearDown" finished-at="2024-04-25T19:31:47 ART" duration-ms="83" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -115,7 +115,7 @@
         </test-method> <!-- tearDown -->
       </class> <!-- tests.ItemTest -->
       <class name="tests.CheckoutTwoTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-21T20:59:52 ART" name="setUp" finished-at="2024-04-21T20:59:53 ART" duration-ms="940" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-25T19:30:27 ART" name="setUp" finished-at="2024-04-25T19:30:28 ART" duration-ms="941" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -126,11 +126,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="cancelCheckout()[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-21T20:59:53 ART" name="cancelCheckout" description="Cancel checkout" finished-at="2024-04-21T20:59:56 ART" duration-ms="2595" status="PASS">
+        <test-method signature="cancelCheckout()[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-25T19:30:28 ART" name="cancelCheckout" description="Cancel checkout" finished-at="2024-04-25T19:30:31 ART" duration-ms="2654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cancelCheckout -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-21T20:59:56 ART" name="tearDown" finished-at="2024-04-21T20:59:56 ART" duration-ms="128" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-25T19:30:31 ART" name="tearDown" finished-at="2024-04-25T19:30:31 ART" duration-ms="106" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -141,7 +141,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-21T20:59:56 ART" name="setUp" finished-at="2024-04-21T20:59:57 ART" duration-ms="1052" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-25T19:30:31 ART" name="setUp" finished-at="2024-04-25T19:30:32 ART" duration-ms="1008" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -152,11 +152,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="finishCheckout()[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-21T20:59:57 ART" name="finishCheckout" description="Finish checkout" finished-at="2024-04-21T20:59:58 ART" duration-ms="1743" status="PASS">
+        <test-method signature="finishCheckout()[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-25T19:30:32 ART" name="finishCheckout" description="Finish checkout" finished-at="2024-04-25T19:30:34 ART" duration-ms="1816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishCheckout -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-21T20:59:58 ART" name="tearDown" finished-at="2024-04-21T20:59:59 ART" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutTwoTest@3c22fc4c]" started-at="2024-04-25T19:30:34 ART" name="tearDown" finished-at="2024-04-25T19:30:34 ART" duration-ms="154" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -169,7 +169,7 @@
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CheckoutTwoTest -->
       <class name="tests.InventoryTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T20:59:59 ART" name="setUp" finished-at="2024-04-21T21:00:00 ART" duration-ms="1042" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:34 ART" name="setUp" finished-at="2024-04-25T19:30:35 ART" duration-ms="974" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -180,11 +180,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="closeMenu()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:00 ART" name="closeMenu" description="Close hamburger menu" finished-at="2024-04-21T21:00:02 ART" duration-ms="2309" status="PASS">
+        <test-method signature="closeMenu()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:35 ART" name="closeMenu" description="Close hamburger menu" finished-at="2024-04-25T19:30:37 ART" duration-ms="2416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeMenu -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:02 ART" name="tearDown" finished-at="2024-04-21T21:00:02 ART" duration-ms="135" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:37 ART" name="tearDown" finished-at="2024-04-25T19:30:37 ART" duration-ms="91" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -195,7 +195,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:02 ART" name="setUp" finished-at="2024-04-21T21:00:03 ART" duration-ms="1029" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:37 ART" name="setUp" finished-at="2024-04-25T19:30:38 ART" duration-ms="980" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -206,11 +206,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="filterChange()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:03 ART" name="filterChange" description="Change the shop filter" finished-at="2024-04-21T21:00:04 ART" duration-ms="1197" status="PASS">
+        <test-method signature="filterChange()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:38 ART" name="filterChange" description="Change the shop filter" finished-at="2024-04-25T19:30:39 ART" duration-ms="1248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filterChange -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:04 ART" name="tearDown" finished-at="2024-04-21T21:00:04 ART" duration-ms="131" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:39 ART" name="tearDown" finished-at="2024-04-25T19:30:39 ART" duration-ms="87" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -221,7 +221,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:04 ART" name="setUp" finished-at="2024-04-21T21:00:06 ART" duration-ms="1032" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:39 ART" name="setUp" finished-at="2024-04-25T19:30:40 ART" duration-ms="1013" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -232,11 +232,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToAboutPage()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:06 ART" name="goToAboutPage" description="Go to about page" finished-at="2024-04-21T21:00:11 ART" duration-ms="5038" status="PASS">
+        <test-method signature="goToAboutPage()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:40 ART" name="goToAboutPage" description="Go to about page" finished-at="2024-04-25T19:30:46 ART" duration-ms="5453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToAboutPage -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:11 ART" name="tearDown" finished-at="2024-04-21T21:00:11 ART" duration-ms="127" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:46 ART" name="tearDown" finished-at="2024-04-25T19:30:46 ART" duration-ms="109" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -247,7 +247,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:11 ART" name="setUp" finished-at="2024-04-21T21:00:12 ART" duration-ms="1134" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:46 ART" name="setUp" finished-at="2024-04-25T19:30:47 ART" duration-ms="1226" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -258,11 +258,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToCart()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:12 ART" name="goToCart" description="Go to cart" finished-at="2024-04-21T21:00:14 ART" duration-ms="1802" status="PASS">
+        <test-method signature="goToCart()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:47 ART" name="goToCart" description="Go to cart" finished-at="2024-04-25T19:30:49 ART" duration-ms="1885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:14 ART" name="tearDown" finished-at="2024-04-21T21:00:14 ART" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:49 ART" name="tearDown" finished-at="2024-04-25T19:30:49 ART" duration-ms="133" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -273,7 +273,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:14 ART" name="setUp" finished-at="2024-04-21T21:00:15 ART" duration-ms="1015" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:49 ART" name="setUp" finished-at="2024-04-25T19:30:50 ART" duration-ms="958" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -284,11 +284,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToCartWithAddedItem()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:15 ART" name="goToCartWithAddedItem" description="Add item to cart and check if its the same item" finished-at="2024-04-21T21:00:17 ART" duration-ms="1841" status="PASS">
+        <test-method signature="goToCartWithAddedItem()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:50 ART" name="goToCartWithAddedItem" description="Add item to cart and check if its the same item" finished-at="2024-04-25T19:30:52 ART" duration-ms="1901" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToCartWithAddedItem -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:17 ART" name="tearDown" finished-at="2024-04-21T21:00:17 ART" duration-ms="157" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:52 ART" name="tearDown" finished-at="2024-04-25T19:30:52 ART" duration-ms="115" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -299,7 +299,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:17 ART" name="setUp" finished-at="2024-04-21T21:00:18 ART" duration-ms="1147" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:52 ART" name="setUp" finished-at="2024-04-25T19:30:53 ART" duration-ms="920" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -310,11 +310,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToInventory()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:18 ART" name="goToInventory" description="Go back to Inventory page" finished-at="2024-04-21T21:00:20 ART" duration-ms="2420" status="PASS">
+        <test-method signature="goToInventory()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:53 ART" name="goToInventory" description="Go back to Inventory page" finished-at="2024-04-25T19:30:56 ART" duration-ms="2943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToInventory -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:20 ART" name="tearDown" finished-at="2024-04-21T21:00:20 ART" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:56 ART" name="tearDown" finished-at="2024-04-25T19:30:56 ART" duration-ms="83" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -325,7 +325,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:20 ART" name="setUp" finished-at="2024-04-21T21:00:22 ART" duration-ms="1090" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:56 ART" name="setUp" finished-at="2024-04-25T19:30:57 ART" duration-ms="993" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -336,11 +336,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToItemPageFromImage()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:22 ART" name="goToItemPageFromImage" description="Go to item page from image" finished-at="2024-04-21T21:00:23 ART" duration-ms="1879" status="PASS">
+        <test-method signature="goToItemPageFromImage()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:57 ART" name="goToItemPageFromImage" description="Go to item page from image" finished-at="2024-04-25T19:30:59 ART" duration-ms="1965" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToItemPageFromImage -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:23 ART" name="tearDown" finished-at="2024-04-21T21:00:24 ART" duration-ms="158" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:59 ART" name="tearDown" finished-at="2024-04-25T19:30:59 ART" duration-ms="119" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -351,7 +351,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:24 ART" name="setUp" finished-at="2024-04-21T21:00:25 ART" duration-ms="984" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:30:59 ART" name="setUp" finished-at="2024-04-25T19:31:00 ART" duration-ms="1011" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -362,11 +362,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToItemPageFromLabel()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:25 ART" name="goToItemPageFromLabel" description="Go to item page from label" finished-at="2024-04-21T21:00:26 ART" duration-ms="1852" status="PASS">
+        <test-method signature="goToItemPageFromLabel()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:31:00 ART" name="goToItemPageFromLabel" description="Go to item page from label" finished-at="2024-04-25T19:31:02 ART" duration-ms="1930" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToItemPageFromLabel -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:26 ART" name="tearDown" finished-at="2024-04-21T21:00:27 ART" duration-ms="151" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:31:02 ART" name="tearDown" finished-at="2024-04-25T19:31:02 ART" duration-ms="113" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -377,7 +377,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:27 ART" name="setUp" finished-at="2024-04-21T21:00:28 ART" duration-ms="1038" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:31:02 ART" name="setUp" finished-at="2024-04-25T19:31:03 ART" duration-ms="906" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -388,11 +388,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="logout()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:28 ART" name="logout" description="Try to logout" finished-at="2024-04-21T21:00:29 ART" duration-ms="1167" status="PASS">
+        <test-method signature="logout()[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:31:03 ART" name="logout" description="Try to logout" finished-at="2024-04-25T19:31:04 ART" duration-ms="1249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-21T21:00:29 ART" name="tearDown" finished-at="2024-04-21T21:00:29 ART" duration-ms="91" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.InventoryTest@460d0a57]" started-at="2024-04-25T19:31:04 ART" name="tearDown" finished-at="2024-04-25T19:31:05 ART" duration-ms="113" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -405,7 +405,7 @@
         </test-method> <!-- tearDown -->
       </class> <!-- tests.InventoryTest -->
       <class name="tests.CheckoutOneTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:43 ART" name="setUp" finished-at="2024-04-21T20:59:44 ART" duration-ms="1035" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:18 ART" name="setUp" finished-at="2024-04-25T19:30:19 ART" duration-ms="1001" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -416,11 +416,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="backToCart()[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:44 ART" name="backToCart" description="Go back to cart with cancel button" finished-at="2024-04-21T20:59:46 ART" duration-ms="2616" status="PASS">
+        <test-method signature="backToCart()[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:19 ART" name="backToCart" description="Go back to cart with cancel button" finished-at="2024-04-25T19:30:22 ART" duration-ms="2539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backToCart -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:46 ART" name="tearDown" finished-at="2024-04-21T20:59:46 ART" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:22 ART" name="tearDown" finished-at="2024-04-25T19:30:22 ART" duration-ms="122" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -431,7 +431,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:46 ART" name="setUp" finished-at="2024-04-21T20:59:48 ART" duration-ms="1027" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:22 ART" name="setUp" finished-at="2024-04-25T19:30:23 ART" duration-ms="876" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -442,11 +442,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="continueToCheckout2()[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:48 ART" name="continueToCheckout2" description="Continue to checkout 2" finished-at="2024-04-21T20:59:49 ART" duration-ms="1656" status="PASS">
+        <test-method signature="continueToCheckout2()[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:23 ART" name="continueToCheckout2" description="Continue to checkout 2" finished-at="2024-04-25T19:30:24 ART" duration-ms="1676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- continueToCheckout2 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:49 ART" name="tearDown" finished-at="2024-04-21T20:59:49 ART" duration-ms="117" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:24 ART" name="tearDown" finished-at="2024-04-25T19:30:24 ART" duration-ms="77" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -457,7 +457,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:49 ART" name="setUp" finished-at="2024-04-21T20:59:50 ART" duration-ms="1027" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:24 ART" name="setUp" finished-at="2024-04-25T19:30:25 ART" duration-ms="987" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -468,11 +468,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="continueToCheckout2WithNoData()[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:50 ART" name="continueToCheckout2WithNoData" description="Continue to checkout 2 without inserting info" finished-at="2024-04-21T20:59:52 ART" duration-ms="1516" status="PASS">
+        <test-method signature="continueToCheckout2WithNoData()[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:25 ART" name="continueToCheckout2WithNoData" description="Continue to checkout 2 without inserting info" finished-at="2024-04-25T19:30:27 ART" duration-ms="1570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- continueToCheckout2WithNoData -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-21T20:59:52 ART" name="tearDown" finished-at="2024-04-21T20:59:52 ART" duration-ms="144" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutOneTest@7f552bd3]" started-at="2024-04-25T19:30:27 ART" name="tearDown" finished-at="2024-04-25T19:30:27 ART" duration-ms="99" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -485,7 +485,7 @@
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CheckoutOneTest -->
       <class name="tests.CartTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:27 ART" name="setUp" finished-at="2024-04-21T20:59:29 ART" duration-ms="1717" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:04 ART" name="setUp" finished-at="2024-04-25T19:30:05 ART" duration-ms="1625" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -496,11 +496,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToCheckoutOne()[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:29 ART" name="goToCheckoutOne" description="Go to checkout step one" finished-at="2024-04-21T20:59:31 ART" duration-ms="1782" status="PASS">
+        <test-method signature="goToCheckoutOne()[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:05 ART" name="goToCheckoutOne" description="Go to checkout step one" finished-at="2024-04-25T19:30:07 ART" duration-ms="1906" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToCheckoutOne -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:31 ART" name="tearDown" finished-at="2024-04-21T20:59:31 ART" duration-ms="317" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:07 ART" name="tearDown" finished-at="2024-04-25T19:30:07 ART" duration-ms="276" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -511,7 +511,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:31 ART" name="setUp" finished-at="2024-04-21T20:59:32 ART" duration-ms="1058" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:07 ART" name="setUp" finished-at="2024-04-25T19:30:08 ART" duration-ms="1003" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -522,11 +522,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToInventoryA()[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:32 ART" name="goToInventoryA" description="Go back to inventory page using All items button in menu" finished-at="2024-04-21T20:59:35 ART" duration-ms="3070" status="PASS">
+        <test-method signature="goToInventoryA()[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:08 ART" name="goToInventoryA" description="Go back to inventory page using All items button in menu" finished-at="2024-04-25T19:30:11 ART" duration-ms="2495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToInventoryA -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:35 ART" name="tearDown" finished-at="2024-04-21T20:59:35 ART" duration-ms="182" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:11 ART" name="tearDown" finished-at="2024-04-25T19:30:11 ART" duration-ms="76" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -537,7 +537,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:35 ART" name="setUp" finished-at="2024-04-21T20:59:36 ART" duration-ms="1040" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:11 ART" name="setUp" finished-at="2024-04-25T19:30:12 ART" duration-ms="974" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -548,11 +548,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToInventoryB()[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:36 ART" name="goToInventoryB" description="Go back to inventory page using Continue Shopping button" finished-at="2024-04-21T20:59:39 ART" duration-ms="2524" status="PASS">
+        <test-method signature="goToInventoryB()[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:12 ART" name="goToInventoryB" description="Go back to inventory page using Continue Shopping button" finished-at="2024-04-25T19:30:14 ART" duration-ms="2472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToInventoryB -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-21T20:59:39 ART" name="tearDown" finished-at="2024-04-21T20:59:39 ART" duration-ms="144" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CartTest@47542153]" started-at="2024-04-25T19:30:14 ART" name="tearDown" finished-at="2024-04-25T19:30:14 ART" duration-ms="91" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -565,7 +565,7 @@
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CartTest -->
       <class name="tests.CheckoutCompleteTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutCompleteTest@3eb7fc54]" started-at="2024-04-21T20:59:39 ART" name="setUp" finished-at="2024-04-21T20:59:40 ART" duration-ms="1042" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.CheckoutCompleteTest@3eb7fc54]" started-at="2024-04-25T19:30:14 ART" name="setUp" finished-at="2024-04-25T19:30:15 ART" duration-ms="948" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -576,11 +576,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="backHome()[pri:0, instance:tests.CheckoutCompleteTest@3eb7fc54]" started-at="2024-04-21T20:59:40 ART" name="backHome" description="Go back to home page" finished-at="2024-04-21T20:59:43 ART" duration-ms="2445" status="PASS">
+        <test-method signature="backHome()[pri:0, instance:tests.CheckoutCompleteTest@3eb7fc54]" started-at="2024-04-25T19:30:15 ART" name="backHome" description="Go back to home page" finished-at="2024-04-25T19:30:18 ART" duration-ms="2508" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- backHome -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutCompleteTest@3eb7fc54]" started-at="2024-04-21T20:59:43 ART" name="tearDown" finished-at="2024-04-21T20:59:43 ART" duration-ms="95" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.CheckoutCompleteTest@3eb7fc54]" started-at="2024-04-25T19:30:18 ART" name="tearDown" finished-at="2024-04-25T19:30:18 ART" duration-ms="82" status="PASS">
           <params>
             <param index="0">
               <value>
